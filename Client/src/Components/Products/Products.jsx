@@ -21,7 +21,8 @@
   
     const categ = useSelector(state => state.categ);
     const products = useSelector(state => state.products);
-  
+    console.log(products)
+    console.log(categ)
  
 
   const cardsPerPage = 20;
