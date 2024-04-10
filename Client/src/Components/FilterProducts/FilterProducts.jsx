@@ -12,6 +12,20 @@ const FilterProducts = ({ categ, products, applyFilters }) => { // Asegúrate de
     const [selectedOrden, setSelectedOrden] = useState("");
     const [noCoincidencias, setNoCoincidencias] = useState(false);
 
+ //Agregué de linea 16 a 26
+  const [filtersApplied, setFiltersApplied] = useState(false);
+
+// Verifica si no hay coincidencias y establece el estado noCoincidencias en true
+useEffect(() => {
+    const noMatch = checkForNoMatch(products, selectedCateg, selectedPrecio, selectedOrden);
+    setNoCoincidencias(noMatch && filtersApplied);
+}, [selectedCateg, selectedPrecio, selectedOrden, filtersApplied]);
+
+function applyFilters(filters) {
+    setFiltersApplied(Object.values(filters).some(value => value !== ""));
+}
+  
+  
     function handleFilterCateg(e) {
         const selectedValue = e.target.value;
         setSelectedCateg(selectedValue);
