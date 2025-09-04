@@ -1,3 +1,7 @@
 node_modules
 .env
 dataApi/newProducts.js
+dataApi/convertir.js
+dataApi/products_new.js
+dataApi/subirFotos.js
+dataApi/products_cloudinary.js

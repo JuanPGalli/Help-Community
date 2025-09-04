@@ -1,1925 +1,3 @@
-/* const products = [
-  {
-    id: 1,
-    title: "iPhone 9",
-    description: "An apple mobile which is nothing like apple",
-    price: 549,
-    discountPercentage: 12.96,
-    rating: 4.69,
-    stock: 94,
-    brand: "Apple",
-    category: "smartphones",
-    thumbnail: "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/1/1.jpg",
-      "https://cdn.dummyjson.com/product-images/1/2.jpg",
-      "https://cdn.dummyjson.com/product-images/1/3.jpg",
-      "https://cdn.dummyjson.com/product-images/1/4.jpg",
-      "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 2,
-    title: "iPhone X",
-    description:
-      "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-    price: 899,
-    discountPercentage: 17.94,
-    rating: 4.44,
-    stock: 34,
-    brand: "Apple",
-    category: "smartphones",
-    thumbnail: "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/2/1.jpg",
-      "https://cdn.dummyjson.com/product-images/2/2.jpg",
-      "https://cdn.dummyjson.com/product-images/2/3.jpg",
-      "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 3,
-    title: "Samsung Universe 9",
-    description:
-      "Samsung's new variant which goes beyond Galaxy to the Universe",
-    price: 1249,
-    discountPercentage: 15.46,
-    rating: 4.09,
-    stock: 36,
-    brand: "Samsung",
-    category: "smartphones",
-    thumbnail: "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
-    images: ["https://cdn.dummyjson.com/product-images/3/1.jpg"],
-  },
-  {
-    id: 4,
-    title: "OPPOF19",
-    description: "OPPO F19 is officially announced on April 2021.",
-    price: 280,
-    discountPercentage: 17.91,
-    rating: 4.3,
-    stock: 123,
-    brand: "OPPO",
-    category: "smartphones",
-    thumbnail: "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/4/1.jpg",
-      "https://cdn.dummyjson.com/product-images/4/2.jpg",
-      "https://cdn.dummyjson.com/product-images/4/3.jpg",
-      "https://cdn.dummyjson.com/product-images/4/4.jpg",
-      "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 5,
-    title: "Huawei P30",
-    description:
-      "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
-    price: 499,
-    discountPercentage: 10.58,
-    rating: 4.09,
-    stock: 32,
-    brand: "Huawei",
-    category: "smartphones",
-    thumbnail: "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/5/1.jpg",
-      "https://cdn.dummyjson.com/product-images/5/2.jpg",
-      "https://cdn.dummyjson.com/product-images/5/3.jpg",
-    ],
-  },
-  {
-    id: 6,
-    title: "MacBook Pro",
-    description:
-      "MacBook Pro 2021 with mini-LED display may launch between September, November",
-    price: 1749,
-    discountPercentage: 11.02,
-    rating: 4.57,
-    stock: 83,
-    brand: "Apple",
-    category: "laptops",
-    thumbnail: "https://cdn.dummyjson.com/product-images/6/thumbnail.png",
-    images: [
-      "https://cdn.dummyjson.com/product-images/6/1.png",
-      "https://cdn.dummyjson.com/product-images/6/2.jpg",
-      "https://cdn.dummyjson.com/product-images/6/3.png",
-      "https://cdn.dummyjson.com/product-images/6/4.jpg",
-    ],
-  },
-  {
-    id: 7,
-    title: "Samsung Galaxy Book",
-    description:
-      "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
-    price: 1499,
-    discountPercentage: 4.15,
-    rating: 4.25,
-    stock: 50,
-    brand: "Samsung",
-    category: "laptops",
-    thumbnail: "https://cdn.dummyjson.com/product-images/7/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/7/1.jpg",
-      "https://cdn.dummyjson.com/product-images/7/2.jpg",
-      "https://cdn.dummyjson.com/product-images/7/3.jpg",
-      "https://cdn.dummyjson.com/product-images/7/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 8,
-    title: "Microsoft Surface Laptop 4",
-    description:
-      "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
-    price: 1499,
-    discountPercentage: 10.23,
-    rating: 4.43,
-    stock: 68,
-    brand: "Microsoft Surface",
-    category: "laptops",
-    thumbnail: "https://cdn.dummyjson.com/product-images/8/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/8/1.jpg",
-      "https://cdn.dummyjson.com/product-images/8/2.jpg",
-      "https://cdn.dummyjson.com/product-images/8/3.jpg",
-      "https://cdn.dummyjson.com/product-images/8/4.jpg",
-      "https://cdn.dummyjson.com/product-images/8/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 9,
-    title: "Infinix INBOOK",
-    description:
-      "Infinix Inbook X1 Ci3 10th 8GB 256GB 14 Win10 Grey – 1 Year Warranty",
-    price: 1099,
-    discountPercentage: 11.83,
-    rating: 4.54,
-    stock: 96,
-    brand: "Infinix",
-    category: "laptops",
-    thumbnail: "https://cdn.dummyjson.com/product-images/9/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/9/1.jpg",
-      "https://cdn.dummyjson.com/product-images/9/2.png",
-      "https://cdn.dummyjson.com/product-images/9/3.png",
-      "https://cdn.dummyjson.com/product-images/9/4.jpg",
-      "https://cdn.dummyjson.com/product-images/9/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 10,
-    title: "HP Pavilion 15-DK1056WM",
-    description:
-      "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
-    price: 1099,
-    discountPercentage: 6.18,
-    rating: 4.43,
-    stock: 89,
-    brand: "HP Pavilion",
-    category: "laptops",
-    thumbnail: "https://cdn.dummyjson.com/product-images/10/thumbnail.jpeg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/10/1.jpg",
-      "https://cdn.dummyjson.com/product-images/10/2.jpg",
-      "https://cdn.dummyjson.com/product-images/10/3.jpg",
-      "https://cdn.dummyjson.com/product-images/10/thumbnail.jpeg",
-    ],
-  },
-  {
-    id: 11,
-    title: "perfume Oil",
-    description:
-      "Mega Discount, Impression of Acqua Di Gio by GiorgioArmani concentrated attar perfume Oil",
-    price: 13,
-    discountPercentage: 8.4,
-    rating: 4.26,
-    stock: 65,
-    brand: "Impression of Acqua Di Gio",
-    category: "fragrances",
-    thumbnail: "https://cdn.dummyjson.com/product-images/11/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/11/1.jpg",
-      "https://cdn.dummyjson.com/product-images/11/2.jpg",
-      "https://cdn.dummyjson.com/product-images/11/3.jpg",
-      "https://cdn.dummyjson.com/product-images/11/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 12,
-    title: "Brown Perfume",
-    description: "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
-    price: 40,
-    discountPercentage: 15.66,
-    rating: 4,
-    stock: 52,
-    brand: "Royal_Mirage",
-    category: "fragrances",
-    thumbnail: "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/12/1.jpg",
-      "https://cdn.dummyjson.com/product-images/12/2.jpg",
-      "https://cdn.dummyjson.com/product-images/12/3.png",
-      "https://cdn.dummyjson.com/product-images/12/4.jpg",
-      "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 13,
-    title: "Fog Scent Xpressio Perfume",
-    description:
-      "Product details of Best Fog Scent Xpressio Perfume 100ml For Men cool long lasting perfumes for Men",
-    price: 13,
-    discountPercentage: 8.14,
-    rating: 4.59,
-    stock: 61,
-    brand: "Fog Scent Xpressio",
-    category: "fragrances",
-    thumbnail: "https://cdn.dummyjson.com/product-images/13/thumbnail.webp",
-    images: [
-      "https://cdn.dummyjson.com/product-images/13/1.jpg",
-      "https://cdn.dummyjson.com/product-images/13/2.png",
-      "https://cdn.dummyjson.com/product-images/13/3.jpg",
-      "https://cdn.dummyjson.com/product-images/13/4.jpg",
-      "https://cdn.dummyjson.com/product-images/13/thumbnail.webp",
-    ],
-  },
-  {
-    id: 14,
-    title: "Non-Alcoholic Concentrated Perfume Oil",
-    description:
-      "Original Al Munakh® by Mahal Al Musk | Our Impression of Climate | 6ml Non-Alcoholic Concentrated Perfume Oil",
-    price: 120,
-    discountPercentage: 15.6,
-    rating: 4.21,
-    stock: 114,
-    brand: "Al Munakh",
-    category: "fragrances",
-    thumbnail: "https://cdn.dummyjson.com/product-images/14/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/14/1.jpg",
-      "https://cdn.dummyjson.com/product-images/14/2.jpg",
-      "https://cdn.dummyjson.com/product-images/14/3.jpg",
-      "https://cdn.dummyjson.com/product-images/14/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 15,
-    title: "Eau De Perfume Spray",
-    description:
-      "Genuine  Al-Rehab spray perfume from UAE/Saudi Arabia/Yemen High Quality",
-    price: 30,
-    discountPercentage: 10.99,
-    rating: 4.7,
-    stock: 105,
-    brand: "Lord - Al-Rehab",
-    category: "fragrances",
-    thumbnail: "https://cdn.dummyjson.com/product-images/15/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/15/1.jpg",
-      "https://cdn.dummyjson.com/product-images/15/2.jpg",
-      "https://cdn.dummyjson.com/product-images/15/3.jpg",
-      "https://cdn.dummyjson.com/product-images/15/4.jpg",
-      "https://cdn.dummyjson.com/product-images/15/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 16,
-    title: "Hyaluronic Acid Serum",
-    description:
-      "L'OrÃ©al Paris introduces Hyaluron Expert Replumping Serum formulated with 1.5% Hyaluronic Acid",
-    price: 19,
-    discountPercentage: 13.31,
-    rating: 4.83,
-    stock: 110,
-    brand: "L'Oreal Paris",
-    category: "skincare",
-    thumbnail: "https://cdn.dummyjson.com/product-images/16/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/16/1.png",
-      "https://cdn.dummyjson.com/product-images/16/2.webp",
-      "https://cdn.dummyjson.com/product-images/16/3.jpg",
-      "https://cdn.dummyjson.com/product-images/16/4.jpg",
-      "https://cdn.dummyjson.com/product-images/16/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 17,
-    title: "Tree Oil 30ml",
-    description:
-      "Tea tree oil contains a number of compounds, including terpinen-4-ol, that have been shown to kill certain bacteria,",
-    price: 12,
-    discountPercentage: 4.09,
-    rating: 4.52,
-    stock: 78,
-    brand: "Hemani Tea",
-    category: "skincare",
-    thumbnail: "https://cdn.dummyjson.com/product-images/17/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/17/1.jpg",
-      "https://cdn.dummyjson.com/product-images/17/2.jpg",
-      "https://cdn.dummyjson.com/product-images/17/3.jpg",
-      "https://cdn.dummyjson.com/product-images/17/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 18,
-    title: "Oil Free Moisturizer 100ml",
-    description:
-      "Dermive Oil Free Moisturizer with SPF 20 is specifically formulated with ceramides, hyaluronic acid & sunscreen.",
-    price: 40,
-    discountPercentage: 13.1,
-    rating: 4.56,
-    stock: 88,
-    brand: "Dermive",
-    category: "skincare",
-    thumbnail: "https://cdn.dummyjson.com/product-images/18/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/18/1.jpg",
-      "https://cdn.dummyjson.com/product-images/18/2.jpg",
-      "https://cdn.dummyjson.com/product-images/18/3.jpg",
-      "https://cdn.dummyjson.com/product-images/18/4.jpg",
-      "https://cdn.dummyjson.com/product-images/18/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 19,
-    title: "Skin Beauty Serum.",
-    description:
-      "Product name: rorec collagen hyaluronic acid white face serum riceNet weight: 15 m",
-    price: 46,
-    discountPercentage: 10.68,
-    rating: 4.42,
-    stock: 54,
-    brand: "ROREC White Rice",
-    category: "skincare",
-    thumbnail: "https://cdn.dummyjson.com/product-images/19/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/19/1.jpg",
-      "https://cdn.dummyjson.com/product-images/19/2.jpg",
-      "https://cdn.dummyjson.com/product-images/19/3.png",
-      "https://cdn.dummyjson.com/product-images/19/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 20,
-    title: "Freckle Treatment Cream- 15gm",
-    description:
-      "Fair & Clear is Pakistan's only pure Freckle cream which helpsfade Freckles, Darkspots and pigments. Mercury level is 0%, so there are no side effects.",
-    price: 70,
-    discountPercentage: 16.99,
-    rating: 4.06,
-    stock: 140,
-    brand: "Fair & Clear",
-    category: "skincare",
-    thumbnail: "https://cdn.dummyjson.com/product-images/20/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/20/1.jpg",
-      "https://cdn.dummyjson.com/product-images/20/2.jpg",
-      "https://cdn.dummyjson.com/product-images/20/3.jpg",
-      "https://cdn.dummyjson.com/product-images/20/4.jpg",
-      "https://cdn.dummyjson.com/product-images/20/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 21,
-    title: "- Daal Masoor 500 grams",
-    description: "Fine quality Branded Product Keep in a cool and dry place",
-    price: 20,
-    discountPercentage: 4.81,
-    rating: 4.44,
-    stock: 133,
-    brand: "Saaf & Khaas",
-    category: "groceries",
-    thumbnail: "https://cdn.dummyjson.com/product-images/21/thumbnail.png",
-    images: [
-      "https://cdn.dummyjson.com/product-images/21/1.png",
-      "https://cdn.dummyjson.com/product-images/21/2.jpg",
-      "https://cdn.dummyjson.com/product-images/21/3.jpg",
-    ],
-  },
-  {
-    id: 22,
-    title: "Elbow Macaroni - 400 gm",
-    description: "Product details of Bake Parlor Big Elbow Macaroni - 400 gm",
-    price: 14,
-    discountPercentage: 15.58,
-    rating: 4.57,
-    stock: 146,
-    brand: "Bake Parlor Big",
-    category: "groceries",
-    thumbnail: "https://cdn.dummyjson.com/product-images/22/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/22/1.jpg",
-      "https://cdn.dummyjson.com/product-images/22/2.jpg",
-      "https://cdn.dummyjson.com/product-images/22/3.jpg",
-    ],
-  },
-  {
-    id: 23,
-    title: "Orange Essence Food Flavou",
-    description:
-      "Specifications of Orange Essence Food Flavour For Cakes and Baking Food Item",
-    price: 14,
-    discountPercentage: 8.04,
-    rating: 4.85,
-    stock: 26,
-    brand: "Baking Food Items",
-    category: "groceries",
-    thumbnail: "https://cdn.dummyjson.com/product-images/23/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/23/1.jpg",
-      "https://cdn.dummyjson.com/product-images/23/2.jpg",
-      "https://cdn.dummyjson.com/product-images/23/3.jpg",
-      "https://cdn.dummyjson.com/product-images/23/4.jpg",
-      "https://cdn.dummyjson.com/product-images/23/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 24,
-    title: "cereals muesli fruit nuts",
-    description:
-      "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
-    price: 46,
-    discountPercentage: 16.8,
-    rating: 4.94,
-    stock: 113,
-    brand: "fauji",
-    category: "groceries",
-    thumbnail: "https://cdn.dummyjson.com/product-images/24/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/24/1.jpg",
-      "https://cdn.dummyjson.com/product-images/24/2.jpg",
-      "https://cdn.dummyjson.com/product-images/24/3.jpg",
-      "https://cdn.dummyjson.com/product-images/24/4.jpg",
-      "https://cdn.dummyjson.com/product-images/24/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 25,
-    title: "Gulab Powder 50 Gram",
-    description: "Dry Rose Flower Powder Gulab Powder 50 Gram • Treats Wounds",
-    price: 70,
-    discountPercentage: 13.58,
-    rating: 4.87,
-    stock: 47,
-    brand: "Dry Rose",
-    category: "groceries",
-    thumbnail: "https://cdn.dummyjson.com/product-images/25/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/25/1.png",
-      "https://cdn.dummyjson.com/product-images/25/2.jpg",
-      "https://cdn.dummyjson.com/product-images/25/3.png",
-      "https://cdn.dummyjson.com/product-images/25/4.jpg",
-      "https://cdn.dummyjson.com/product-images/25/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 26,
-    title: "Plant Hanger For Home",
-    description:
-      "Boho Decor Plant Hanger For Home Wall Decoration Macrame Wall Hanging Shelf",
-    price: 41,
-    discountPercentage: 17.86,
-    rating: 4.08,
-    stock: 131,
-    brand: "Boho Decor",
-    category: "home-decoration",
-    thumbnail: "https://cdn.dummyjson.com/product-images/26/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/26/1.jpg",
-      "https://cdn.dummyjson.com/product-images/26/2.jpg",
-      "https://cdn.dummyjson.com/product-images/26/3.jpg",
-      "https://cdn.dummyjson.com/product-images/26/4.jpg",
-      "https://cdn.dummyjson.com/product-images/26/5.jpg",
-      "https://cdn.dummyjson.com/product-images/26/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 27,
-    title: "Flying Wooden Bird",
-    description:
-      "Package Include 6 Birds with Adhesive Tape Shape: 3D Shaped Wooden Birds Material: Wooden MDF, Laminated 3.5mm",
-    price: 51,
-    discountPercentage: 15.58,
-    rating: 4.41,
-    stock: 17,
-    brand: "Flying Wooden",
-    category: "home-decoration",
-    thumbnail: "https://cdn.dummyjson.com/product-images/27/thumbnail.webp",
-    images: [
-      "https://cdn.dummyjson.com/product-images/27/1.jpg",
-      "https://cdn.dummyjson.com/product-images/27/2.jpg",
-      "https://cdn.dummyjson.com/product-images/27/3.jpg",
-      "https://cdn.dummyjson.com/product-images/27/4.jpg",
-      "https://cdn.dummyjson.com/product-images/27/thumbnail.webp",
-    ],
-  },
-  {
-    id: 28,
-    title: "3D Embellishment Art Lamp",
-    description:
-      "3D led lamp sticker Wall sticker 3d wall art light on/off button  cell operated (included)",
-    price: 20,
-    discountPercentage: 16.49,
-    rating: 4.82,
-    stock: 54,
-    brand: "LED Lights",
-    category: "home-decoration",
-    thumbnail: "https://cdn.dummyjson.com/product-images/28/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/28/1.jpg",
-      "https://cdn.dummyjson.com/product-images/28/2.jpg",
-      "https://cdn.dummyjson.com/product-images/28/3.png",
-      "https://cdn.dummyjson.com/product-images/28/4.jpg",
-      "https://cdn.dummyjson.com/product-images/28/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 29,
-    title: "Handcraft Chinese style",
-    description:
-      "Handcraft Chinese style art luxury palace hotel villa mansion home decor ceramic vase with brass fruit plate",
-    price: 60,
-    discountPercentage: 15.34,
-    rating: 4.44,
-    stock: 7,
-    brand: "luxury palace",
-    category: "home-decoration",
-    thumbnail: "https://cdn.dummyjson.com/product-images/29/thumbnail.webp",
-    images: [
-      "https://cdn.dummyjson.com/product-images/29/1.jpg",
-      "https://cdn.dummyjson.com/product-images/29/2.jpg",
-      "https://cdn.dummyjson.com/product-images/29/3.webp",
-      "https://cdn.dummyjson.com/product-images/29/4.webp",
-      "https://cdn.dummyjson.com/product-images/29/thumbnail.webp",
-    ],
-  },
-  {
-    id: 30,
-    title: "Key Holder",
-    description:
-      "Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality",
-    price: 30,
-    discountPercentage: 2.92,
-    rating: 4.92,
-    stock: 54,
-    brand: "Golden",
-    category: "home-decoration",
-    thumbnail: "https://cdn.dummyjson.com/product-images/30/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/30/1.jpg",
-      "https://cdn.dummyjson.com/product-images/30/2.jpg",
-      "https://cdn.dummyjson.com/product-images/30/3.jpg",
-      "https://cdn.dummyjson.com/product-images/30/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 31,
-    title: "Mornadi Velvet Bed",
-    description:
-      "Mornadi Velvet Bed Base with Headboard Slats Support Classic Style Bedroom Furniture Bed Set",
-    price: 40,
-    discountPercentage: 17,
-    rating: 4.16,
-    stock: 140,
-    brand: "Furniture Bed Set",
-    category: "furniture",
-    thumbnail: "https://cdn.dummyjson.com/product-images/31/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/31/1.jpg",
-      "https://cdn.dummyjson.com/product-images/31/2.jpg",
-      "https://cdn.dummyjson.com/product-images/31/3.jpg",
-      "https://cdn.dummyjson.com/product-images/31/4.jpg",
-      "https://cdn.dummyjson.com/product-images/31/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 32,
-    title: "Sofa for Coffe Cafe",
-    description:
-      "Ratttan Outdoor furniture Set Waterproof  Rattan Sofa for Coffe Cafe",
-    price: 50,
-    discountPercentage: 15.59,
-    rating: 4.74,
-    stock: 30,
-    brand: "Ratttan Outdoor",
-    category: "furniture",
-    thumbnail: "https://cdn.dummyjson.com/product-images/32/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/32/1.jpg",
-      "https://cdn.dummyjson.com/product-images/32/2.jpg",
-      "https://cdn.dummyjson.com/product-images/32/3.jpg",
-      "https://cdn.dummyjson.com/product-images/32/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 33,
-    title: "3 Tier Corner Shelves",
-    description:
-      "3 Tier Corner Shelves | 3 PCs Wall Mount Kitchen Shelf | Floating Bedroom Shelf",
-    price: 700,
-    discountPercentage: 17,
-    rating: 4.31,
-    stock: 106,
-    brand: "Kitchen Shelf",
-    category: "furniture",
-    thumbnail: "https://cdn.dummyjson.com/product-images/33/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/33/1.jpg",
-      "https://cdn.dummyjson.com/product-images/33/2.jpg",
-      "https://cdn.dummyjson.com/product-images/33/3.jpg",
-      "https://cdn.dummyjson.com/product-images/33/4.jpg",
-      "https://cdn.dummyjson.com/product-images/33/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 34,
-    title: "Plastic Table",
-    description:
-      "V﻿ery good quality plastic table for multi purpose now in reasonable price",
-    price: 50,
-    discountPercentage: 4,
-    rating: 4.01,
-    stock: 136,
-    brand: "Multi Purpose",
-    category: "furniture",
-    thumbnail: "https://cdn.dummyjson.com/product-images/34/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/34/1.jpg",
-      "https://cdn.dummyjson.com/product-images/34/2.jpg",
-      "https://cdn.dummyjson.com/product-images/34/3.jpg",
-      "https://cdn.dummyjson.com/product-images/34/4.jpg",
-      "https://cdn.dummyjson.com/product-images/34/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 35,
-    title: "3 DOOR PORTABLE",
-    description:
-      "Material: Stainless Steel and Fabric  Item Size: 110 cm x 45 cm x 175 cm Package Contents: 1 Storage Wardrobe",
-    price: 41,
-    discountPercentage: 7.98,
-    rating: 4.06,
-    stock: 68,
-    brand: "AmnaMart",
-    category: "furniture",
-    thumbnail: "https://cdn.dummyjson.com/product-images/35/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/35/1.jpg",
-      "https://cdn.dummyjson.com/product-images/35/2.jpg",
-      "https://cdn.dummyjson.com/product-images/35/3.jpg",
-      "https://cdn.dummyjson.com/product-images/35/4.jpg",
-      "https://cdn.dummyjson.com/product-images/35/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 36,
-    title: "Sleeve Shirt Womens",
-    description:
-      "Cotton Solid Color Professional Wear Sleeve Shirt Womens Work Blouses Wholesale Clothing Casual Plain Custom Top OEM Customized",
-    price: 90,
-    discountPercentage: 10.89,
-    rating: 4.26,
-    stock: 39,
-    brand: "Professional Wear",
-    category: "tops",
-    thumbnail: "https://cdn.dummyjson.com/product-images/36/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/36/1.jpg",
-      "https://cdn.dummyjson.com/product-images/36/2.webp",
-      "https://cdn.dummyjson.com/product-images/36/3.webp",
-      "https://cdn.dummyjson.com/product-images/36/4.jpg",
-      "https://cdn.dummyjson.com/product-images/36/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 37,
-    title: "ank Tops for Womens/Girls",
-    description:
-      "PACK OF 3 CAMISOLES ,VERY COMFORTABLE SOFT COTTON STUFF, COMFORTABLE IN ALL FOUR SEASONS",
-    price: 50,
-    discountPercentage: 12.05,
-    rating: 4.52,
-    stock: 107,
-    brand: "Soft Cotton",
-    category: "tops",
-    thumbnail: "https://cdn.dummyjson.com/product-images/37/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/37/1.jpg",
-      "https://cdn.dummyjson.com/product-images/37/2.jpg",
-      "https://cdn.dummyjson.com/product-images/37/3.jpg",
-      "https://cdn.dummyjson.com/product-images/37/4.jpg",
-      "https://cdn.dummyjson.com/product-images/37/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 38,
-    title: "sublimation plain kids tank",
-    description: "sublimation plain kids tank tops wholesale",
-    price: 100,
-    discountPercentage: 11.12,
-    rating: 4.8,
-    stock: 20,
-    brand: "Soft Cotton",
-    category: "tops",
-    thumbnail: "https://cdn.dummyjson.com/product-images/38/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/38/1.png",
-      "https://cdn.dummyjson.com/product-images/38/2.jpg",
-      "https://cdn.dummyjson.com/product-images/38/3.jpg",
-      "https://cdn.dummyjson.com/product-images/38/4.jpg",
-    ],
-  },
-  {
-    id: 39,
-    title: "Women Sweaters Wool",
-    description:
-      "2021 Custom Winter Fall Zebra Knit Crop Top Women Sweaters Wool Mohair Cos Customize Crew Neck Women' S Crop Top Sweater",
-    price: 600,
-    discountPercentage: 17.2,
-    rating: 4.55,
-    stock: 55,
-    brand: "Top Sweater",
-    category: "tops",
-    thumbnail: "https://cdn.dummyjson.com/product-images/39/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/39/1.jpg",
-      "https://cdn.dummyjson.com/product-images/39/2.jpg",
-      "https://cdn.dummyjson.com/product-images/39/3.jpg",
-      "https://cdn.dummyjson.com/product-images/39/4.jpg",
-      "https://cdn.dummyjson.com/product-images/39/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 40,
-    title: "women winter clothes",
-    description:
-      "women winter clothes thick fleece hoodie top with sweat pantjogger women sweatsuit set joggers pants two piece pants set",
-    price: 57,
-    discountPercentage: 13.39,
-    rating: 4.91,
-    stock: 84,
-    brand: "Top Sweater",
-    category: "tops",
-    thumbnail: "https://cdn.dummyjson.com/product-images/40/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/40/1.jpg",
-      "https://cdn.dummyjson.com/product-images/40/2.jpg",
-    ],
-  },
-  {
-    id: 41,
-    title: "NIGHT SUIT",
-    description: "NIGHT SUIT RED MICKY MOUSE..  For Girls. Fantastic Suits.",
-    price: 55,
-    discountPercentage: 15.05,
-    rating: 4.65,
-    stock: 21,
-    brand: "RED MICKY MOUSE..",
-    category: "womens-dresses",
-    thumbnail: "https://cdn.dummyjson.com/product-images/41/thumbnail.webp",
-    images: [
-      "https://cdn.dummyjson.com/product-images/41/1.jpg",
-      "https://cdn.dummyjson.com/product-images/41/2.webp",
-      "https://cdn.dummyjson.com/product-images/41/3.jpg",
-      "https://cdn.dummyjson.com/product-images/41/4.jpg",
-      "https://cdn.dummyjson.com/product-images/41/thumbnail.webp",
-    ],
-  },
-  {
-    id: 42,
-    title: "Stiched Kurta plus trouser",
-    description:
-      "FABRIC: LILEIN CHEST: 21 LENGHT: 37 TROUSER: (38) :ARABIC LILEIN",
-    price: 80,
-    discountPercentage: 15.37,
-    rating: 4.05,
-    stock: 148,
-    brand: "Digital Printed",
-    category: "womens-dresses",
-    thumbnail: "https://cdn.dummyjson.com/product-images/42/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/42/1.png",
-      "https://cdn.dummyjson.com/product-images/42/2.png",
-      "https://cdn.dummyjson.com/product-images/42/3.png",
-      "https://cdn.dummyjson.com/product-images/42/4.jpg",
-      "https://cdn.dummyjson.com/product-images/42/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 43,
-    title: "frock gold printed",
-    description:
-      "Ghazi fabric long frock gold printed ready to wear stitched collection (G992)",
-    price: 600,
-    discountPercentage: 15.55,
-    rating: 4.31,
-    stock: 150,
-    brand: "Ghazi Fabric",
-    category: "womens-dresses",
-    thumbnail: "https://cdn.dummyjson.com/product-images/43/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/43/1.jpg",
-      "https://cdn.dummyjson.com/product-images/43/2.jpg",
-      "https://cdn.dummyjson.com/product-images/43/3.jpg",
-      "https://cdn.dummyjson.com/product-images/43/4.jpg",
-      "https://cdn.dummyjson.com/product-images/43/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 44,
-    title: "Ladies Multicolored Dress",
-    description:
-      "This classy shirt for women gives you a gorgeous look on everyday wear and specially for semi-casual wears.",
-    price: 79,
-    discountPercentage: 16.88,
-    rating: 4.03,
-    stock: 2,
-    brand: "Ghazi Fabric",
-    category: "womens-dresses",
-    thumbnail: "https://cdn.dummyjson.com/product-images/44/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/44/1.jpg",
-      "https://cdn.dummyjson.com/product-images/44/2.jpg",
-      "https://cdn.dummyjson.com/product-images/44/3.jpg",
-      "https://cdn.dummyjson.com/product-images/44/4.jpg",
-      "https://cdn.dummyjson.com/product-images/44/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 45,
-    title: "Malai Maxi Dress",
-    description:
-      "Ready to wear, Unique design according to modern standard fashion, Best fitting ,Imported stuff",
-    price: 50,
-    discountPercentage: 5.07,
-    rating: 4.67,
-    stock: 96,
-    brand: "IELGY",
-    category: "womens-dresses",
-    thumbnail: "https://cdn.dummyjson.com/product-images/45/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/45/1.jpg",
-      "https://cdn.dummyjson.com/product-images/45/2.webp",
-      "https://cdn.dummyjson.com/product-images/45/3.jpg",
-      "https://cdn.dummyjson.com/product-images/45/4.jpg",
-      "https://cdn.dummyjson.com/product-images/45/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 46,
-    title: "women's shoes",
-    description:
-      "Close: Lace, Style with bottom: Increased inside, Sole Material: Rubber",
-    price: 40,
-    discountPercentage: 16.96,
-    rating: 4.14,
-    stock: 72,
-    brand: "IELGY fashion",
-    category: "womens-shoes",
-    thumbnail: "https://cdn.dummyjson.com/product-images/46/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/46/1.webp",
-      "https://cdn.dummyjson.com/product-images/46/2.jpg",
-      "https://cdn.dummyjson.com/product-images/46/3.jpg",
-      "https://cdn.dummyjson.com/product-images/46/4.jpg",
-      "https://cdn.dummyjson.com/product-images/46/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 47,
-    title: "Sneaker shoes",
-    description:
-      "Synthetic Leather Casual Sneaker shoes for Women/girls Sneakers For Women",
-    price: 120,
-    discountPercentage: 10.37,
-    rating: 4.19,
-    stock: 50,
-    brand: "Synthetic Leather",
-    category: "womens-shoes",
-    thumbnail: "https://cdn.dummyjson.com/product-images/47/thumbnail.jpeg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/47/1.jpg",
-      "https://cdn.dummyjson.com/product-images/47/2.jpg",
-      "https://cdn.dummyjson.com/product-images/47/3.jpg",
-      "https://cdn.dummyjson.com/product-images/47/thumbnail.jpeg",
-    ],
-  },
-  {
-    id: 48,
-    title: "Women Strip Heel",
-    description:
-      "Features: Flip-flops, Mid Heel, Comfortable, Striped Heel, Antiskid, Striped",
-    price: 40,
-    discountPercentage: 10.83,
-    rating: 4.02,
-    stock: 25,
-    brand: "Sandals Flip Flops",
-    category: "womens-shoes",
-    thumbnail: "https://cdn.dummyjson.com/product-images/48/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/48/1.jpg",
-      "https://cdn.dummyjson.com/product-images/48/2.jpg",
-      "https://cdn.dummyjson.com/product-images/48/3.jpg",
-      "https://cdn.dummyjson.com/product-images/48/4.jpg",
-      "https://cdn.dummyjson.com/product-images/48/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 49,
-    title: "Chappals & Shoe Ladies Metallic",
-    description:
-      "Womens Chappals & Shoe Ladies Metallic Tong Thong Sandal Flat Summer 2020 Maasai Sandals",
-    price: 23,
-    discountPercentage: 2.62,
-    rating: 4.72,
-    stock: 107,
-    brand: "Maasai Sandals",
-    category: "womens-shoes",
-    thumbnail: "https://cdn.dummyjson.com/product-images/49/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/49/1.jpg",
-      "https://cdn.dummyjson.com/product-images/49/2.jpg",
-      "https://cdn.dummyjson.com/product-images/49/3.webp",
-      "https://cdn.dummyjson.com/product-images/49/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 50,
-    title: "Women Shoes",
-    description:
-      "2020 New Arrivals Genuine Leather Fashion Trend Platform Summer Women Shoes",
-    price: 36,
-    discountPercentage: 16.87,
-    rating: 4.33,
-    stock: 46,
-    brand: "Arrivals Genuine",
-    category: "womens-shoes",
-    thumbnail: "https://cdn.dummyjson.com/product-images/50/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/50/1.jpeg",
-      "https://cdn.dummyjson.com/product-images/50/2.jpg",
-      "https://cdn.dummyjson.com/product-images/50/3.jpg",
-    ],
-  },
-  {
-    id: 51,
-    title: "half sleeves T shirts",
-    description:
-      "Many store is creating new designs and trend every month and every year. Daraz.pk have a beautiful range of men fashion brands",
-    price: 23,
-    discountPercentage: 12.76,
-    rating: 4.26,
-    stock: 132,
-    brand: "Vintage Apparel",
-    category: "mens-shirts",
-    thumbnail: "https://cdn.dummyjson.com/product-images/51/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/51/1.png",
-      "https://cdn.dummyjson.com/product-images/51/2.jpg",
-      "https://cdn.dummyjson.com/product-images/51/3.jpg",
-      "https://cdn.dummyjson.com/product-images/51/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 52,
-    title: "FREE FIRE T Shirt",
-    description:
-      "quality and professional print - It doesn't just look high quality, it is high quality.",
-    price: 10,
-    discountPercentage: 14.72,
-    rating: 4.52,
-    stock: 128,
-    brand: "FREE FIRE",
-    category: "mens-shirts",
-    thumbnail: "https://cdn.dummyjson.com/product-images/52/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/52/1.png",
-      "https://cdn.dummyjson.com/product-images/52/2.png",
-      "https://cdn.dummyjson.com/product-images/52/3.jpg",
-      "https://cdn.dummyjson.com/product-images/52/4.jpg",
-      "https://cdn.dummyjson.com/product-images/52/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 53,
-    title: "printed high quality T shirts",
-    description: "Brand: vintage Apparel ,Export quality",
-    price: 35,
-    discountPercentage: 7.54,
-    rating: 4.89,
-    stock: 6,
-    brand: "Vintage Apparel",
-    category: "mens-shirts",
-    thumbnail: "https://cdn.dummyjson.com/product-images/53/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/53/1.webp",
-      "https://cdn.dummyjson.com/product-images/53/2.jpg",
-      "https://cdn.dummyjson.com/product-images/53/3.jpg",
-      "https://cdn.dummyjson.com/product-images/53/4.jpg",
-      "https://cdn.dummyjson.com/product-images/53/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 54,
-    title: "Pubg Printed Graphic T-Shirt",
-    description:
-      "Product Description Features: 100% Ultra soft Polyester Jersey. Vibrant & colorful printing on front. Feels soft as cotton without ever cracking",
-    price: 46,
-    discountPercentage: 16.44,
-    rating: 4.62,
-    stock: 136,
-    brand: "The Warehouse",
-    category: "mens-shirts",
-    thumbnail: "https://cdn.dummyjson.com/product-images/54/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/54/1.jpg",
-      "https://cdn.dummyjson.com/product-images/54/2.jpg",
-      "https://cdn.dummyjson.com/product-images/54/3.jpg",
-      "https://cdn.dummyjson.com/product-images/54/4.jpg",
-      "https://cdn.dummyjson.com/product-images/54/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 55,
-    title: "Money Heist Printed Summer T Shirts",
-    description: "Fabric Jercy, Size: M & L Wear Stylish Dual Stiched",
-    price: 66,
-    discountPercentage: 15.97,
-    rating: 4.9,
-    stock: 122,
-    brand: "The Warehouse",
-    category: "mens-shirts",
-    thumbnail: "https://cdn.dummyjson.com/product-images/55/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/55/1.jpg",
-      "https://cdn.dummyjson.com/product-images/55/2.webp",
-      "https://cdn.dummyjson.com/product-images/55/3.jpg",
-      "https://cdn.dummyjson.com/product-images/55/4.jpg",
-      "https://cdn.dummyjson.com/product-images/55/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 56,
-    title: "Sneakers Joggers Shoes",
-    description:
-      "Gender: Men , Colors: Same as DisplayedCondition: 100% Brand New",
-    price: 40,
-    discountPercentage: 12.57,
-    rating: 4.38,
-    stock: 6,
-    brand: "Sneakers",
-    category: "mens-shoes",
-    thumbnail: "https://cdn.dummyjson.com/product-images/56/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/56/1.jpg",
-      "https://cdn.dummyjson.com/product-images/56/2.jpg",
-      "https://cdn.dummyjson.com/product-images/56/3.jpg",
-      "https://cdn.dummyjson.com/product-images/56/4.jpg",
-      "https://cdn.dummyjson.com/product-images/56/5.jpg",
-      "https://cdn.dummyjson.com/product-images/56/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 57,
-    title: "Loafers for men",
-    description:
-      "Men Shoes - Loafers for men - Rubber Shoes - Nylon Shoes - Shoes for men - Moccassion - Pure Nylon (Rubber) Expot Quality.",
-    price: 47,
-    discountPercentage: 10.91,
-    rating: 4.91,
-    stock: 20,
-    brand: "Rubber",
-    category: "mens-shoes",
-    thumbnail: "https://cdn.dummyjson.com/product-images/57/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/57/1.jpg",
-      "https://cdn.dummyjson.com/product-images/57/2.jpg",
-      "https://cdn.dummyjson.com/product-images/57/3.jpg",
-      "https://cdn.dummyjson.com/product-images/57/4.jpg",
-      "https://cdn.dummyjson.com/product-images/57/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 58,
-    title: "formal offices shoes",
-    description:
-      "Pattern Type: Solid, Material: PU, Toe Shape: Pointed Toe ,Outsole Material: Rubber",
-    price: 57,
-    discountPercentage: 12,
-    rating: 4.41,
-    stock: 68,
-    brand: "The Warehouse",
-    category: "mens-shoes",
-    thumbnail: "https://cdn.dummyjson.com/product-images/58/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/58/1.jpg",
-      "https://cdn.dummyjson.com/product-images/58/2.jpg",
-      "https://cdn.dummyjson.com/product-images/58/3.jpg",
-      "https://cdn.dummyjson.com/product-images/58/4.jpg",
-      "https://cdn.dummyjson.com/product-images/58/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 59,
-    title: "Spring and summershoes",
-    description:
-      "Comfortable stretch cloth, lightweight body; ,rubber sole, anti-skid wear;",
-    price: 20,
-    discountPercentage: 8.71,
-    rating: 4.33,
-    stock: 137,
-    brand: "Sneakers",
-    category: "mens-shoes",
-    thumbnail: "https://cdn.dummyjson.com/product-images/59/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/59/1.jpg",
-      "https://cdn.dummyjson.com/product-images/59/2.jpg",
-      "https://cdn.dummyjson.com/product-images/59/3.jpg",
-      "https://cdn.dummyjson.com/product-images/59/4.jpg",
-      "https://cdn.dummyjson.com/product-images/59/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 60,
-    title: "Stylish Casual Jeans Shoes",
-    description:
-      "High Quality ,Stylish design ,Comfortable wear ,FAshion ,Durable",
-    price: 58,
-    discountPercentage: 7.55,
-    rating: 4.55,
-    stock: 129,
-    brand: "Sneakers",
-    category: "mens-shoes",
-    thumbnail: "https://cdn.dummyjson.com/product-images/60/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/60/1.jpg",
-      "https://cdn.dummyjson.com/product-images/60/2.jpg",
-      "https://cdn.dummyjson.com/product-images/60/3.jpg",
-      "https://cdn.dummyjson.com/product-images/60/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 61,
-    title: "Leather Straps Wristwatch",
-    description: "Style:Sport ,Clasp:Buckles ,Water Resistance Depth:3Bar",
-    price: 120,
-    discountPercentage: 7.14,
-    rating: 4.63,
-    stock: 91,
-    brand: "Naviforce",
-    category: "mens-watches",
-    thumbnail: "https://cdn.dummyjson.com/product-images/61/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/61/1.jpg",
-      "https://cdn.dummyjson.com/product-images/61/2.png",
-      "https://cdn.dummyjson.com/product-images/61/3.jpg",
-    ],
-  },
-  {
-    id: 62,
-    title: "Waterproof Leather Brand Watch",
-    description:
-      "Watch Crown With Environmental IPS Bronze Electroplating; Display system of 12 hours",
-    price: 46,
-    discountPercentage: 3.15,
-    rating: 4.05,
-    stock: 95,
-    brand: "SKMEI 9117",
-    category: "mens-watches",
-    thumbnail: "https://cdn.dummyjson.com/product-images/62/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/62/1.jpg",
-      "https://cdn.dummyjson.com/product-images/62/2.jpg",
-    ],
-  },
-  {
-    id: 63,
-    title: "Royal Blue Premium Watch",
-    description:
-      "Men Silver Chain Royal Blue Premium Watch Latest Analog Watch",
-    price: 50,
-    discountPercentage: 2.56,
-    rating: 4.89,
-    stock: 142,
-    brand: "SKMEI 9117",
-    category: "mens-watches",
-    thumbnail: "https://cdn.dummyjson.com/product-images/63/thumbnail.webp",
-    images: [
-      "https://cdn.dummyjson.com/product-images/63/1.jpg",
-      "https://cdn.dummyjson.com/product-images/63/2.jpg",
-      "https://cdn.dummyjson.com/product-images/63/3.png",
-      "https://cdn.dummyjson.com/product-images/63/4.jpeg",
-    ],
-  },
-  {
-    id: 64,
-    title: "Leather Strap Skeleton Watch",
-    description:
-      "Leather Strap Skeleton Watch for Men - Stylish and Latest Design",
-    price: 46,
-    discountPercentage: 10.2,
-    rating: 4.98,
-    stock: 61,
-    brand: "Strap Skeleton",
-    category: "mens-watches",
-    thumbnail: "https://cdn.dummyjson.com/product-images/64/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/64/1.jpg",
-      "https://cdn.dummyjson.com/product-images/64/2.webp",
-      "https://cdn.dummyjson.com/product-images/64/3.jpg",
-      "https://cdn.dummyjson.com/product-images/64/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 65,
-    title: "Stainless Steel Wrist Watch",
-    description:
-      "Stylish Watch For Man (Luxury) Classy Men's Stainless Steel Wrist Watch - Box Packed",
-    price: 47,
-    discountPercentage: 17.79,
-    rating: 4.79,
-    stock: 94,
-    brand: "Stainless",
-    category: "mens-watches",
-    thumbnail: "https://cdn.dummyjson.com/product-images/65/thumbnail.webp",
-    images: [
-      "https://cdn.dummyjson.com/product-images/65/1.jpg",
-      "https://cdn.dummyjson.com/product-images/65/2.webp",
-      "https://cdn.dummyjson.com/product-images/65/3.jpg",
-      "https://cdn.dummyjson.com/product-images/65/4.webp",
-      "https://cdn.dummyjson.com/product-images/65/thumbnail.webp",
-    ],
-  },
-  {
-    id: 66,
-    title: "Steel Analog Couple Watches",
-    description: "Elegant design, Stylish ,Unique & Trendy,Comfortable wear",
-    price: 35,
-    discountPercentage: 3.23,
-    rating: 4.79,
-    stock: 24,
-    brand: "Eastern Watches",
-    category: "womens-watches",
-    thumbnail: "https://cdn.dummyjson.com/product-images/66/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/66/1.jpg",
-      "https://cdn.dummyjson.com/product-images/66/2.jpg",
-      "https://cdn.dummyjson.com/product-images/66/3.jpg",
-      "https://cdn.dummyjson.com/product-images/66/4.JPG",
-      "https://cdn.dummyjson.com/product-images/66/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 67,
-    title: "Fashion Magnetic Wrist Watch",
-    description:
-      "Buy this awesome  The product is originally manufactured by the company and it's a top selling product with a very reasonable",
-    price: 60,
-    discountPercentage: 16.69,
-    rating: 4.03,
-    stock: 46,
-    brand: "Eastern Watches",
-    category: "womens-watches",
-    thumbnail: "https://cdn.dummyjson.com/product-images/67/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/67/1.jpg",
-      "https://cdn.dummyjson.com/product-images/67/2.jpg",
-      "https://cdn.dummyjson.com/product-images/67/3.jpg",
-      "https://cdn.dummyjson.com/product-images/67/4.jpg",
-      "https://cdn.dummyjson.com/product-images/67/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 68,
-    title: "Stylish Luxury Digital Watch",
-    description:
-      "Stylish Luxury Digital Watch For Girls / Women - Led Smart Ladies Watches For Girls",
-    price: 57,
-    discountPercentage: 9.03,
-    rating: 4.55,
-    stock: 77,
-    brand: "Luxury Digital",
-    category: "womens-watches",
-    thumbnail: "https://cdn.dummyjson.com/product-images/68/thumbnail.webp",
-    images: [
-      "https://cdn.dummyjson.com/product-images/68/1.jpg",
-      "https://cdn.dummyjson.com/product-images/68/2.jpg",
-    ],
-  },
-  {
-    id: 69,
-    title: "Golden Watch Pearls Bracelet Watch",
-    description:
-      "Product details of Golden Watch Pearls Bracelet Watch For Girls - Golden Chain Ladies Bracelate Watch for Women",
-    price: 47,
-    discountPercentage: 17.55,
-    rating: 4.77,
-    stock: 89,
-    brand: "Watch Pearls",
-    category: "womens-watches",
-    thumbnail: "https://cdn.dummyjson.com/product-images/69/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/69/1.jpg",
-      "https://cdn.dummyjson.com/product-images/69/2.jpg",
-      "https://cdn.dummyjson.com/product-images/69/3.webp",
-      "https://cdn.dummyjson.com/product-images/69/4.jpg",
-      "https://cdn.dummyjson.com/product-images/69/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 70,
-    title: "Stainless Steel Women",
-    description:
-      "Fashion Skmei 1830 Shell Dial Stainless Steel Women Wrist Watch Lady Bracelet Watch Quartz Watches Ladies",
-    price: 35,
-    discountPercentage: 8.98,
-    rating: 4.08,
-    stock: 111,
-    brand: "Bracelet",
-    category: "womens-watches",
-    thumbnail: "https://cdn.dummyjson.com/product-images/70/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/70/1.jpg",
-      "https://cdn.dummyjson.com/product-images/70/2.jpg",
-      "https://cdn.dummyjson.com/product-images/70/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 71,
-    title: "Women Shoulder Bags",
-    description:
-      "LouisWill Women Shoulder Bags Long Clutches Cross Body Bags Phone Bags PU Leather Hand Bags Large Capacity Card Holders Zipper Coin Purses Fashion Crossbody Bags for Girls Ladies",
-    price: 46,
-    discountPercentage: 14.65,
-    rating: 4.71,
-    stock: 17,
-    brand: "LouisWill",
-    category: "womens-bags",
-    thumbnail: "https://cdn.dummyjson.com/product-images/71/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/71/1.jpg",
-      "https://cdn.dummyjson.com/product-images/71/2.jpg",
-      "https://cdn.dummyjson.com/product-images/71/3.webp",
-      "https://cdn.dummyjson.com/product-images/71/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 72,
-    title: "Handbag For Girls",
-    description:
-      "This fashion is designed to add a charming effect to your casual outfit. This Bag is made of synthetic leather.",
-    price: 23,
-    discountPercentage: 17.5,
-    rating: 4.91,
-    stock: 27,
-    brand: "LouisWill",
-    category: "womens-bags",
-    thumbnail: "https://cdn.dummyjson.com/product-images/72/thumbnail.webp",
-    images: [
-      "https://cdn.dummyjson.com/product-images/72/1.jpg",
-      "https://cdn.dummyjson.com/product-images/72/2.png",
-      "https://cdn.dummyjson.com/product-images/72/3.webp",
-      "https://cdn.dummyjson.com/product-images/72/4.jpg",
-      "https://cdn.dummyjson.com/product-images/72/thumbnail.webp",
-    ],
-  },
-  {
-    id: 73,
-    title: "Fancy hand clutch",
-    description:
-      "This fashion is designed to add a charming effect to your casual outfit. This Bag is made of synthetic leather.",
-    price: 44,
-    discountPercentage: 10.39,
-    rating: 4.18,
-    stock: 101,
-    brand: "Bracelet",
-    category: "womens-bags",
-    thumbnail: "https://cdn.dummyjson.com/product-images/73/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/73/1.jpg",
-      "https://cdn.dummyjson.com/product-images/73/2.webp",
-      "https://cdn.dummyjson.com/product-images/73/3.jpg",
-      "https://cdn.dummyjson.com/product-images/73/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 74,
-    title: "Leather Hand Bag",
-    description:
-      "It features an attractive design that makes it a must have accessory in your collection. We sell different kind of bags for boys, kids, women, girls and also for unisex.",
-    price: 57,
-    discountPercentage: 11.19,
-    rating: 4.01,
-    stock: 43,
-    brand: "Copenhagen Luxe",
-    category: "womens-bags",
-    thumbnail: "https://cdn.dummyjson.com/product-images/74/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/74/1.jpg",
-      "https://cdn.dummyjson.com/product-images/74/2.jpg",
-      "https://cdn.dummyjson.com/product-images/74/3.jpg",
-      "https://cdn.dummyjson.com/product-images/74/4.jpg",
-      "https://cdn.dummyjson.com/product-images/74/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 75,
-    title: "Seven Pocket Women Bag",
-    description:
-      "Seven Pocket Women Bag Handbags Lady Shoulder Crossbody Bag Female Purse Seven Pocket Bag",
-    price: 68,
-    discountPercentage: 14.87,
-    rating: 4.93,
-    stock: 13,
-    brand: "Steal Frame",
-    category: "womens-bags",
-    thumbnail: "https://cdn.dummyjson.com/product-images/75/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/75/1.jpg",
-      "https://cdn.dummyjson.com/product-images/75/2.jpg",
-      "https://cdn.dummyjson.com/product-images/75/3.jpg",
-      "https://cdn.dummyjson.com/product-images/75/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 76,
-    title: "Silver Ring Set Women",
-    description:
-      "Jewelry Type:RingsCertificate Type:NonePlating:Silver PlatedShapeattern:noneStyle:CLASSICReligious",
-    price: 70,
-    discountPercentage: 13.57,
-    rating: 4.61,
-    stock: 51,
-    brand: "Darojay",
-    category: "womens-jewellery",
-    thumbnail: "https://cdn.dummyjson.com/product-images/76/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/76/1.jpg",
-      "https://cdn.dummyjson.com/product-images/76/2.jpg",
-      "https://cdn.dummyjson.com/product-images/76/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 77,
-    title: "Rose Ring",
-    description:
-      "Brand: The Greetings Flower Colour: RedRing Colour: GoldenSize: Adjustable",
-    price: 100,
-    discountPercentage: 3.22,
-    rating: 4.21,
-    stock: 149,
-    brand: "Copenhagen Luxe",
-    category: "womens-jewellery",
-    thumbnail: "https://cdn.dummyjson.com/product-images/77/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/77/1.jpg",
-      "https://cdn.dummyjson.com/product-images/77/2.jpg",
-      "https://cdn.dummyjson.com/product-images/77/3.jpg",
-      "https://cdn.dummyjson.com/product-images/77/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 78,
-    title: "Rhinestone Korean Style Open Rings",
-    description:
-      "Fashion Jewellery 3Pcs Adjustable Pearl Rhinestone Korean Style Open Rings For Women",
-    price: 30,
-    discountPercentage: 8.02,
-    rating: 4.69,
-    stock: 9,
-    brand: "Fashion Jewellery",
-    category: "womens-jewellery",
-    thumbnail: "https://cdn.dummyjson.com/product-images/78/thumbnail.jpg",
-    images: ["https://cdn.dummyjson.com/product-images/78/thumbnail.jpg"],
-  },
-  {
-    id: 79,
-    title: "Elegant Female Pearl Earrings",
-    description:
-      "Elegant Female Pearl Earrings Set Zircon Pearl Earings Women Party Accessories 9 Pairs/Set",
-    price: 30,
-    discountPercentage: 12.8,
-    rating: 4.74,
-    stock: 16,
-    brand: "Fashion Jewellery",
-    category: "womens-jewellery",
-    thumbnail: "https://cdn.dummyjson.com/product-images/79/thumbnail.jpg",
-    images: ["https://cdn.dummyjson.com/product-images/79/1.jpg"],
-  },
-  {
-    id: 80,
-    title: "Chain Pin Tassel Earrings",
-    description:
-      "Pair Of Ear Cuff Butterfly Long Chain Pin Tassel Earrings - Silver ( Long Life Quality Product)",
-    price: 45,
-    discountPercentage: 17.75,
-    rating: 4.59,
-    stock: 9,
-    brand: "Cuff Butterfly",
-    category: "womens-jewellery",
-    thumbnail: "https://cdn.dummyjson.com/product-images/80/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/80/1.jpg",
-      "https://cdn.dummyjson.com/product-images/80/2.jpg",
-      "https://cdn.dummyjson.com/product-images/80/3.png",
-      "https://cdn.dummyjson.com/product-images/80/4.jpg",
-      "https://cdn.dummyjson.com/product-images/80/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 81,
-    title: "Round Silver Frame Sun Glasses",
-    description:
-      "A pair of sunglasses can protect your eyes from being hurt. For car driving, vacation travel, outdoor activities, social gatherings,",
-    price: 19,
-    discountPercentage: 10.1,
-    rating: 4.94,
-    stock: 78,
-    brand: "Designer Sun Glasses",
-    category: "sunglasses",
-    thumbnail: "https://cdn.dummyjson.com/product-images/81/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/81/1.jpg",
-      "https://cdn.dummyjson.com/product-images/81/2.jpg",
-      "https://cdn.dummyjson.com/product-images/81/3.jpg",
-      "https://cdn.dummyjson.com/product-images/81/4.webp",
-      "https://cdn.dummyjson.com/product-images/81/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 82,
-    title: "Kabir Singh Square Sunglass",
-    description:
-      "Orignal Metal Kabir Singh design 2020 Sunglasses Men Brand Designer Sun Glasses Kabir Singh Square Sunglass",
-    price: 50,
-    discountPercentage: 15.6,
-    rating: 4.62,
-    stock: 78,
-    brand: "Designer Sun Glasses",
-    category: "sunglasses",
-    thumbnail: "https://cdn.dummyjson.com/product-images/82/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/82/1.jpg",
-      "https://cdn.dummyjson.com/product-images/82/2.webp",
-      "https://cdn.dummyjson.com/product-images/82/3.jpg",
-      "https://cdn.dummyjson.com/product-images/82/4.jpg",
-      "https://cdn.dummyjson.com/product-images/82/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 83,
-    title: "Wiley X Night Vision Yellow Glasses",
-    description:
-      "Wiley X Night Vision Yellow Glasses for Riders - Night Vision Anti Fog Driving Glasses - Free Night Glass Cover - Shield Eyes From Dust and Virus- For Night Sport Matches",
-    price: 30,
-    discountPercentage: 6.33,
-    rating: 4.97,
-    stock: 115,
-    brand: "mastar watch",
-    category: "sunglasses",
-    thumbnail: "https://cdn.dummyjson.com/product-images/83/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/83/1.jpg",
-      "https://cdn.dummyjson.com/product-images/83/2.jpg",
-      "https://cdn.dummyjson.com/product-images/83/3.jpg",
-      "https://cdn.dummyjson.com/product-images/83/4.jpg",
-      "https://cdn.dummyjson.com/product-images/83/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 84,
-    title: "Square Sunglasses",
-    description:
-      "Fashion Oversized Square Sunglasses Retro Gradient Big Frame Sunglasses For Women One Piece Gafas Shade Mirror Clear Lens 17059",
-    price: 28,
-    discountPercentage: 13.89,
-    rating: 4.64,
-    stock: 64,
-    brand: "mastar watch",
-    category: "sunglasses",
-    thumbnail: "https://cdn.dummyjson.com/product-images/84/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/84/1.jpg",
-      "https://cdn.dummyjson.com/product-images/84/2.jpg",
-      "https://cdn.dummyjson.com/product-images/84/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 85,
-    title: "LouisWill Men Sunglasses",
-    description:
-      "LouisWill Men Sunglasses Polarized Sunglasses UV400 Sunglasses Day Night Dual Use Safety Driving Night Vision Eyewear AL-MG Frame Sun Glasses with Free Box for Drivers",
-    price: 50,
-    discountPercentage: 11.27,
-    rating: 4.98,
-    stock: 92,
-    brand: "LouisWill",
-    category: "sunglasses",
-    thumbnail: "https://cdn.dummyjson.com/product-images/85/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/85/1.jpg",
-      "https://cdn.dummyjson.com/product-images/85/2.jpg",
-      "https://cdn.dummyjson.com/product-images/85/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 86,
-    title: "Bluetooth Aux",
-    description:
-      "Bluetooth Aux Bluetooth Car Aux Car Bluetooth Transmitter Aux Audio Receiver Handfree Car Bluetooth Music Receiver Universal 3.5mm Streaming A2DP Wireless Auto AUX Audio Adapter With Mic For Phone MP3",
-    price: 25,
-    discountPercentage: 10.56,
-    rating: 4.57,
-    stock: 22,
-    brand: "Car Aux",
-    category: "automotive",
-    thumbnail: "https://cdn.dummyjson.com/product-images/86/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/86/1.jpg",
-      "https://cdn.dummyjson.com/product-images/86/2.webp",
-      "https://cdn.dummyjson.com/product-images/86/3.jpg",
-      "https://cdn.dummyjson.com/product-images/86/4.jpg",
-      "https://cdn.dummyjson.com/product-images/86/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 87,
-    title: "t Temperature Controller Incubator Controller",
-    description:
-      "Both Heat and Cool Purpose, Temperature control range; -50 to +110, Temperature measurement accuracy; 0.1, Control accuracy; 0.1",
-    price: 40,
-    discountPercentage: 11.3,
-    rating: 4.54,
-    stock: 37,
-    brand: "W1209 DC12V",
-    category: "automotive",
-    thumbnail: "https://cdn.dummyjson.com/product-images/87/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/87/1.jpg",
-      "https://cdn.dummyjson.com/product-images/87/2.jpg",
-      "https://cdn.dummyjson.com/product-images/87/3.jpg",
-      "https://cdn.dummyjson.com/product-images/87/4.jpg",
-      "https://cdn.dummyjson.com/product-images/87/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 88,
-    title: "TC Reusable Silicone Magic Washing Gloves",
-    description:
-      "TC Reusable Silicone Magic Washing Gloves with Scrubber, Cleaning Brush Scrubber Gloves Heat Resistant Pair for Cleaning of Kitchen, Dishes, Vegetables and Fruits, Bathroom, Car Wash, Pet Care and Multipurpose",
-    price: 29,
-    discountPercentage: 3.19,
-    rating: 4.98,
-    stock: 42,
-    brand: "TC Reusable",
-    category: "automotive",
-    thumbnail: "https://cdn.dummyjson.com/product-images/88/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/88/1.jpg",
-      "https://cdn.dummyjson.com/product-images/88/2.jpg",
-      "https://cdn.dummyjson.com/product-images/88/3.jpg",
-      "https://cdn.dummyjson.com/product-images/88/4.webp",
-      "https://cdn.dummyjson.com/product-images/88/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 89,
-    title: "Qualcomm original Car Charger",
-    description:
-      "best Quality CHarger , Highly Recommended to all best Quality CHarger , Highly Recommended to all",
-    price: 40,
-    discountPercentage: 17.53,
-    rating: 4.2,
-    stock: 79,
-    brand: "TC Reusable",
-    category: "automotive",
-    thumbnail: "https://cdn.dummyjson.com/product-images/89/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/89/1.jpg",
-      "https://cdn.dummyjson.com/product-images/89/2.jpg",
-      "https://cdn.dummyjson.com/product-images/89/3.jpg",
-      "https://cdn.dummyjson.com/product-images/89/4.jpg",
-      "https://cdn.dummyjson.com/product-images/89/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 90,
-    title: "Cycle Bike Glow",
-    description:
-      "Universal fitment and easy to install no special wires, can be easily installed and removed. Fits most standard tyre air stem valves of road, mountain bicycles, motocycles and cars.Bright led will turn on w",
-    price: 35,
-    discountPercentage: 11.08,
-    rating: 4.1,
-    stock: 63,
-    brand: "Neon LED Light",
-    category: "automotive",
-    thumbnail: "https://cdn.dummyjson.com/product-images/90/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/90/1.jpg",
-      "https://cdn.dummyjson.com/product-images/90/2.jpg",
-      "https://cdn.dummyjson.com/product-images/90/3.jpg",
-      "https://cdn.dummyjson.com/product-images/90/4.jpg",
-      "https://cdn.dummyjson.com/product-images/90/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 91,
-    title: "Black Motorbike",
-    description:
-      "Engine Type:Wet sump, Single Cylinder, Four Stroke, Two Valves, Air Cooled with SOHC (Single Over Head Cam) Chain Drive Bore & Stroke:47.0 x 49.5 MM",
-    price: 569,
-    discountPercentage: 13.63,
-    rating: 4.04,
-    stock: 115,
-    brand: "METRO 70cc Motorcycle - MR70",
-    category: "motorcycle",
-    thumbnail: "https://cdn.dummyjson.com/product-images/91/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/91/1.jpg",
-      "https://cdn.dummyjson.com/product-images/91/2.jpg",
-      "https://cdn.dummyjson.com/product-images/91/3.jpg",
-      "https://cdn.dummyjson.com/product-images/91/4.jpg",
-      "https://cdn.dummyjson.com/product-images/91/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 92,
-    title: "HOT SALE IN EUROPE electric racing motorcycle",
-    description:
-      "HOT SALE IN EUROPE electric racing motorcycle electric motorcycle for sale adult electric motorcycles",
-    price: 920,
-    discountPercentage: 14.4,
-    rating: 4.19,
-    stock: 22,
-    brand: "BRAVE BULL",
-    category: "motorcycle",
-    thumbnail: "https://cdn.dummyjson.com/product-images/92/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/92/1.jpg",
-      "https://cdn.dummyjson.com/product-images/92/2.jpg",
-      "https://cdn.dummyjson.com/product-images/92/3.jpg",
-      "https://cdn.dummyjson.com/product-images/92/4.jpg",
-    ],
-  },
-  {
-    id: 93,
-    title: "Automatic Motor Gas Motorcycles",
-    description:
-      "150cc 4-Stroke Motorcycle Automatic Motor Gas Motorcycles Scooter motorcycles 150cc scooter",
-    price: 1050,
-    discountPercentage: 3.34,
-    rating: 4.84,
-    stock: 127,
-    brand: "shock absorber",
-    category: "motorcycle",
-    thumbnail: "https://cdn.dummyjson.com/product-images/93/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/93/1.jpg",
-      "https://cdn.dummyjson.com/product-images/93/2.jpg",
-      "https://cdn.dummyjson.com/product-images/93/3.jpg",
-      "https://cdn.dummyjson.com/product-images/93/4.jpg",
-      "https://cdn.dummyjson.com/product-images/93/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 94,
-    title: "new arrivals Fashion motocross goggles",
-    description:
-      "new arrivals Fashion motocross goggles motorcycle motocross racing motorcycle",
-    price: 900,
-    discountPercentage: 3.85,
-    rating: 4.06,
-    stock: 109,
-    brand: "JIEPOLLY",
-    category: "motorcycle",
-    thumbnail: "https://cdn.dummyjson.com/product-images/94/thumbnail.webp",
-    images: [
-      "https://cdn.dummyjson.com/product-images/94/1.webp",
-      "https://cdn.dummyjson.com/product-images/94/2.jpg",
-      "https://cdn.dummyjson.com/product-images/94/3.jpg",
-      "https://cdn.dummyjson.com/product-images/94/thumbnail.webp",
-    ],
-  },
-  {
-    id: 95,
-    title: "Wholesale cargo lashing Belt",
-    description:
-      "Wholesale cargo lashing Belt Tie Down end Ratchet strap customized strap 25mm motorcycle 1500kgs with rubber handle",
-    price: 930,
-    discountPercentage: 17.67,
-    rating: 4.21,
-    stock: 144,
-    brand: "Xiangle",
-    category: "motorcycle",
-    thumbnail: "https://cdn.dummyjson.com/product-images/95/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/95/1.jpg",
-      "https://cdn.dummyjson.com/product-images/95/2.jpg",
-      "https://cdn.dummyjson.com/product-images/95/3.jpg",
-      "https://cdn.dummyjson.com/product-images/95/4.jpg",
-      "https://cdn.dummyjson.com/product-images/95/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 96,
-    title: "lighting ceiling kitchen",
-    description:
-      "Wholesale slim hanging decorative kid room lighting ceiling kitchen chandeliers pendant light modern",
-    price: 30,
-    discountPercentage: 14.89,
-    rating: 4.83,
-    stock: 96,
-    brand: "lightingbrilliance",
-    category: "lighting",
-    thumbnail: "https://cdn.dummyjson.com/product-images/96/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/96/1.jpg",
-      "https://cdn.dummyjson.com/product-images/96/2.jpg",
-      "https://cdn.dummyjson.com/product-images/96/3.jpg",
-      "https://cdn.dummyjson.com/product-images/96/4.jpg",
-      "https://cdn.dummyjson.com/product-images/96/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 97,
-    title: "Metal Ceramic Flower",
-    description:
-      "Metal Ceramic Flower Chandelier Home Lighting American Vintage Hanging Lighting Pendant Lamp",
-    price: 35,
-    discountPercentage: 10.94,
-    rating: 4.93,
-    stock: 146,
-    brand: "Ifei Home",
-    category: "lighting",
-    thumbnail: "https://cdn.dummyjson.com/product-images/97/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/97/1.jpg",
-      "https://cdn.dummyjson.com/product-images/97/2.jpg",
-      "https://cdn.dummyjson.com/product-images/97/3.jpg",
-      "https://cdn.dummyjson.com/product-images/97/4.webp",
-      "https://cdn.dummyjson.com/product-images/97/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 98,
-    title: "3 lights lndenpant kitchen islang",
-    description:
-      "3 lights lndenpant kitchen islang dining room pendant rice paper chandelier contemporary led pendant light modern chandelier",
-    price: 34,
-    discountPercentage: 5.92,
-    rating: 4.99,
-    stock: 44,
-    brand: "DADAWU",
-    category: "lighting",
-    thumbnail: "https://cdn.dummyjson.com/product-images/98/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/98/1.jpg",
-      "https://cdn.dummyjson.com/product-images/98/2.jpg",
-      "https://cdn.dummyjson.com/product-images/98/3.jpg",
-      "https://cdn.dummyjson.com/product-images/98/4.jpg",
-      "https://cdn.dummyjson.com/product-images/98/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 99,
-    title: "American Vintage Wood Pendant Light",
-    description:
-      "American Vintage Wood Pendant Light Farmhouse Antique Hanging Lamp Lampara Colgante",
-    price: 46,
-    discountPercentage: 8.84,
-    rating: 4.32,
-    stock: 138,
-    brand: "Ifei Home",
-    category: "lighting",
-    thumbnail: "https://cdn.dummyjson.com/product-images/99/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/99/1.jpg",
-      "https://cdn.dummyjson.com/product-images/99/2.jpg",
-      "https://cdn.dummyjson.com/product-images/99/3.jpg",
-      "https://cdn.dummyjson.com/product-images/99/4.jpg",
-      "https://cdn.dummyjson.com/product-images/99/thumbnail.jpg",
-    ],
-  },
-  {
-    id: 100,
-    title: "Crystal chandelier maria theresa for 12 light",
-    description: "Crystal chandelier maria theresa for 12 light",
-    price: 47,
-    discountPercentage: 16,
-    rating: 4.74,
-    stock: 133,
-    brand: "YIOSI",
-    category: "lighting",
-    thumbnail: "https://cdn.dummyjson.com/product-images/100/thumbnail.jpg",
-    images: [
-      "https://cdn.dummyjson.com/product-images/100/1.jpg",
-      "https://cdn.dummyjson.com/product-images/100/2.jpg",
-      "https://cdn.dummyjson.com/product-images/100/3.jpg",
-      "https://cdn.dummyjson.com/product-images/100/thumbnail.jpg",
-    ],
-  },
-]; */
 const products = [
   {
     id: 1,
@@ -1933,9 +11,9 @@ const products = [
     brand: 'Essence',
     category: 'beauty',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952891/mi_ecommerce/thumbnails/mppmul3zvcdz4x7ir2zk.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952891/mi_ecommerce/ymwy1hsurolpbjbyeeha.webp',
     ],
   },
   {
@@ -1950,9 +28,9 @@ const products = [
     brand: 'Glamour Beauty',
     category: 'beauty',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952893/mi_ecommerce/thumbnails/oycm0dsrz2y8j83satve.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/1.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952892/mi_ecommerce/xyohi6s7pikgiyolpjn2.webp',
     ],
   },
   {
@@ -1966,8 +44,11 @@ const products = [
     stock: 89,
     brand: 'Velvet Touch',
     category: 'beauty',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/beauty/powder-canister/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/beauty/powder-canister/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952894/mi_ecommerce/thumbnails/reciyagx9cp2zg9qjeu7.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952893/mi_ecommerce/g1czl1f7ivi9scahm63d.webp',
+    ],
   },
   {
     id: 4,
@@ -1980,8 +61,11 @@ const products = [
     stock: 91,
     brand: 'Chic Cosmetics',
     category: 'beauty',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/beauty/red-lipstick/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/beauty/red-lipstick/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952895/mi_ecommerce/thumbnails/llcqywj7d5ypxks2vz8q.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952895/mi_ecommerce/oax7vebiv2i6sadpocu4.webp',
+    ],
   },
   {
     id: 5,
@@ -1994,8 +78,11 @@ const products = [
     stock: 79,
     brand: 'Nail Couture',
     category: 'beauty',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/beauty/red-nail-polish/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/beauty/red-nail-polish/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952897/mi_ecommerce/thumbnails/c8ews2mqythzaqftioet.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952896/mi_ecommerce/htgxrexrmwhb54pngbgf.webp',
+    ],
   },
   {
     id: 6,
@@ -2009,11 +96,11 @@ const products = [
     brand: 'Calvin Klein',
     category: 'fragrances',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952899/mi_ecommerce/thumbnails/jqz8cvxypepko0h2ze9p.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/1.webp',
-      'https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/2.webp',
-      'https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952897/mi_ecommerce/dknke9q6ne7mfkjzvlio.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952898/mi_ecommerce/tn3dppzparpyhbia9gwf.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952898/mi_ecommerce/szgcctimuoxphcpjsf2i.webp',
     ],
   },
   {
@@ -2028,11 +115,11 @@ const products = [
     brand: 'Chanel',
     category: 'fragrances',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/fragrances/chanel-coco-noir-eau-de/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952901/mi_ecommerce/thumbnails/cfkeotr3pbf3lhkqfh0l.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/fragrances/chanel-coco-noir-eau-de/1.webp',
-      'https://cdn.dummyjson.com/product-images/fragrances/chanel-coco-noir-eau-de/2.webp',
-      'https://cdn.dummyjson.com/product-images/fragrances/chanel-coco-noir-eau-de/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952899/mi_ecommerce/bil7sseayrq5gd87fa94.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952900/mi_ecommerce/dbigegakvw8inzujm8hz.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952901/mi_ecommerce/qayamkwt8yg7mxvtl1jo.webp',
     ],
   },
   {
@@ -2046,11 +133,12 @@ const products = [
     stock: 98,
     brand: 'Dior',
     category: 'fragrances',
-    thumbnail: "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/thumbnail.webp",
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952903/mi_ecommerce/thumbnails/ijkxyfumonljckd5a5ui.webp',
     images: [
-      "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/1.webp",
-      "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/2.webp",
-      "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/3.webp",
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952902/mi_ecommerce/vsfhxz3ihpksgrb1wrbf.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952902/mi_ecommerce/emjjaupcngzs2ixpqaeg.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952903/mi_ecommerce/vtfokzyeeh9suyljn2kn.webp',
     ],
   },
   {
@@ -2065,11 +153,11 @@ const products = [
     brand: 'Dolce & Gabbana',
     category: 'fragrances',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/fragrances/dolce-shine-eau-de/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952906/mi_ecommerce/thumbnails/dqn37ssfvhnmz44g8te5.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/fragrances/dolce-shine-eau-de/1.webp',
-      'https://cdn.dummyjson.com/product-images/fragrances/dolce-shine-eau-de/2.webp',
-      'https://cdn.dummyjson.com/product-images/fragrances/dolce-shine-eau-de/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952904/mi_ecommerce/qiro7kxht9lzxjutt5th.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952905/mi_ecommerce/rhrmmkvnvdpmadn6u9q0.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952906/mi_ecommerce/bylbrkp0a6lyydpg9ksj.webp',
     ],
   },
   {
@@ -2084,11 +172,11 @@ const products = [
     brand: 'Gucci',
     category: 'fragrances',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/fragrances/gucci-bloom-eau-de/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952908/mi_ecommerce/thumbnails/yp62caeepobatrqkyoft.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/fragrances/gucci-bloom-eau-de/1.webp',
-      'https://cdn.dummyjson.com/product-images/fragrances/gucci-bloom-eau-de/2.webp',
-      'https://cdn.dummyjson.com/product-images/fragrances/gucci-bloom-eau-de/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952907/mi_ecommerce/zdvhacxk5xevp4xlqg3r.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952907/mi_ecommerce/ypu3hjrcakgke4pksem9.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952908/mi_ecommerce/xa6ze981kcuv9oerl5no.webp',
     ],
   },
   {
@@ -2103,11 +191,11 @@ const products = [
     brand: 'Annibale Colombo',
     category: 'furniture',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952911/mi_ecommerce/thumbnails/n5dn1wiaq3xvf40poiqo.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/1.webp',
-      'https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/2.webp',
-      'https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952909/mi_ecommerce/ykmkjwejmignrm3jfewf.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952909/mi_ecommerce/wwopigdktn9jsfhnrtc5.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952910/mi_ecommerce/hxgmw6zeux5mi74scebg.webp',
     ],
   },
   {
@@ -2122,11 +210,11 @@ const products = [
     brand: 'Annibale Colombo',
     category: 'furniture',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952914/mi_ecommerce/thumbnails/ebqifruqc3udkl90dhzm.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/1.webp',
-      'https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/2.webp',
-      'https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952912/mi_ecommerce/h2gyuscsd4hga2ctkpvv.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952912/mi_ecommerce/jngg0aedtghk1jnrpr4y.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952913/mi_ecommerce/esapmfs9322t7hoovcxi.webp',
     ],
   },
   {
@@ -2141,11 +229,11 @@ const products = [
     brand: 'Furniture Co.',
     category: 'furniture',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952916/mi_ecommerce/thumbnails/p6dw6jlzfcxuzffoabxf.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/1.webp',
-      'https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/2.webp',
-      'https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952914/mi_ecommerce/squhzdizy4qlyls7ansa.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952915/mi_ecommerce/seik86qmqir71g7oixzu.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952915/mi_ecommerce/orockga5iwdje0jc0j39.webp',
     ],
   },
   {
@@ -2160,11 +248,11 @@ const products = [
     brand: 'Knoll',
     category: 'furniture',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952919/mi_ecommerce/thumbnails/huwo6zkbwzwlqasqcb5b.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/1.webp',
-      'https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/2.webp',
-      'https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952917/mi_ecommerce/ar16oso2j87wnhcefplk.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952917/mi_ecommerce/dujuixh2mleq8wfelp37.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952918/mi_ecommerce/xluhkvhv1clo6iszeasx.webp',
     ],
   },
   {
@@ -2179,11 +267,11 @@ const products = [
     brand: 'Bath Trends',
     category: 'furniture',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952921/mi_ecommerce/thumbnails/g53xfr5tlyw5t6x8tgl7.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/1.webp',
-      'https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/2.webp',
-      'https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952919/mi_ecommerce/pkulilm5xwu8ur0faqus.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952920/mi_ecommerce/yylzncmutszsoaq3gz0u.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952921/mi_ecommerce/ois8cgsgjqfeyqda4svf.webp',
     ],
   },
   {
@@ -2197,8 +285,11 @@ const products = [
     stock: 8,
     brand: undefined,
     category: 'groceries',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/groceries/apple/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/groceries/apple/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952923/mi_ecommerce/thumbnails/fapjsotp7p8sevk3j14n.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952922/mi_ecommerce/a8jmdqssyng2evu0jcb9.webp',
+    ],
   },
   {
     id: 17,
@@ -2211,8 +302,11 @@ const products = [
     stock: 86,
     brand: undefined,
     category: 'groceries',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/groceries/beef-steak/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/groceries/beef-steak/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952924/mi_ecommerce/thumbnails/zhmtv3qwri1wgubqekyp.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952924/mi_ecommerce/o7axdwfhjobytmdurd9g.webp',
+    ],
   },
   {
     id: 18,
@@ -2224,8 +318,11 @@ const products = [
     stock: 46,
     brand: undefined,
     category: 'groceries',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/groceries/cat-food/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/groceries/cat-food/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952926/mi_ecommerce/thumbnails/hgqfugejuz9frj1kkq4a.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952925/mi_ecommerce/luqecvqv2ipdctq7n6x6.webp',
+    ],
   },
   {
     id: 19,
@@ -2237,10 +334,11 @@ const products = [
     stock: 97,
     brand: undefined,
     category: 'groceries',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/groceries/chicken-meat/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952928/mi_ecommerce/thumbnails/acsg5p4vgpkgbtfwt2zx.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/groceries/chicken-meat/1.webp',
-      'https://cdn.dummyjson.com/product-images/groceries/chicken-meat/2.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952926/mi_ecommerce/bgocbngcsqeamfybuqgp.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952927/mi_ecommerce/pc5hhinccjfaw1fvmqoe.webp',
     ],
   },
   {
@@ -2254,8 +352,11 @@ const products = [
     stock: 10,
     brand: undefined,
     category: 'groceries',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/groceries/cooking-oil/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/groceries/cooking-oil/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952930/mi_ecommerce/thumbnails/ptoi9cs9ofuqpwqt4goc.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952929/mi_ecommerce/v9gnpqtlnesyrrypbjix.webp',
+    ],
   },
   {
     id: 21,
@@ -2268,8 +369,11 @@ const products = [
     stock: 84,
     brand: undefined,
     category: 'groceries',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/groceries/cucumber/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/groceries/cucumber/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952932/mi_ecommerce/thumbnails/l4b87ucdgausm7p9enlw.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952931/mi_ecommerce/k2lmblg1k2gou4vgwih1.webp',
+    ],
   },
   {
     id: 22,
@@ -2282,8 +386,11 @@ const products = [
     stock: 71,
     brand: undefined,
     category: 'groceries',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/groceries/dog-food/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/groceries/dog-food/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952933/mi_ecommerce/thumbnails/nvfkbko3ui78vbpqrknl.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952932/mi_ecommerce/sfsfoqxnxjx7b5mivkh2.webp',
+    ],
   },
   {
     id: 23,
@@ -2295,8 +402,11 @@ const products = [
     stock: 9,
     brand: undefined,
     category: 'groceries',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/groceries/eggs/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/groceries/eggs/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952934/mi_ecommerce/thumbnails/utrqavdbpf3vrzfpj4nn.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952933/mi_ecommerce/y4v7twdvavpihjs0ekop.webp',
+    ],
   },
   {
     id: 24,
@@ -2308,8 +418,11 @@ const products = [
     stock: 74,
     brand: undefined,
     category: 'groceries',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/groceries/fish-steak/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/groceries/fish-steak/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952935/mi_ecommerce/thumbnails/wfedu1hflnxv38lmw0ra.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952934/mi_ecommerce/ff69mqhjmyobdee00puc.webp',
+    ],
   },
   {
     id: 25,
@@ -2323,8 +436,10 @@ const products = [
     brand: undefined,
     category: 'groceries',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/groceries/green-bell-pepper/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/groceries/green-bell-pepper/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952936/mi_ecommerce/thumbnails/qnmeufff0d78jkemrs50.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952936/mi_ecommerce/ynllaffzhsgpjahijaj7.webp',
+    ],
   },
   {
     id: 26,
@@ -2337,8 +452,10 @@ const products = [
     brand: undefined,
     category: 'groceries',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/groceries/green-chili-pepper/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/groceries/green-chili-pepper/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952938/mi_ecommerce/thumbnails/ltotho71ocgb3pqe39pi.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952937/mi_ecommerce/fpwojnms32t38eyci1u9.webp',
+    ],
   },
   {
     id: 27,
@@ -2351,8 +468,11 @@ const products = [
     stock: 34,
     brand: undefined,
     category: 'groceries',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/groceries/honey-jar/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/groceries/honey-jar/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952939/mi_ecommerce/thumbnails/finjzeyvihhvubxqtqux.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952938/mi_ecommerce/s1j6lxr3zdgn5ykptb9v.webp',
+    ],
   },
   {
     id: 28,
@@ -2365,12 +485,13 @@ const products = [
     stock: 27,
     brand: undefined,
     category: 'groceries',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/groceries/ice-cream/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952942/mi_ecommerce/thumbnails/k7skeg8mpepyeohrjcis.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/groceries/ice-cream/1.webp',
-      'https://cdn.dummyjson.com/product-images/groceries/ice-cream/2.webp',
-      'https://cdn.dummyjson.com/product-images/groceries/ice-cream/3.webp',
-      'https://cdn.dummyjson.com/product-images/groceries/ice-cream/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952939/mi_ecommerce/a0nlvrozeyudt2qlgs1l.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952940/mi_ecommerce/wc8irx48bzxoldl3ubnb.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952941/mi_ecommerce/beogeqitdddt3q1ecdxs.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952941/mi_ecommerce/nx2rbur6yvhka6vjk3bn.webp',
     ],
   },
   {
@@ -2383,8 +504,11 @@ const products = [
     stock: 50,
     brand: undefined,
     category: 'groceries',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/groceries/juice/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/groceries/juice/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952944/mi_ecommerce/thumbnails/q0scb4yhlydy9tebunrr.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952943/mi_ecommerce/nn6yzupdoqdgykvh9zso.webp',
+    ],
   },
   {
     id: 30,
@@ -2397,8 +521,11 @@ const products = [
     stock: 99,
     brand: undefined,
     category: 'groceries',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/groceries/kiwi/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/groceries/kiwi/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952945/mi_ecommerce/thumbnails/ull7ejbblszjc22edmdl.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952944/mi_ecommerce/lc1m7t2flobkqm1oklld.webp',
+    ],
   },
   {
     id: 31,
@@ -2411,8 +538,11 @@ const products = [
     stock: 31,
     brand: undefined,
     category: 'groceries',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/groceries/lemon/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/groceries/lemon/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952946/mi_ecommerce/thumbnails/rlu0pddh7nqjpdsvjcbi.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952945/mi_ecommerce/evbsefpr1dpd3b4wygrw.webp',
+    ],
   },
   {
     id: 32,
@@ -2424,8 +554,11 @@ const products = [
     stock: 27,
     brand: undefined,
     category: 'groceries',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/groceries/milk/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/groceries/milk/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952948/mi_ecommerce/thumbnails/nvyajj4ubzx08xszwnxm.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952947/mi_ecommerce/gjwzb57lqffjfj6lx9k6.webp',
+    ],
   },
   {
     id: 33,
@@ -2438,8 +571,11 @@ const products = [
     stock: 99,
     brand: undefined,
     category: 'groceries',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/groceries/mulberry/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/groceries/mulberry/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952949/mi_ecommerce/thumbnails/uwjrotnzhtersmvdeuew.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952948/mi_ecommerce/qrbt2pq7umgreuhnqlc3.webp',
+    ],
   },
   {
     id: 34,
@@ -2452,8 +588,11 @@ const products = [
     stock: 57,
     brand: undefined,
     category: 'groceries',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/groceries/nescafe-coffee/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/groceries/nescafe-coffee/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952950/mi_ecommerce/thumbnails/ipjxhjtorubmhwg3my00.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952949/mi_ecommerce/waa1upxhexoirwors5gd.webp',
+    ],
   },
   {
     id: 35,
@@ -2465,8 +604,11 @@ const products = [
     stock: 13,
     brand: undefined,
     category: 'groceries',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/groceries/potatoes/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/groceries/potatoes/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952951/mi_ecommerce/thumbnails/guyxqldotmgsft2num0t.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952951/mi_ecommerce/pjqxjdd4ou3gfxbyxxsy.webp',
+    ],
   },
   {
     id: 36,
@@ -2479,8 +621,11 @@ const products = [
     stock: 80,
     brand: undefined,
     category: 'groceries',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/groceries/protein-powder/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/groceries/protein-powder/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952953/mi_ecommerce/thumbnails/imc9tnwh3esegn9ddphf.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952952/mi_ecommerce/qrmq1htxwea4uyra8gwr.webp',
+    ],
   },
   {
     id: 37,
@@ -2493,8 +638,11 @@ const products = [
     stock: 82,
     brand: undefined,
     category: 'groceries',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/groceries/red-onions/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/groceries/red-onions/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952954/mi_ecommerce/thumbnails/bfncveihuvzevmluu5rw.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952953/mi_ecommerce/gtsteguvi5psz1lvhdnc.webp',
+    ],
   },
   {
     id: 38,
@@ -2507,8 +655,11 @@ const products = [
     stock: 59,
     brand: undefined,
     category: 'groceries',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/groceries/rice/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/groceries/rice/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952955/mi_ecommerce/thumbnails/ffxx3mfpfyrfftusp9yn.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952955/mi_ecommerce/dcuymoxiud7qgdrbkwt7.webp',
+    ],
   },
   {
     id: 39,
@@ -2520,8 +671,11 @@ const products = [
     stock: 53,
     brand: undefined,
     category: 'groceries',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/groceries/soft-drinks/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/groceries/soft-drinks/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952957/mi_ecommerce/thumbnails/xiaeawfix0gg27txum1t.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952956/mi_ecommerce/rhbxkkqoeqqwt1uvz8hw.webp',
+    ],
   },
   {
     id: 40,
@@ -2534,8 +688,11 @@ const products = [
     stock: 46,
     brand: undefined,
     category: 'groceries',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/groceries/strawberry/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/groceries/strawberry/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952958/mi_ecommerce/thumbnails/gjwllh5ssbhjk3tns6mr.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952957/mi_ecommerce/mxn0povbhhyat2bb4bsk.webp',
+    ],
   },
   {
     id: 41,
@@ -2548,10 +705,11 @@ const products = [
     stock: 86,
     brand: undefined,
     category: 'groceries',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/groceries/tissue-paper-box/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952960/mi_ecommerce/thumbnails/cqyrp8bkw7aderlsrhgx.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/groceries/tissue-paper-box/1.webp',
-      'https://cdn.dummyjson.com/product-images/groceries/tissue-paper-box/2.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952958/mi_ecommerce/pzd5iypdkaw44c2yttsg.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952959/mi_ecommerce/ql23crtlczjrjoc5kidd.webp',
     ],
   },
   {
@@ -2565,8 +723,11 @@ const products = [
     stock: 53,
     brand: undefined,
     category: 'groceries',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/groceries/water/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/groceries/water/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952961/mi_ecommerce/thumbnails/fhkk9iddwwn2rkzigm81.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952960/mi_ecommerce/eyccidk1k5vvdlbo3ten.webp',
+    ],
   },
   {
     id: 43,
@@ -2580,11 +741,11 @@ const products = [
     brand: undefined,
     category: 'home-decoration',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/home-decoration/decoration-swing/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952964/mi_ecommerce/thumbnails/hc6vu6niyu2szxvboakv.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/home-decoration/decoration-swing/1.webp',
-      'https://cdn.dummyjson.com/product-images/home-decoration/decoration-swing/2.webp',
-      'https://cdn.dummyjson.com/product-images/home-decoration/decoration-swing/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952961/mi_ecommerce/ucrpihxrnrnjwlyaqgjp.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952962/mi_ecommerce/xqnxz7uduxweazggjhew.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952963/mi_ecommerce/duatoalpw7dfwn8riqta.webp',
     ],
   },
   {
@@ -2599,9 +760,9 @@ const products = [
     brand: undefined,
     category: 'home-decoration',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/home-decoration/family-tree-photo-frame/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952965/mi_ecommerce/thumbnails/ykwyjyizpt9xbbfk0yso.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/home-decoration/family-tree-photo-frame/1.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952964/mi_ecommerce/gp2o5olq9hlnizaplrek.webp',
     ],
   },
   {
@@ -2616,11 +777,11 @@ const products = [
     brand: undefined,
     category: 'home-decoration',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/home-decoration/house-showpiece-plant/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952967/mi_ecommerce/thumbnails/tkumpew5ad0f9zhpsi1w.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/home-decoration/house-showpiece-plant/1.webp',
-      'https://cdn.dummyjson.com/product-images/home-decoration/house-showpiece-plant/2.webp',
-      'https://cdn.dummyjson.com/product-images/home-decoration/house-showpiece-plant/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952965/mi_ecommerce/f5obock0f1vxigxkgyp7.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952966/mi_ecommerce/jivxwj0qpesaxl9djtx6.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952967/mi_ecommerce/pt9dszkk1wccaavc4bdz.webp',
     ],
   },
   {
@@ -2634,12 +795,13 @@ const products = [
     stock: 59,
     brand: undefined,
     category: 'home-decoration',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/home-decoration/plant-pot/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952972/mi_ecommerce/thumbnails/vzcdjeq6cfacpfaondrl.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/home-decoration/plant-pot/1.webp',
-      'https://cdn.dummyjson.com/product-images/home-decoration/plant-pot/2.webp',
-      'https://cdn.dummyjson.com/product-images/home-decoration/plant-pot/3.webp',
-      'https://cdn.dummyjson.com/product-images/home-decoration/plant-pot/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952968/mi_ecommerce/fuospy7janwlthzcwdbc.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952969/mi_ecommerce/rnbzlzpqwlopurou4sia.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952969/mi_ecommerce/yjuomcg7uttilvsktl1q.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952971/mi_ecommerce/wl0ch73tnydn1qauimgy.webp',
     ],
   },
   {
@@ -2653,8 +815,11 @@ const products = [
     stock: 9,
     brand: undefined,
     category: 'home-decoration',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/home-decoration/table-lamp/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/home-decoration/table-lamp/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952973/mi_ecommerce/thumbnails/xsn5agtzzjg88hzhamrv.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952972/mi_ecommerce/agb4ypualrstk2no86nl.webp',
+    ],
   },
   {
     id: 48,
@@ -2668,8 +833,10 @@ const products = [
     brand: undefined,
     category: 'kitchen-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/bamboo-spatula/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/kitchen-accessories/bamboo-spatula/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952974/mi_ecommerce/thumbnails/grxiujfkiyoozw8qhmgf.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952974/mi_ecommerce/mn0pm9skwk19iqaso1z1.webp',
+    ],
   },
   {
     id: 49,
@@ -2683,10 +850,10 @@ const products = [
     brand: undefined,
     category: 'kitchen-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/black-aluminium-cup/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952976/mi_ecommerce/thumbnails/g7liajnkbex4i4ynx2ru.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/black-aluminium-cup/1.webp',
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/black-aluminium-cup/2.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952975/mi_ecommerce/kkirjtcdsgkxdpj7kufv.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952975/mi_ecommerce/hnptnisoc4a6zst7hw0g.webp',
     ],
   },
   {
@@ -2701,8 +868,10 @@ const products = [
     brand: undefined,
     category: 'kitchen-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/black-whisk/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/kitchen-accessories/black-whisk/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952977/mi_ecommerce/thumbnails/hrdggnedngyxks6lirew.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952977/mi_ecommerce/pkkzef2ha5jkt9y2ywjj.webp',
+    ],
   },
   {
     id: 51,
@@ -2716,12 +885,12 @@ const products = [
     brand: undefined,
     category: 'kitchen-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/boxed-blender/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952981/mi_ecommerce/thumbnails/d0wcpolnnkz8usiyynqo.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/boxed-blender/1.webp',
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/boxed-blender/2.webp',
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/boxed-blender/3.webp',
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/boxed-blender/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952978/mi_ecommerce/e85gxff3pi98tztxhgyo.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952979/mi_ecommerce/wofmndkumu2ojieczwh3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952980/mi_ecommerce/oowab3dbluxnom6vjudu.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952981/mi_ecommerce/hzpngdwibh1ub6q46ncu.webp',
     ],
   },
   {
@@ -2736,9 +905,9 @@ const products = [
     brand: undefined,
     category: 'kitchen-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/carbon-steel-wok/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952983/mi_ecommerce/thumbnails/azdkofxhwas0causif69.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/carbon-steel-wok/1.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952982/mi_ecommerce/lny7w0wmr4qnfvrpx1od.webp',
     ],
   },
   {
@@ -2753,8 +922,10 @@ const products = [
     brand: undefined,
     category: 'kitchen-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/chopping-board/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/kitchen-accessories/chopping-board/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952984/mi_ecommerce/thumbnails/rtp6mqntpcfz3uwpmj9b.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952983/mi_ecommerce/wfjvcuzxgbxjebaemvfc.webp',
+    ],
   },
   {
     id: 54,
@@ -2768,9 +939,9 @@ const products = [
     brand: undefined,
     category: 'kitchen-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/citrus-squeezer-yellow/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952985/mi_ecommerce/thumbnails/hharsbiraophziwgodcn.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/citrus-squeezer-yellow/1.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952984/mi_ecommerce/gkdvn3dqjrcgmculg28h.webp',
     ],
   },
   {
@@ -2785,8 +956,10 @@ const products = [
     brand: undefined,
     category: 'kitchen-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/egg-slicer/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/kitchen-accessories/egg-slicer/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952986/mi_ecommerce/thumbnails/kmpvhisfe0bdspccrzjq.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952985/mi_ecommerce/spthrmzmmcnn40ef3nqa.webp',
+    ],
   },
   {
     id: 56,
@@ -2800,12 +973,12 @@ const products = [
     brand: undefined,
     category: 'kitchen-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/electric-stove/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952989/mi_ecommerce/thumbnails/oggbnx2ywdobtw0rrkwd.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/electric-stove/1.webp',
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/electric-stove/2.webp',
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/electric-stove/3.webp',
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/electric-stove/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952987/mi_ecommerce/sf4tznjk6wadepqgfvvw.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952987/mi_ecommerce/v7mocmqhz0u5fvppncoc.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952988/mi_ecommerce/jlluhnqkxnwnvyv4jdob.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952988/mi_ecommerce/eztfall11qlofuqvt9io.webp',
     ],
   },
   {
@@ -2820,9 +993,9 @@ const products = [
     brand: undefined,
     category: 'kitchen-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/fine-mesh-strainer/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952990/mi_ecommerce/thumbnails/dklpxj95mpm70g0tqnjt.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/fine-mesh-strainer/1.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952989/mi_ecommerce/zoimnefuxm8nvo9wf4k9.webp',
     ],
   },
   {
@@ -2836,8 +1009,11 @@ const products = [
     stock: 7,
     brand: undefined,
     category: 'kitchen-accessories',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/kitchen-accessories/fork/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/kitchen-accessories/fork/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952991/mi_ecommerce/thumbnails/mtvupx3fssv2v2prcslf.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952990/mi_ecommerce/wkrpegsfodgzhxgvxoqm.webp',
+    ],
   },
   {
     id: 59,
@@ -2850,8 +1026,11 @@ const products = [
     stock: 46,
     brand: undefined,
     category: 'kitchen-accessories',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/kitchen-accessories/glass/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/kitchen-accessories/glass/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952992/mi_ecommerce/thumbnails/lgp5wwzuvwmhvhfcwczh.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952991/mi_ecommerce/ypcaaemm1ymcumob8ctl.webp',
+    ],
   },
   {
     id: 60,
@@ -2865,8 +1044,10 @@ const products = [
     brand: undefined,
     category: 'kitchen-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/grater-black/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/kitchen-accessories/grater-black/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952993/mi_ecommerce/thumbnails/annnvuknyy1yhqb8viza.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952993/mi_ecommerce/hmwkj2esd7hlt7qbaz1y.webp',
+    ],
   },
   {
     id: 61,
@@ -2880,8 +1061,10 @@ const products = [
     brand: undefined,
     category: 'kitchen-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/hand-blender/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/kitchen-accessories/hand-blender/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952994/mi_ecommerce/thumbnails/bbsp53pmhvibwxfwks8u.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952994/mi_ecommerce/rzpolmg7x7yl6wizj34e.webp',
+    ],
   },
   {
     id: 62,
@@ -2895,8 +1078,10 @@ const products = [
     brand: undefined,
     category: 'kitchen-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/ice-cube-tray/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/kitchen-accessories/ice-cube-tray/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952996/mi_ecommerce/thumbnails/bhdskiqqj8kerb2ikovr.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952995/mi_ecommerce/esjwxockrjtskpjk0ixe.webp',
+    ],
   },
   {
     id: 63,
@@ -2910,8 +1095,10 @@ const products = [
     brand: undefined,
     category: 'kitchen-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/kitchen-sieve/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/kitchen-accessories/kitchen-sieve/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952997/mi_ecommerce/thumbnails/izepmxld6rh5mtessym3.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952996/mi_ecommerce/rfryyanrfowbuabntykx.webp',
+    ],
   },
   {
     id: 64,
@@ -2924,8 +1111,11 @@ const products = [
     stock: 7,
     brand: undefined,
     category: 'kitchen-accessories',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/kitchen-accessories/knife/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/kitchen-accessories/knife/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952999/mi_ecommerce/thumbnails/w3xidktvrjrd3quhyzbz.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952997/mi_ecommerce/nzf3iojttsdpgwogrjym.webp',
+    ],
   },
   {
     id: 65,
@@ -2939,8 +1129,10 @@ const products = [
     brand: undefined,
     category: 'kitchen-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/lunch-box/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/kitchen-accessories/lunch-box/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953000/mi_ecommerce/thumbnails/mxqojvbbbgefdra2k1we.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756952999/mi_ecommerce/ohfobpnqqlxfrszd0bge.webp',
+    ],
   },
   {
     id: 66,
@@ -2954,12 +1146,12 @@ const products = [
     brand: undefined,
     category: 'kitchen-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/microwave-oven/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953003/mi_ecommerce/thumbnails/v9kdoxlbfsibd0obbnsr.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/microwave-oven/1.webp',
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/microwave-oven/2.webp',
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/microwave-oven/3.webp',
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/microwave-oven/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953000/mi_ecommerce/ui7owsqafkhomq0cy2hq.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953001/mi_ecommerce/lyedhcygrgv4cwglgqqt.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953002/mi_ecommerce/fpnm8g4jwyqwixn2wope.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953002/mi_ecommerce/vixltrnqlqjsqw0jfiwx.webp',
     ],
   },
   {
@@ -2974,10 +1166,10 @@ const products = [
     brand: undefined,
     category: 'kitchen-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/mug-tree-stand/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953004/mi_ecommerce/thumbnails/kcvsvhhtxdpzkrjghi16.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/mug-tree-stand/1.webp',
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/mug-tree-stand/2.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953003/mi_ecommerce/l8fedahjxpsajao5qpdn.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953004/mi_ecommerce/ilh6vlo1cavmkdlkufup.webp',
     ],
   },
   {
@@ -2991,8 +1183,11 @@ const products = [
     stock: 90,
     brand: undefined,
     category: 'kitchen-accessories',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/kitchen-accessories/pan/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/kitchen-accessories/pan/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953006/mi_ecommerce/thumbnails/libihakzshw1p070njzg.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953005/mi_ecommerce/bliloh9b1fighmhygxhw.webp',
+    ],
   },
   {
     id: 69,
@@ -3005,8 +1200,11 @@ const products = [
     stock: 66,
     brand: undefined,
     category: 'kitchen-accessories',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/kitchen-accessories/plate/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/kitchen-accessories/plate/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953007/mi_ecommerce/thumbnails/dixiidefcknkcu4rmtim.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953006/mi_ecommerce/xnnlyzcqqw3h9f6xkyeh.webp',
+    ],
   },
   {
     id: 70,
@@ -3020,8 +1218,10 @@ const products = [
     brand: undefined,
     category: 'kitchen-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/red-tongs/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/kitchen-accessories/red-tongs/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953008/mi_ecommerce/thumbnails/okg6uzusqxerlkp0gh2a.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953008/mi_ecommerce/vico95hvwbhlakrfw774.webp',
+    ],
   },
   {
     id: 71,
@@ -3035,9 +1235,9 @@ const products = [
     brand: undefined,
     category: 'kitchen-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/silver-pot-with-glass-cap/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953010/mi_ecommerce/thumbnails/dp2jfpjksruiylngzor8.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/silver-pot-with-glass-cap/1.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953009/mi_ecommerce/vjyyjngfzcvgholigbq0.webp',
     ],
   },
   {
@@ -3052,8 +1252,10 @@ const products = [
     brand: undefined,
     category: 'kitchen-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/slotted-turner/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/kitchen-accessories/slotted-turner/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953011/mi_ecommerce/thumbnails/c0cumpoutmvrtifikjik.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953010/mi_ecommerce/qqq75qmqebksqyn41gep.webp',
+    ],
   },
   {
     id: 73,
@@ -3067,8 +1269,10 @@ const products = [
     brand: undefined,
     category: 'kitchen-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/spice-rack/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/kitchen-accessories/spice-rack/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953012/mi_ecommerce/thumbnails/xvfkcbfsremmiymgn6sr.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953011/mi_ecommerce/nhigk6vgjlrynr8bxvrq.webp',
+    ],
   },
   {
     id: 74,
@@ -3081,8 +1285,11 @@ const products = [
     stock: 59,
     brand: undefined,
     category: 'kitchen-accessories',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/kitchen-accessories/spoon/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/kitchen-accessories/spoon/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953013/mi_ecommerce/thumbnails/djumrpqegy4lbv3koykb.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953013/mi_ecommerce/dam6byi5ru47kp1kgkvc.webp',
+    ],
   },
   {
     id: 75,
@@ -3095,8 +1302,11 @@ const products = [
     stock: 71,
     brand: undefined,
     category: 'kitchen-accessories',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/kitchen-accessories/tray/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/kitchen-accessories/tray/1.webp'],
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953015/mi_ecommerce/thumbnails/ztrqbxokirqzuomeddru.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953014/mi_ecommerce/z7k4kvcaympyokzhwcxd.webp',
+    ],
   },
   {
     id: 76,
@@ -3110,9 +1320,9 @@ const products = [
     brand: undefined,
     category: 'kitchen-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/wooden-rolling-pin/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953017/mi_ecommerce/thumbnails/bgqwtuadc0cet8qosz0k.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/wooden-rolling-pin/1.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953015/mi_ecommerce/y10xuodo62xqj94bqber.webp',
     ],
   },
   {
@@ -3127,8 +1337,10 @@ const products = [
     brand: undefined,
     category: 'kitchen-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/kitchen-accessories/yellow-peeler/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/kitchen-accessories/yellow-peeler/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953018/mi_ecommerce/thumbnails/faehvprm4z3fpoqzb31q.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953017/mi_ecommerce/xuqcfdtnlrpkh62xwevm.webp',
+    ],
   },
   {
     id: 78,
@@ -3142,11 +1354,11 @@ const products = [
     brand: 'Apple',
     category: 'laptops',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953020/mi_ecommerce/thumbnails/oszsdgfckp8h7fjzomnb.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/1.webp',
-      'https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/2.webp',
-      'https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953018/mi_ecommerce/azcvdex0rqjmtr5vglo3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953019/mi_ecommerce/k79kmrwrrhn6eqlw6o3t.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953020/mi_ecommerce/a6uqgzqfyd2olhr1olze.webp',
     ],
   },
   {
@@ -3161,11 +1373,11 @@ const products = [
     brand: 'Asus',
     category: 'laptops',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953023/mi_ecommerce/thumbnails/k5n90kptcyyavgmuokjh.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/1.webp',
-      'https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/2.webp',
-      'https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953021/mi_ecommerce/i5bs3vfprstp53fm1bml.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953021/mi_ecommerce/jfdik1ysl3gatucwwjtu.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953022/mi_ecommerce/rxjtj41pqpzl2esmfsl8.webp',
     ],
   },
   {
@@ -3180,11 +1392,11 @@ const products = [
     brand: 'Huawei',
     category: 'laptops',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953025/mi_ecommerce/thumbnails/ayeancqlds8ci9bquudw.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/1.webp',
-      'https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/2.webp',
-      'https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953023/mi_ecommerce/cto4bv3iqagfeugrdsv8.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953024/mi_ecommerce/nzx6lgdhbhw8sruv0b1m.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953024/mi_ecommerce/mwqnq0aidxih2tdxwwlc.webp',
     ],
   },
   {
@@ -3198,11 +1410,12 @@ const products = [
     stock: 40,
     brand: 'Lenovo',
     category: 'laptops',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953027/mi_ecommerce/thumbnails/vli4ocdsmkmehg80nqzh.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/1.webp',
-      'https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/2.webp',
-      'https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953025/mi_ecommerce/zdu9dzc0w8b01ar0rszo.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953026/mi_ecommerce/esmokocaiphhao4x6ihn.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953026/mi_ecommerce/jxnxtf5izbmv6u6ce5qq.webp',
     ],
   },
   {
@@ -3217,11 +1430,11 @@ const products = [
     brand: 'Dell',
     category: 'laptops',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953030/mi_ecommerce/thumbnails/daaonwtkpcxcu3u8vash.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/1.webp',
-      'https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/2.webp',
-      'https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953028/mi_ecommerce/coym6mbcih2qz47s79ug.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953028/mi_ecommerce/lzxitxzl0sfrvphqjysq.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953029/mi_ecommerce/snzjcpyw4zdqlf6efqpa.webp',
     ],
   },
   {
@@ -3236,12 +1449,12 @@ const products = [
     brand: 'Fashion Trends',
     category: 'mens-shirts',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953033/mi_ecommerce/thumbnails/siehenccls7x1xcxzvun.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/1.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/2.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/3.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953030/mi_ecommerce/iz6oazcdgs3uls3xwepv.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953031/mi_ecommerce/ifcd9aajlxi9dommciyj.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953032/mi_ecommerce/cproyy7vyrsbrcmlihiz.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953032/mi_ecommerce/k1udqjjofs0eqqr9oqhi.webp',
     ],
   },
   {
@@ -3256,12 +1469,12 @@ const products = [
     brand: 'Gigabyte',
     category: 'mens-shirts',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mens-shirts/gigabyte-aorus-men-tshirt/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953036/mi_ecommerce/thumbnails/oi37iuzsckrclolc36jh.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mens-shirts/gigabyte-aorus-men-tshirt/1.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shirts/gigabyte-aorus-men-tshirt/2.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shirts/gigabyte-aorus-men-tshirt/3.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shirts/gigabyte-aorus-men-tshirt/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953033/mi_ecommerce/rkgcu6u9raj7hfl5bdgq.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953034/mi_ecommerce/eh0x9yehcm3gyarplwfp.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953035/mi_ecommerce/gss93mw12tfhbxbulqx8.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953035/mi_ecommerce/e1bjwxkgzm5oelvlbv3d.webp',
     ],
   },
   {
@@ -3276,12 +1489,12 @@ const products = [
     brand: 'Classic Wear',
     category: 'mens-shirts',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953039/mi_ecommerce/thumbnails/vk0smauhuu1mtr5ffrqt.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/1.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/2.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/3.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953036/mi_ecommerce/elkmlq232ayzwh6cu6v8.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953037/mi_ecommerce/ie87sxkfosm7jpkcd3kc.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953038/mi_ecommerce/fdng6alk26l3pnc15fqt.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953039/mi_ecommerce/rtmilbe9o94czt3pg4ui.webp',
     ],
   },
   {
@@ -3296,12 +1509,12 @@ const products = [
     brand: 'Casual Comfort',
     category: 'mens-shirts',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mens-shirts/man-short-sleeve-shirt/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953043/mi_ecommerce/thumbnails/ouyiwssbr0uzcbu18xtq.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mens-shirts/man-short-sleeve-shirt/1.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shirts/man-short-sleeve-shirt/2.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shirts/man-short-sleeve-shirt/3.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shirts/man-short-sleeve-shirt/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953040/mi_ecommerce/zxwdqrxjnokk3snoaqdt.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953041/mi_ecommerce/laou8p6qzi5u4xp9dgrm.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953041/mi_ecommerce/sdqumvxlq6xw5cgpp2hg.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953042/mi_ecommerce/xhoi7vqkayj4gntkuyep.webp',
     ],
   },
   {
@@ -3316,12 +1529,12 @@ const products = [
     brand: 'Urban Chic',
     category: 'mens-shirts',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mens-shirts/men-check-shirt/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953046/mi_ecommerce/thumbnails/ih5bv5hcxwrkfcut9hji.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mens-shirts/men-check-shirt/1.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shirts/men-check-shirt/2.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shirts/men-check-shirt/3.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shirts/men-check-shirt/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953043/mi_ecommerce/lnsxx7o21ulxlown1vjq.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953044/mi_ecommerce/fpghexvfmloqwwhsvagv.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953045/mi_ecommerce/szktxhmel9uze5ssta26.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953045/mi_ecommerce/zzmpzewpzr2xin8iattg.webp',
     ],
   },
   {
@@ -3336,12 +1549,12 @@ const products = [
     brand: 'Nike',
     category: 'mens-shoes',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-black/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953049/mi_ecommerce/thumbnails/gygh23ecmtvd1t7z2zto.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-black/1.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-black/2.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-black/3.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-black/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953046/mi_ecommerce/u30uybkf1yblx1wfdvye.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953047/mi_ecommerce/hznkzd9m13ircze7b7xc.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953048/mi_ecommerce/ohvbigy6p1aqtpzirqdr.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953048/mi_ecommerce/bblzqsjq7gk2ptwze4m2.webp',
     ],
   },
   {
@@ -3356,12 +1569,12 @@ const products = [
     brand: 'Nike',
     category: 'mens-shoes',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mens-shoes/nike-baseball-cleats/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953052/mi_ecommerce/thumbnails/hop59hl1uyvovjh4kycx.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mens-shoes/nike-baseball-cleats/1.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shoes/nike-baseball-cleats/2.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shoes/nike-baseball-cleats/3.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shoes/nike-baseball-cleats/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953050/mi_ecommerce/uupbb7dklcws8v01oqay.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953050/mi_ecommerce/how2jxby6ymxcdzwglqi.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953051/mi_ecommerce/labupjsbtpvw2urhvswt.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953052/mi_ecommerce/ovymbaqhnhhylcrcocf0.webp',
     ],
   },
   {
@@ -3376,12 +1589,12 @@ const products = [
     brand: 'Puma',
     category: 'mens-shoes',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mens-shoes/puma-future-rider-trainers/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953056/mi_ecommerce/thumbnails/xrovj1lcotooqhgxmws0.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mens-shoes/puma-future-rider-trainers/1.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shoes/puma-future-rider-trainers/2.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shoes/puma-future-rider-trainers/3.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shoes/puma-future-rider-trainers/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953053/mi_ecommerce/aszx0s0piefwtxfv6ioo.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953054/mi_ecommerce/vmzmc4gugcgjyjnfcbv1.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953054/mi_ecommerce/zglkfzprbsuu6bfkrv8r.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953055/mi_ecommerce/mkkzzgl51uleqsexxq4q.webp',
     ],
   },
   {
@@ -3396,12 +1609,12 @@ const products = [
     brand: 'Off White',
     category: 'mens-shoes',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-&-red/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953059/mi_ecommerce/thumbnails/fu5dyghmbdivj61mpx2z.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-&-red/1.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-&-red/2.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-&-red/3.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-&-red/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953056/mi_ecommerce/xearm6tek7ljdomvofkx.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953057/mi_ecommerce/nzy1fx4adhxhywnmkynw.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953058/mi_ecommerce/uqhzgyjxg9bxqb6ltypd.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953058/mi_ecommerce/g9qv6lcp1tlheeuoaomv.webp',
     ],
   },
   {
@@ -3416,12 +1629,12 @@ const products = [
     brand: 'Off White',
     category: 'mens-shoes',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-red/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953062/mi_ecommerce/thumbnails/u9kfq4lf8mxdf9jtvm4o.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-red/1.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-red/2.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-red/3.webp',
-      'https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-red/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953060/mi_ecommerce/hkqcnrga9jrszauo0hmm.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953060/mi_ecommerce/wh5hccx2zrezlmrbsldv.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953061/mi_ecommerce/mmzagbe96mn0yrgkpb4w.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953061/mi_ecommerce/t8xzjzfytsgisigiyhbz.webp',
     ],
   },
   {
@@ -3436,11 +1649,11 @@ const products = [
     brand: 'Fashion Timepieces',
     category: 'mens-watches',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mens-watches/brown-leather-belt-watch/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953064/mi_ecommerce/thumbnails/tlo7pilh2x7du8r8tvtf.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mens-watches/brown-leather-belt-watch/1.webp',
-      'https://cdn.dummyjson.com/product-images/mens-watches/brown-leather-belt-watch/2.webp',
-      'https://cdn.dummyjson.com/product-images/mens-watches/brown-leather-belt-watch/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953063/mi_ecommerce/ohfckhpy427s6iue2znj.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953063/mi_ecommerce/myipac7y45u7tpvwuqko.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953064/mi_ecommerce/onsjap4amqb3arndoj8f.webp',
     ],
   },
   {
@@ -3455,11 +1668,11 @@ const products = [
     brand: 'Longines',
     category: 'mens-watches',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mens-watches/longines-master-collection/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953067/mi_ecommerce/thumbnails/dasze5izub1tvrjlqz2b.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mens-watches/longines-master-collection/1.webp',
-      'https://cdn.dummyjson.com/product-images/mens-watches/longines-master-collection/2.webp',
-      'https://cdn.dummyjson.com/product-images/mens-watches/longines-master-collection/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953065/mi_ecommerce/npz5h9yuvvaxu3lujthx.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953066/mi_ecommerce/nxeqkd0zuac6hugxizy0.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953067/mi_ecommerce/yvz55gzcpu1etvtyk8ba.webp',
     ],
   },
   {
@@ -3474,11 +1687,11 @@ const products = [
     brand: 'Rolex',
     category: 'mens-watches',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-date-black-dial/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953070/mi_ecommerce/thumbnails/wyi8sgudajnhjkjb6zdn.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-date-black-dial/1.webp',
-      'https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-date-black-dial/2.webp',
-      'https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-date-black-dial/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953068/mi_ecommerce/wgvoixuvjs3l7tbefmi0.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953068/mi_ecommerce/u2stybokjm3ojjwugyus.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953069/mi_ecommerce/pybkstqmaxgyruwsqxgw.webp',
     ],
   },
   {
@@ -3493,11 +1706,11 @@ const products = [
     brand: 'Rolex',
     category: 'mens-watches',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-moonphase/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953072/mi_ecommerce/thumbnails/vmmqpsrtnok2mgr0af7m.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-moonphase/1.webp',
-      'https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-moonphase/2.webp',
-      'https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-moonphase/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953070/mi_ecommerce/fd0g5blbruajzw34y9mv.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953071/mi_ecommerce/yudmcdv1lalcsmelwsnv.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953071/mi_ecommerce/nujupecvnz88xmv4cd4x.webp',
     ],
   },
   {
@@ -3512,11 +1725,11 @@ const products = [
     brand: 'Rolex',
     category: 'mens-watches',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mens-watches/rolex-datejust/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953074/mi_ecommerce/thumbnails/bm0fmrzdtimafykcwale.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mens-watches/rolex-datejust/1.webp',
-      'https://cdn.dummyjson.com/product-images/mens-watches/rolex-datejust/2.webp',
-      'https://cdn.dummyjson.com/product-images/mens-watches/rolex-datejust/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953073/mi_ecommerce/hz51geu5azgaqgaicmer.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953073/mi_ecommerce/ofj6ttdhw2pddulc7dr9.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953074/mi_ecommerce/ojfynebmo3dabznokou4.webp',
     ],
   },
   {
@@ -3531,11 +1744,11 @@ const products = [
     brand: 'Rolex',
     category: 'mens-watches',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mens-watches/rolex-submariner-watch/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953077/mi_ecommerce/thumbnails/ptmwgwapbnsjkwrxrujv.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mens-watches/rolex-submariner-watch/1.webp',
-      'https://cdn.dummyjson.com/product-images/mens-watches/rolex-submariner-watch/2.webp',
-      'https://cdn.dummyjson.com/product-images/mens-watches/rolex-submariner-watch/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953075/mi_ecommerce/huqzb6cncvpill3iv5p1.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953076/mi_ecommerce/cf5i0l2fdfpun32cc2ke.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953076/mi_ecommerce/sw5r5townwfxw73jogys.webp',
     ],
   },
   {
@@ -3550,10 +1763,10 @@ const products = [
     brand: 'Amazon',
     category: 'mobile-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/amazon-echo-plus/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953079/mi_ecommerce/thumbnails/vmxvy6aemx1y7eh5uu1v.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/amazon-echo-plus/1.webp',
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/amazon-echo-plus/2.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953077/mi_ecommerce/owd95rvbwo8z1pouctsf.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953078/mi_ecommerce/u7jtusztc9vdwnxjmjto.webp',
     ],
   },
   {
@@ -3568,11 +1781,11 @@ const products = [
     brand: 'Apple',
     category: 'mobile-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953081/mi_ecommerce/thumbnails/wxjinkmuzgmf1bfgnzyq.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/1.webp',
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/2.webp',
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953079/mi_ecommerce/qeaipt6mk0siyri8iknb.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953080/mi_ecommerce/gfdxhhidfnteltvordja.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953080/mi_ecommerce/uc93u0jl2pjoq55wwemx.webp',
     ],
   },
   {
@@ -3587,9 +1800,9 @@ const products = [
     brand: 'Apple',
     category: 'mobile-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods-max-silver/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953082/mi_ecommerce/thumbnails/ftqqfqbkiwljq8i9fg22.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods-max-silver/1.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953082/mi_ecommerce/tofkngsmfv3wnbf9waak.webp',
     ],
   },
   {
@@ -3604,9 +1817,9 @@ const products = [
     brand: 'Apple',
     category: 'mobile-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpower-wireless-charger/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953083/mi_ecommerce/thumbnails/aa1hncn5rtnzezafywna.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpower-wireless-charger/1.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953083/mi_ecommerce/adxez80bbo9lxearht4u.webp',
     ],
   },
   {
@@ -3621,9 +1834,9 @@ const products = [
     brand: 'Apple',
     category: 'mobile-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-homepod-mini-cosmic-grey/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953084/mi_ecommerce/thumbnails/ihnn75yi51triqlmeuz5.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-homepod-mini-cosmic-grey/1.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953084/mi_ecommerce/lkfwfmvyv0m4kvjvtdqk.webp',
     ],
   },
   {
@@ -3638,10 +1851,10 @@ const products = [
     brand: 'Apple',
     category: 'mobile-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-iphone-charger/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953086/mi_ecommerce/thumbnails/swzlwawpvi1x3ejycrsw.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-iphone-charger/1.webp',
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-iphone-charger/2.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953085/mi_ecommerce/saioukjjuecefikklmc1.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953085/mi_ecommerce/bsecipdwdjuobd57vipm.webp',
     ],
   },
   {
@@ -3656,10 +1869,10 @@ const products = [
     brand: 'Apple',
     category: 'mobile-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-magsafe-battery-pack/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953088/mi_ecommerce/thumbnails/e1z0wzkgkiqd5eypfk2z.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-magsafe-battery-pack/1.webp',
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-magsafe-battery-pack/2.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953086/mi_ecommerce/gvf7qnhxba7r40pkmd5v.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953087/mi_ecommerce/yy7fjvpzd1ho0hyrqvji.webp',
     ],
   },
   {
@@ -3674,11 +1887,11 @@ const products = [
     brand: 'Apple',
     category: 'mobile-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-watch-series-4-gold/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953090/mi_ecommerce/thumbnails/ctfqc1x3g25eeiskmxay.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-watch-series-4-gold/1.webp',
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-watch-series-4-gold/2.webp',
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-watch-series-4-gold/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953089/mi_ecommerce/ftlfdmdrx5qncva0asq7.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953089/mi_ecommerce/f8a86wljz4zug8blees3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953090/mi_ecommerce/ixga33mu18sfpihuxwpt.webp',
     ],
   },
   {
@@ -3693,9 +1906,9 @@ const products = [
     brand: 'Beats',
     category: 'mobile-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/beats-flex-wireless-earphones/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953091/mi_ecommerce/thumbnails/jfobewbdjfhrrnnis8sp.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/beats-flex-wireless-earphones/1.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953091/mi_ecommerce/xovdsg2it0wreyxd1jre.webp',
     ],
   },
   {
@@ -3710,12 +1923,12 @@ const products = [
     brand: 'Apple',
     category: 'mobile-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953094/mi_ecommerce/thumbnails/vpyvppswmdyt5pt2cjwc.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/1.webp',
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/2.webp',
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/3.webp',
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953092/mi_ecommerce/ypvandmrv7veykgoeqih.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953093/mi_ecommerce/epfsfuezd3psuxlihax4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953093/mi_ecommerce/qh4rorzwbcfe5lqi59gq.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953094/mi_ecommerce/h94qfxvmobfewsryic9u.webp',
     ],
   },
   {
@@ -3729,10 +1942,11 @@ const products = [
     stock: 48,
     brand: 'TechGear',
     category: 'mobile-accessories',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/mobile-accessories/monopod/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953097/mi_ecommerce/thumbnails/uqli4fdurhloyobxsd3i.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/monopod/1.webp',
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/monopod/2.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953095/mi_ecommerce/stc4ehpymmrsox1zc8kg.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953096/mi_ecommerce/wlgxnwlzouajfjph8biq.webp',
     ],
   },
   {
@@ -3747,9 +1961,9 @@ const products = [
     brand: 'GadgetMaster',
     category: 'mobile-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/selfie-lamp-with-iphone/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953098/mi_ecommerce/thumbnails/t6rn6m5sgwqdkjjd6rcc.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/selfie-lamp-with-iphone/1.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953097/mi_ecommerce/aldh7ky2tbepwvqmq0t7.webp',
     ],
   },
   {
@@ -3764,9 +1978,9 @@ const products = [
     brand: 'SnapTech',
     category: 'mobile-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/selfie-stick-monopod/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953099/mi_ecommerce/thumbnails/bltlsxzuzby5hyolayoc.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/selfie-stick-monopod/1.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953099/mi_ecommerce/g5luy2xgrpbbfjkefc0r.webp',
     ],
   },
   {
@@ -3781,9 +1995,9 @@ const products = [
     brand: 'ProVision',
     category: 'mobile-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/tv-studio-camera-pedestal/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953101/mi_ecommerce/thumbnails/ilwgmmnbxpta5mvhdhyy.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/mobile-accessories/tv-studio-camera-pedestal/1.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953100/mi_ecommerce/bfpwvbdouuagpjgjz3a4.webp',
     ],
   },
   {
@@ -3798,12 +2012,12 @@ const products = [
     brand: 'Generic Motors',
     category: 'motorcycle',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/motorcycle/generic-motorcycle/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953104/mi_ecommerce/thumbnails/ja6y8qvryu3wtmudhgcm.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/motorcycle/generic-motorcycle/1.webp',
-      'https://cdn.dummyjson.com/product-images/motorcycle/generic-motorcycle/2.webp',
-      'https://cdn.dummyjson.com/product-images/motorcycle/generic-motorcycle/3.webp',
-      'https://cdn.dummyjson.com/product-images/motorcycle/generic-motorcycle/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953101/mi_ecommerce/jroczxq9jylioficyf9c.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953102/mi_ecommerce/v6hfgfxugkq6vy7lujl2.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953103/mi_ecommerce/lvk80lpxgn5utdimpt2l.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953103/mi_ecommerce/znlx4qv58enu5gyxepo1.webp',
     ],
   },
   {
@@ -3817,12 +2031,13 @@ const products = [
     stock: 52,
     brand: 'Kawasaki',
     category: 'motorcycle',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/motorcycle/kawasaki-z800/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953107/mi_ecommerce/thumbnails/c0nwtzjaxlcpopuj11op.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/motorcycle/kawasaki-z800/1.webp',
-      'https://cdn.dummyjson.com/product-images/motorcycle/kawasaki-z800/2.webp',
-      'https://cdn.dummyjson.com/product-images/motorcycle/kawasaki-z800/3.webp',
-      'https://cdn.dummyjson.com/product-images/motorcycle/kawasaki-z800/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953105/mi_ecommerce/nt26wh5bcth8kpkai0pu.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953105/mi_ecommerce/tscpjzyl6rdn9is6fiyr.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953106/mi_ecommerce/wpwwvtqmcnm2ezznt05j.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953106/mi_ecommerce/jl597gl3ftcmqbd1ksjo.webp',
     ],
   },
   {
@@ -3836,12 +2051,13 @@ const products = [
     stock: 10,
     brand: 'MotoGP',
     category: 'motorcycle',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/motorcycle/motogp-ci.h1/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953110/mi_ecommerce/thumbnails/d25ge4lcy2hgbszzsl4b.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/motorcycle/motogp-ci.h1/1.webp',
-      'https://cdn.dummyjson.com/product-images/motorcycle/motogp-ci.h1/2.webp',
-      'https://cdn.dummyjson.com/product-images/motorcycle/motogp-ci.h1/3.webp',
-      'https://cdn.dummyjson.com/product-images/motorcycle/motogp-ci.h1/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953107/mi_ecommerce/wcij1hjzrjiidx49pjtp.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953108/mi_ecommerce/ioy11farrfbjbdnqmmuq.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953109/mi_ecommerce/philwdxoxtjmcfesy5qf.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953109/mi_ecommerce/c27kptgguzwkwwum1dfw.webp',
     ],
   },
   {
@@ -3856,12 +2072,12 @@ const products = [
     brand: 'ScootMaster',
     category: 'motorcycle',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/motorcycle/scooter-motorcycle/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953113/mi_ecommerce/thumbnails/z6gfmao4sdqaubyx1w2g.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/motorcycle/scooter-motorcycle/1.webp',
-      'https://cdn.dummyjson.com/product-images/motorcycle/scooter-motorcycle/2.webp',
-      'https://cdn.dummyjson.com/product-images/motorcycle/scooter-motorcycle/3.webp',
-      'https://cdn.dummyjson.com/product-images/motorcycle/scooter-motorcycle/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953110/mi_ecommerce/eyuzmsfxjidxtqbhqmdp.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953111/mi_ecommerce/ptdexzfolywebnya7rwe.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953111/mi_ecommerce/nscopc0o627ckxmmfgjr.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953112/mi_ecommerce/f9mik22kehe85taylfsz.webp',
     ],
   },
   {
@@ -3876,12 +2092,12 @@ const products = [
     brand: 'SpeedMaster',
     category: 'motorcycle',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/motorcycle/sportbike-motorcycle/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953116/mi_ecommerce/thumbnails/fta21teajs7racne7bsm.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/motorcycle/sportbike-motorcycle/1.webp',
-      'https://cdn.dummyjson.com/product-images/motorcycle/sportbike-motorcycle/2.webp',
-      'https://cdn.dummyjson.com/product-images/motorcycle/sportbike-motorcycle/3.webp',
-      'https://cdn.dummyjson.com/product-images/motorcycle/sportbike-motorcycle/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953113/mi_ecommerce/a3bpupgbslrxe1tdu9ii.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953114/mi_ecommerce/ov7fuwx8sxtn972drqgh.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953115/mi_ecommerce/lsybgg1jc2ppdhw9zeae.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953115/mi_ecommerce/to0vqaptc3emqrauemgg.webp',
     ],
   },
   {
@@ -3896,11 +2112,11 @@ const products = [
     brand: 'Attitude',
     category: 'skin-care',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/skin-care/attitude-super-leaves-hand-soap/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953118/mi_ecommerce/thumbnails/qvbha8o1x6tkuo94ngpp.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/skin-care/attitude-super-leaves-hand-soap/1.webp',
-      'https://cdn.dummyjson.com/product-images/skin-care/attitude-super-leaves-hand-soap/2.webp',
-      'https://cdn.dummyjson.com/product-images/skin-care/attitude-super-leaves-hand-soap/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953117/mi_ecommerce/yurfoaiufbypu381cpno.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953117/mi_ecommerce/gc6zbvlcxlq9qtafhbiz.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953118/mi_ecommerce/jmfqedqgelpyvzvwkptr.webp',
     ],
   },
   {
@@ -3915,11 +2131,11 @@ const products = [
     brand: 'Olay',
     category: 'skin-care',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/skin-care/olay-ultra-moisture-shea-butter-body-wash/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953121/mi_ecommerce/thumbnails/ma5tbg4x8z4ajphscf9j.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/skin-care/olay-ultra-moisture-shea-butter-body-wash/1.webp',
-      'https://cdn.dummyjson.com/product-images/skin-care/olay-ultra-moisture-shea-butter-body-wash/2.webp',
-      'https://cdn.dummyjson.com/product-images/skin-care/olay-ultra-moisture-shea-butter-body-wash/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953119/mi_ecommerce/oqnffsrnperlod3mfv0a.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953120/mi_ecommerce/uhhjet0n5jmc4af7skmc.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953121/mi_ecommerce/dzhocyolfctpz90krdyb.webp',
     ],
   },
   {
@@ -3934,11 +2150,11 @@ const products = [
     brand: 'Vaseline',
     category: 'skin-care',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/skin-care/vaseline-men-body-and-face-lotion/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953124/mi_ecommerce/thumbnails/tgp0gzgw08tjxqax98vp.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/skin-care/vaseline-men-body-and-face-lotion/1.webp',
-      'https://cdn.dummyjson.com/product-images/skin-care/vaseline-men-body-and-face-lotion/2.webp',
-      'https://cdn.dummyjson.com/product-images/skin-care/vaseline-men-body-and-face-lotion/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953122/mi_ecommerce/tai8e9pjppgyta7vdper.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953122/mi_ecommerce/lttjvn12ra7kgrxwp1tp.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953123/mi_ecommerce/tcu3ljckvr0kbeowtxiw.webp',
     ],
   },
   {
@@ -3952,11 +2168,12 @@ const products = [
     stock: 25,
     brand: 'Apple',
     category: 'smartphones',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953126/mi_ecommerce/thumbnails/ndeykx1jebpqo33ntaty.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/1.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/2.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953124/mi_ecommerce/ejofdcfigarwxinzsxlg.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953125/mi_ecommerce/xcdpj36eieyvxzrmriae.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953126/mi_ecommerce/z6zzbggotuk1zdnfxjhp.webp',
     ],
   },
   {
@@ -3970,11 +2187,12 @@ const products = [
     stock: 60,
     brand: 'Apple',
     category: 'smartphones',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/smartphones/iphone-6/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953129/mi_ecommerce/thumbnails/jbi0tpujsxe5irlqd54h.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/smartphones/iphone-6/1.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/iphone-6/2.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/iphone-6/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953127/mi_ecommerce/toyehzw2kipigsfmfnd4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953127/mi_ecommerce/j48kbhncgrte00zw1k2h.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953128/mi_ecommerce/rl4uybzicjfjlrozvz24.webp',
     ],
   },
   {
@@ -3988,11 +2206,12 @@ const products = [
     stock: 56,
     brand: 'Apple',
     category: 'smartphones',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953131/mi_ecommerce/thumbnails/ou85qik1123nrdy5itd7.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/1.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/2.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953129/mi_ecommerce/k1735l3hz0sisbrhunjy.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953130/mi_ecommerce/cyep4lzji5j6qkz8dvcm.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953130/mi_ecommerce/ijlltwsqiffa44ngvnml.webp',
     ],
   },
   {
@@ -4006,11 +2225,12 @@ const products = [
     stock: 37,
     brand: 'Apple',
     category: 'smartphones',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/smartphones/iphone-x/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953134/mi_ecommerce/thumbnails/rrq0vfmjh8zdzjcrmb3q.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/smartphones/iphone-x/1.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/iphone-x/2.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/iphone-x/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953132/mi_ecommerce/uoxzbt8uo9ecljdbxwe2.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953133/mi_ecommerce/yapmlmepzh7dcs5lubkt.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953133/mi_ecommerce/nq0xerbllqsbalmttxfg.webp',
     ],
   },
   {
@@ -4024,11 +2244,12 @@ const products = [
     stock: 19,
     brand: 'Oppo',
     category: 'smartphones',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/smartphones/oppo-a57/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953136/mi_ecommerce/thumbnails/xogaezvxenod5vj0fx4d.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/smartphones/oppo-a57/1.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/oppo-a57/2.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/oppo-a57/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953135/mi_ecommerce/twq9ftxazuu8najkdl0z.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953135/mi_ecommerce/dsoijkivdesdpilltht8.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953136/mi_ecommerce/koci5sgk1rey2ij26gai.webp',
     ],
   },
   {
@@ -4043,11 +2264,11 @@ const products = [
     brand: 'Oppo',
     category: 'smartphones',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953139/mi_ecommerce/thumbnails/jjfwwwypl8jhp8ruxktf.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/1.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/2.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953137/mi_ecommerce/jusouuqqh7cbtmkmtxwv.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953138/mi_ecommerce/k3amharpp7htoqb07x2i.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953138/mi_ecommerce/qqoiaqdi6qi51lsft28m.webp',
     ],
   },
   {
@@ -4061,12 +2282,13 @@ const products = [
     stock: 55,
     brand: 'Oppo',
     category: 'smartphones',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953141/mi_ecommerce/thumbnails/m0ppmdppooqxhi7smdcv.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/1.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/2.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/3.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953139/mi_ecommerce/mhcclmtz0kxy4wtbqpwi.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953140/mi_ecommerce/lt3dpiorh11vsobjkng6.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953140/mi_ecommerce/rqcdl0rlo2ay7z7ayj1d.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953141/mi_ecommerce/nkqx9n5qiata98za4hpf.webp',
     ],
   },
   {
@@ -4080,11 +2302,12 @@ const products = [
     stock: 48,
     brand: 'Realme',
     category: 'smartphones',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/smartphones/realme-c35/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953143/mi_ecommerce/thumbnails/kpdmphoytmnrzvmdwyoy.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/smartphones/realme-c35/1.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/realme-c35/2.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/realme-c35/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953142/mi_ecommerce/v5yhwouvfk1cqndsubgk.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953142/mi_ecommerce/rs0o9kb2zhncg1itcynl.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953143/mi_ecommerce/j8pw2askculedhmed4mo.webp',
     ],
   },
   {
@@ -4098,11 +2321,12 @@ const products = [
     stock: 12,
     brand: 'Realme',
     category: 'smartphones',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/smartphones/realme-x/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953146/mi_ecommerce/thumbnails/vnbmsdhtvhawsu7nobcv.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/smartphones/realme-x/1.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/realme-x/2.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/realme-x/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953144/mi_ecommerce/ry1ckv1hdjkmftpjlsfi.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953145/mi_ecommerce/fhczbtgldvygxlsmejys.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953145/mi_ecommerce/vl4wpiiokppbaltamwst.webp',
     ],
   },
   {
@@ -4116,11 +2340,12 @@ const products = [
     stock: 80,
     brand: 'Realme',
     category: 'smartphones',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/smartphones/realme-xt/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953148/mi_ecommerce/thumbnails/pklup6f0alybxwvtyoty.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/smartphones/realme-xt/1.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/realme-xt/2.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/realme-xt/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953146/mi_ecommerce/zssn6oyfwhss6misieea.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953147/mi_ecommerce/osxd77cynebexy9kjmdg.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953148/mi_ecommerce/eity3r5axtlbcoiynpfo.webp',
     ],
   },
   {
@@ -4135,11 +2360,11 @@ const products = [
     brand: 'Samsung',
     category: 'smartphones',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953151/mi_ecommerce/thumbnails/buvdwqqnhh3sur4d1cpl.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/1.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/2.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953149/mi_ecommerce/vo2mndfik4qojx0no3zf.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953149/mi_ecommerce/pjli1m94nrelion9xxc5.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953150/mi_ecommerce/oh5uoky3u47udbtfmy4e.webp',
     ],
   },
   {
@@ -4154,11 +2379,11 @@ const products = [
     brand: 'Samsung',
     category: 'smartphones',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953153/mi_ecommerce/thumbnails/zbjj0vjc4hyjwhtsbhlu.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/1.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/2.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953151/mi_ecommerce/mb3emq3s7ry5luzoat8h.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953152/mi_ecommerce/habbywa21lwqqvdrviqr.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953152/mi_ecommerce/srohfnlwflq2zeazcadm.webp',
     ],
   },
   {
@@ -4173,11 +2398,11 @@ const products = [
     brand: 'Samsung',
     category: 'smartphones',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s10/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953156/mi_ecommerce/thumbnails/gh8bjwxodt5pgrv96fvb.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s10/1.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s10/2.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s10/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953154/mi_ecommerce/qbrcjq2xibabdxomyh7g.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953155/mi_ecommerce/baz44vusdrr8ogzlzaru.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953155/mi_ecommerce/i7g0kyfhlybmmiycgvvy.webp',
     ],
   },
   {
@@ -4191,11 +2416,12 @@ const products = [
     stock: 50,
     brand: 'Vivo',
     category: 'smartphones',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/smartphones/vivo-s1/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953159/mi_ecommerce/thumbnails/dvxbfaod1sjfvrjl0z2x.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/smartphones/vivo-s1/1.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/vivo-s1/2.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/vivo-s1/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953157/mi_ecommerce/w8knr1kmfchlorsyon6s.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953158/mi_ecommerce/tadshpywhl5iivvyzd0j.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953159/mi_ecommerce/ygcsnmtzajpwvi1guopa.webp',
     ],
   },
   {
@@ -4209,11 +2435,12 @@ const products = [
     stock: 82,
     brand: 'Vivo',
     category: 'smartphones',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/smartphones/vivo-v9/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953162/mi_ecommerce/thumbnails/aphp9tik1vnvmezjt8aw.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/smartphones/vivo-v9/1.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/vivo-v9/2.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/vivo-v9/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953160/mi_ecommerce/u7pquamxf8yon97svlad.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953161/mi_ecommerce/ybjmybezethsj59bi9nu.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953161/mi_ecommerce/pm3c9rlb5mxkkuccbaig.webp',
     ],
   },
   {
@@ -4227,11 +2454,12 @@ const products = [
     stock: 7,
     brand: 'Vivo',
     category: 'smartphones',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/smartphones/vivo-x21/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953165/mi_ecommerce/thumbnails/lwg8kxkoxzou9lyocsap.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/smartphones/vivo-x21/1.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/vivo-x21/2.webp',
-      'https://cdn.dummyjson.com/product-images/smartphones/vivo-x21/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953163/mi_ecommerce/yj6zjl1wnwhkexc0icx8.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953164/mi_ecommerce/seqmoyagq2ofpp9zwgk0.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953164/mi_ecommerce/bqx84rexmutuqhkaak2h.webp',
     ],
   },
   {
@@ -4246,9 +2474,9 @@ const products = [
     brand: undefined,
     category: 'sports-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/sports-accessories/american-football/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953166/mi_ecommerce/thumbnails/pinzu45bxqqh6mjs9jiy.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/sports-accessories/american-football/1.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953165/mi_ecommerce/dvvbazzn8s43y5zwexpu.webp',
     ],
   },
   {
@@ -4263,8 +2491,10 @@ const products = [
     brand: undefined,
     category: 'sports-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/sports-accessories/baseball-ball/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/sports-accessories/baseball-ball/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953167/mi_ecommerce/thumbnails/fw4yssnjhxoatdm1xqpb.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953167/mi_ecommerce/cwi1bc7z22zgopyueb2t.webp',
+    ],
   },
   {
     id: 139,
@@ -4278,11 +2508,11 @@ const products = [
     brand: undefined,
     category: 'sports-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/sports-accessories/baseball-glove/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953170/mi_ecommerce/thumbnails/yp8cttczoeaab6xeroqu.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/sports-accessories/baseball-glove/1.webp',
-      'https://cdn.dummyjson.com/product-images/sports-accessories/baseball-glove/2.webp',
-      'https://cdn.dummyjson.com/product-images/sports-accessories/baseball-glove/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953168/mi_ecommerce/hjfywskvbvzhe8vesv8e.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953169/mi_ecommerce/mzmevniowtn7ethfpk7c.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953169/mi_ecommerce/nzngggtyfg9zqhcp6yxz.webp',
     ],
   },
   {
@@ -4297,8 +2527,10 @@ const products = [
     brand: undefined,
     category: 'sports-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/sports-accessories/basketball/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/sports-accessories/basketball/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953171/mi_ecommerce/thumbnails/x0c8ayyo9zvbparbb9yi.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953170/mi_ecommerce/xpexus52enj6lc5o6ys3.webp',
+    ],
   },
   {
     id: 141,
@@ -4312,8 +2544,10 @@ const products = [
     brand: undefined,
     category: 'sports-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/sports-accessories/basketball-rim/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/sports-accessories/basketball-rim/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953172/mi_ecommerce/thumbnails/jufcwcbl59kkcrjnsf9g.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953172/mi_ecommerce/lllt8b4kahta51zvho2z.webp',
+    ],
   },
   {
     id: 142,
@@ -4327,8 +2561,10 @@ const products = [
     brand: undefined,
     category: 'sports-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/sports-accessories/cricket-ball/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/sports-accessories/cricket-ball/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953173/mi_ecommerce/thumbnails/azo1x6jnna00hpxcgnoo.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953173/mi_ecommerce/dk6f8mowa71crnvilp0m.webp',
+    ],
   },
   {
     id: 143,
@@ -4342,8 +2578,10 @@ const products = [
     brand: undefined,
     category: 'sports-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/sports-accessories/cricket-bat/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/sports-accessories/cricket-bat/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953174/mi_ecommerce/thumbnails/ijkyzdouwfn439segqo9.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953174/mi_ecommerce/lat1qtl8an4bdpwkdk4t.webp',
+    ],
   },
   {
     id: 144,
@@ -4357,12 +2595,12 @@ const products = [
     brand: undefined,
     category: 'sports-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/sports-accessories/cricket-helmet/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953177/mi_ecommerce/thumbnails/h9vb84pdgs2jsarn8gtp.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/sports-accessories/cricket-helmet/1.webp',
-      'https://cdn.dummyjson.com/product-images/sports-accessories/cricket-helmet/2.webp',
-      'https://cdn.dummyjson.com/product-images/sports-accessories/cricket-helmet/3.webp',
-      'https://cdn.dummyjson.com/product-images/sports-accessories/cricket-helmet/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953175/mi_ecommerce/tuzrfwxxxbkd7q4dhsnc.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953176/mi_ecommerce/faydumienjkwkqgorcfb.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953176/mi_ecommerce/inyziea8pdc4om5ox1ub.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953177/mi_ecommerce/fvmwlkqmlcgj6nryldoy.webp',
     ],
   },
   {
@@ -4377,8 +2615,10 @@ const products = [
     brand: undefined,
     category: 'sports-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/sports-accessories/cricket-wicket/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/sports-accessories/cricket-wicket/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953179/mi_ecommerce/thumbnails/il6lzhymrm0szng7umw9.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953178/mi_ecommerce/eoinobd81kjifv67tidu.webp',
+    ],
   },
   {
     id: 146,
@@ -4392,9 +2632,9 @@ const products = [
     brand: undefined,
     category: 'sports-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/sports-accessories/feather-shuttlecock/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953180/mi_ecommerce/thumbnails/bgesknmy7juw51id65nn.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/sports-accessories/feather-shuttlecock/1.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953179/mi_ecommerce/tysbsk1mjsm6iskrbore.webp',
     ],
   },
   {
@@ -4409,8 +2649,10 @@ const products = [
     brand: undefined,
     category: 'sports-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/sports-accessories/football/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/sports-accessories/football/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953181/mi_ecommerce/thumbnails/qhoxaabt88cvtieapj9r.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953181/mi_ecommerce/jbnu0hhfhbmfhcuv5gac.webp',
+    ],
   },
   {
     id: 148,
@@ -4424,8 +2666,10 @@ const products = [
     brand: undefined,
     category: 'sports-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/sports-accessories/golf-ball/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/sports-accessories/golf-ball/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953182/mi_ecommerce/thumbnails/lrdyl4j4pwjhtxugel1w.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953182/mi_ecommerce/paofelsukci6qapcvne7.webp',
+    ],
   },
   {
     id: 149,
@@ -4439,8 +2683,10 @@ const products = [
     brand: undefined,
     category: 'sports-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/sports-accessories/iron-golf/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/sports-accessories/iron-golf/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953184/mi_ecommerce/thumbnails/pd3dx7gzzeemcpv7wyym.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953183/mi_ecommerce/qeilkkpchuuhkcheotsw.webp',
+    ],
   },
   {
     id: 150,
@@ -4454,9 +2700,9 @@ const products = [
     brand: undefined,
     category: 'sports-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/sports-accessories/metal-baseball-bat/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953185/mi_ecommerce/thumbnails/fpi0enyzisxxstiyghir.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/sports-accessories/metal-baseball-bat/1.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953184/mi_ecommerce/j2leewnln3lb8h2m4847.webp',
     ],
   },
   {
@@ -4471,8 +2717,10 @@ const products = [
     brand: undefined,
     category: 'sports-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/sports-accessories/tennis-ball/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/sports-accessories/tennis-ball/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953186/mi_ecommerce/thumbnails/lk2do2ilrg00hcgehg5s.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953185/mi_ecommerce/zlmqroqhxfa9jn7wmj8r.webp',
+    ],
   },
   {
     id: 152,
@@ -4486,8 +2734,10 @@ const products = [
     brand: undefined,
     category: 'sports-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/sports-accessories/tennis-racket/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/sports-accessories/tennis-racket/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953187/mi_ecommerce/thumbnails/atqvkwqveqfywpobwb1p.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953187/mi_ecommerce/ff6r79crw6p5aemhk57q.webp',
+    ],
   },
   {
     id: 153,
@@ -4501,8 +2751,10 @@ const products = [
     brand: undefined,
     category: 'sports-accessories',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/sports-accessories/volleyball/thumbnail.webp',
-    images: ['https://cdn.dummyjson.com/product-images/sports-accessories/volleyball/1.webp'],
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953189/mi_ecommerce/thumbnails/kflsvkc5hng5dn2u2qte.webp',
+    images: [
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953189/mi_ecommerce/lrnigavzg3hqw6ykmona.webp',
+    ],
   },
   {
     id: 154,
@@ -4516,11 +2768,11 @@ const products = [
     brand: 'Fashion Shades',
     category: 'sunglasses',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/sunglasses/black-sun-glasses/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953192/mi_ecommerce/thumbnails/iwdvb0fl9f2estbttomy.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/sunglasses/black-sun-glasses/1.webp',
-      'https://cdn.dummyjson.com/product-images/sunglasses/black-sun-glasses/2.webp',
-      'https://cdn.dummyjson.com/product-images/sunglasses/black-sun-glasses/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953190/mi_ecommerce/vtvmkqkhjfnnon7rujes.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953191/mi_ecommerce/po4h1ac8h60esz8uayyf.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953191/mi_ecommerce/uns9fykmas4nzryudj7s.webp',
     ],
   },
   {
@@ -4535,11 +2787,11 @@ const products = [
     brand: 'Fashion Shades',
     category: 'sunglasses',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/sunglasses/classic-sun-glasses/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953195/mi_ecommerce/thumbnails/ncbv74gbclx4nbgpx7gf.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/sunglasses/classic-sun-glasses/1.webp',
-      'https://cdn.dummyjson.com/product-images/sunglasses/classic-sun-glasses/2.webp',
-      'https://cdn.dummyjson.com/product-images/sunglasses/classic-sun-glasses/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953192/mi_ecommerce/eakiq2fjdqhllvyysp33.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953194/mi_ecommerce/wyteeqktc5ynhmomt0sz.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953194/mi_ecommerce/e4cepeuamipncsloy3j0.webp',
     ],
   },
   {
@@ -4554,11 +2806,11 @@ const products = [
     brand: 'Fashion Shades',
     category: 'sunglasses',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/sunglasses/green-and-black-glasses/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953197/mi_ecommerce/thumbnails/iuqnczcryr9chhp46rkn.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/sunglasses/green-and-black-glasses/1.webp',
-      'https://cdn.dummyjson.com/product-images/sunglasses/green-and-black-glasses/2.webp',
-      'https://cdn.dummyjson.com/product-images/sunglasses/green-and-black-glasses/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953196/mi_ecommerce/yzqrvskr5fjheg8rivhs.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953196/mi_ecommerce/jxml5t647w7qogi7a6fe.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953197/mi_ecommerce/rkqbzcafmi2xlitfsgf0.webp',
     ],
   },
   {
@@ -4572,11 +2824,12 @@ const products = [
     stock: 86,
     brand: 'Fashion Fun',
     category: 'sunglasses',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/sunglasses/party-glasses/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953200/mi_ecommerce/thumbnails/nqzth8sy1ief5yanwkvt.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/sunglasses/party-glasses/1.webp',
-      'https://cdn.dummyjson.com/product-images/sunglasses/party-glasses/2.webp',
-      'https://cdn.dummyjson.com/product-images/sunglasses/party-glasses/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953198/mi_ecommerce/rvbym0dxvjk3nssvdbs2.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953199/mi_ecommerce/s0rcpqkdydhl34b0sx1i.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953199/mi_ecommerce/czezlrr5rswkizrj0o4c.webp',
     ],
   },
   {
@@ -4590,11 +2843,12 @@ const products = [
     stock: 27,
     brand: 'Fashion Shades',
     category: 'sunglasses',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/sunglasses/sunglasses/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953202/mi_ecommerce/thumbnails/krtynuqykkwxjwxunhah.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/sunglasses/sunglasses/1.webp',
-      'https://cdn.dummyjson.com/product-images/sunglasses/sunglasses/2.webp',
-      'https://cdn.dummyjson.com/product-images/sunglasses/sunglasses/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953200/mi_ecommerce/mzzkvkzjb4wm8pkjyi4u.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953201/mi_ecommerce/dcr3lqid8wl0sjdvfh9q.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953202/mi_ecommerce/opbokmjdkfdulhzp9xwa.webp',
     ],
   },
   {
@@ -4609,12 +2863,12 @@ const products = [
     brand: 'Apple',
     category: 'tablets',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/tablets/ipad-mini-2021-starlight/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953206/mi_ecommerce/thumbnails/dyy2x8vr3lgzbimqll3e.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/tablets/ipad-mini-2021-starlight/1.webp',
-      'https://cdn.dummyjson.com/product-images/tablets/ipad-mini-2021-starlight/2.webp',
-      'https://cdn.dummyjson.com/product-images/tablets/ipad-mini-2021-starlight/3.webp',
-      'https://cdn.dummyjson.com/product-images/tablets/ipad-mini-2021-starlight/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953203/mi_ecommerce/lypwhxdlpdsl9bldppft.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953204/mi_ecommerce/nh7cdhg9cym1bhnrrqrq.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953204/mi_ecommerce/xfxramtnlmxkh175kycw.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953205/mi_ecommerce/c8lconfgjqbuwedxnjch.webp',
     ],
   },
   {
@@ -4629,12 +2883,12 @@ const products = [
     brand: 'Samsung',
     category: 'tablets',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-s8-plus-grey/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953208/mi_ecommerce/thumbnails/s2wrdw6ceutt18p2tkgy.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-s8-plus-grey/1.webp',
-      'https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-s8-plus-grey/2.webp',
-      'https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-s8-plus-grey/3.webp',
-      'https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-s8-plus-grey/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953206/mi_ecommerce/a4yrh8y4au7vqao3qxnr.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953207/mi_ecommerce/ujixlw7pxuxxi61efto2.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953207/mi_ecommerce/k6knh0bahuzyj6xgwkot.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953208/mi_ecommerce/z8ubdabscgkubzouicoh.webp',
     ],
   },
   {
@@ -4649,12 +2903,12 @@ const products = [
     brand: 'Samsung',
     category: 'tablets',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-white/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953212/mi_ecommerce/thumbnails/pgso9pp7dgvf60g8vhxr.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-white/1.webp',
-      'https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-white/2.webp',
-      'https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-white/3.webp',
-      'https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-white/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953209/mi_ecommerce/fsncypxmw5jpkwzin1be.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953209/mi_ecommerce/bgq8e8c9qielxtvgxwiw.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953210/mi_ecommerce/bgf0ojfpfrqf9mtp8fxp.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953211/mi_ecommerce/fel4wr7kjdkrewxy3awg.webp',
     ],
   },
   {
@@ -4668,12 +2922,13 @@ const products = [
     stock: 52,
     brand: undefined,
     category: 'tops',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/tops/blue-frock/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953215/mi_ecommerce/thumbnails/zgvucu2qmzfsvojbmfoe.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/tops/blue-frock/1.webp',
-      'https://cdn.dummyjson.com/product-images/tops/blue-frock/2.webp',
-      'https://cdn.dummyjson.com/product-images/tops/blue-frock/3.webp',
-      'https://cdn.dummyjson.com/product-images/tops/blue-frock/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953212/mi_ecommerce/rmbeyvpo3b68byho4z9i.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953213/mi_ecommerce/xafjwlh423dd9ri4arj7.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953214/mi_ecommerce/wo6ie2ecrnjsw0ltswhv.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953214/mi_ecommerce/ravngqrnhg8m3babj3u1.webp',
     ],
   },
   {
@@ -4687,12 +2942,13 @@ const products = [
     stock: 43,
     brand: undefined,
     category: 'tops',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/tops/girl-summer-dress/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953218/mi_ecommerce/thumbnails/rejr6wqz1vhzooywtqfc.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/tops/girl-summer-dress/1.webp',
-      'https://cdn.dummyjson.com/product-images/tops/girl-summer-dress/2.webp',
-      'https://cdn.dummyjson.com/product-images/tops/girl-summer-dress/3.webp',
-      'https://cdn.dummyjson.com/product-images/tops/girl-summer-dress/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953215/mi_ecommerce/a46blf0zjmwcdextjtms.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953216/mi_ecommerce/gikxm14f2hkfc1fs6xlx.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953217/mi_ecommerce/lfic0neqeaowguiylkb5.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953217/mi_ecommerce/g4go41d4qvnjpb2k4iui.webp',
     ],
   },
   {
@@ -4706,12 +2962,13 @@ const products = [
     stock: 55,
     brand: undefined,
     category: 'tops',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/tops/gray-dress/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953221/mi_ecommerce/thumbnails/cgjl6rtjwu2nokgfecuu.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/tops/gray-dress/1.webp',
-      'https://cdn.dummyjson.com/product-images/tops/gray-dress/2.webp',
-      'https://cdn.dummyjson.com/product-images/tops/gray-dress/3.webp',
-      'https://cdn.dummyjson.com/product-images/tops/gray-dress/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953219/mi_ecommerce/e7ajxnbilb1q5yqkkhxk.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953219/mi_ecommerce/zm5bwer2vbeybipttpeu.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953220/mi_ecommerce/yfg0fkw9z0rckwbmno1u.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953221/mi_ecommerce/gvqhaivcvfpzi4g4cylm.webp',
     ],
   },
   {
@@ -4725,12 +2982,13 @@ const products = [
     stock: 22,
     brand: undefined,
     category: 'tops',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/tops/short-frock/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953225/mi_ecommerce/thumbnails/wuague4s5tg3jk7eetmz.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/tops/short-frock/1.webp',
-      'https://cdn.dummyjson.com/product-images/tops/short-frock/2.webp',
-      'https://cdn.dummyjson.com/product-images/tops/short-frock/3.webp',
-      'https://cdn.dummyjson.com/product-images/tops/short-frock/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953222/mi_ecommerce/k7i29emsxrn0ogolcnnn.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953223/mi_ecommerce/jnqcbw5rmlsb5zztepon.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953223/mi_ecommerce/qlpskes8ne2j6yqaqgpg.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953224/mi_ecommerce/tqv71zucq0fl2mzaqozi.webp',
     ],
   },
   {
@@ -4744,12 +3002,13 @@ const products = [
     stock: 73,
     brand: undefined,
     category: 'tops',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/tops/tartan-dress/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953228/mi_ecommerce/thumbnails/me8a43hwgnwrdxkd9uqk.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/tops/tartan-dress/1.webp',
-      'https://cdn.dummyjson.com/product-images/tops/tartan-dress/2.webp',
-      'https://cdn.dummyjson.com/product-images/tops/tartan-dress/3.webp',
-      'https://cdn.dummyjson.com/product-images/tops/tartan-dress/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953225/mi_ecommerce/paql5duxnsgzujngisgj.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953226/mi_ecommerce/yurxwyzryel5h4q6ie0j.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953226/mi_ecommerce/efgyu9vgqkeudfk1a9rf.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953227/mi_ecommerce/dwocf862jssudzkg46vi.webp',
     ],
   },
   {
@@ -4763,14 +3022,15 @@ const products = [
     stock: 54,
     brand: 'Chrysler',
     category: 'vehicle',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/vehicle/300-touring/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953232/mi_ecommerce/thumbnails/czc36tlazy6ntwoa3dkb.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/vehicle/300-touring/1.webp',
-      'https://cdn.dummyjson.com/product-images/vehicle/300-touring/2.webp',
-      'https://cdn.dummyjson.com/product-images/vehicle/300-touring/3.webp',
-      'https://cdn.dummyjson.com/product-images/vehicle/300-touring/4.webp',
-      'https://cdn.dummyjson.com/product-images/vehicle/300-touring/5.webp',
-      'https://cdn.dummyjson.com/product-images/vehicle/300-touring/6.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953228/mi_ecommerce/n311at71sezaohoz4qcq.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953229/mi_ecommerce/rydpb5hwrzrbe7nrhvax.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953229/mi_ecommerce/vs9qixizacvm3j9bkywy.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953230/mi_ecommerce/b41rxiyfjtevwqessub8.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953230/mi_ecommerce/erixsn4wxilxn6dxqphc.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953231/mi_ecommerce/xqrjj59mq67jhsafxd5q.webp',
     ],
   },
   {
@@ -4784,14 +3044,15 @@ const products = [
     stock: 57,
     brand: 'Dodge',
     category: 'vehicle',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/vehicle/charger-sxt-rwd/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953236/mi_ecommerce/thumbnails/wdybmgvxt9esvzducje9.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/vehicle/charger-sxt-rwd/1.webp',
-      'https://cdn.dummyjson.com/product-images/vehicle/charger-sxt-rwd/2.webp',
-      'https://cdn.dummyjson.com/product-images/vehicle/charger-sxt-rwd/3.webp',
-      'https://cdn.dummyjson.com/product-images/vehicle/charger-sxt-rwd/4.webp',
-      'https://cdn.dummyjson.com/product-images/vehicle/charger-sxt-rwd/5.webp',
-      'https://cdn.dummyjson.com/product-images/vehicle/charger-sxt-rwd/6.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953232/mi_ecommerce/imrbyxppo0glsn1n0lvo.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953233/mi_ecommerce/ih2vcbgngwbjprbfjhgy.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953233/mi_ecommerce/dhilzxozpwi3ijv777ip.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953234/mi_ecommerce/hzykvtjngbyumr16wbfw.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953234/mi_ecommerce/er8d7bpmnttl36iz2dwb.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953235/mi_ecommerce/ypyr39c8gt7wuvmhdez6.webp',
     ],
   },
   {
@@ -4806,14 +3067,14 @@ const products = [
     brand: 'Dodge',
     category: 'vehicle',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/vehicle/dodge-hornet-gt-plus/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953240/mi_ecommerce/thumbnails/l7garrlbd6xerbtg2n1r.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/vehicle/dodge-hornet-gt-plus/1.webp',
-      'https://cdn.dummyjson.com/product-images/vehicle/dodge-hornet-gt-plus/2.webp',
-      'https://cdn.dummyjson.com/product-images/vehicle/dodge-hornet-gt-plus/3.webp',
-      'https://cdn.dummyjson.com/product-images/vehicle/dodge-hornet-gt-plus/4.webp',
-      'https://cdn.dummyjson.com/product-images/vehicle/dodge-hornet-gt-plus/5.webp',
-      'https://cdn.dummyjson.com/product-images/vehicle/dodge-hornet-gt-plus/6.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953236/mi_ecommerce/frifilfha6ftybzyvpkc.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953237/mi_ecommerce/w7nlyj5dy8ilc8iurkl2.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953238/mi_ecommerce/wquspbso7zxbhu70otyf.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953238/mi_ecommerce/bfy45wiqieohduc7pz8i.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953239/mi_ecommerce/lfmdtq4grofq8scrkn6h.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953239/mi_ecommerce/gntfsda1aj4ox8i54uay.webp',
     ],
   },
   {
@@ -4827,14 +3088,15 @@ const products = [
     stock: 95,
     brand: 'Dodge',
     category: 'vehicle',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/vehicle/durango-sxt-rwd/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953244/mi_ecommerce/thumbnails/hmyxmllpzmsiskglnwau.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/vehicle/durango-sxt-rwd/1.webp',
-      'https://cdn.dummyjson.com/product-images/vehicle/durango-sxt-rwd/2.webp',
-      'https://cdn.dummyjson.com/product-images/vehicle/durango-sxt-rwd/3.webp',
-      'https://cdn.dummyjson.com/product-images/vehicle/durango-sxt-rwd/4.webp',
-      'https://cdn.dummyjson.com/product-images/vehicle/durango-sxt-rwd/5.webp',
-      'https://cdn.dummyjson.com/product-images/vehicle/durango-sxt-rwd/6.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953240/mi_ecommerce/apdcjfibsmhgykcfogk1.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953241/mi_ecommerce/sel7ifywaik3w4ovmxvf.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953242/mi_ecommerce/ma8vowkqzcautnu8ocp7.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953242/mi_ecommerce/ww3v5atbc7gspshekowk.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953243/mi_ecommerce/los30yuvoxuef3bhrxgg.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953244/mi_ecommerce/t00mthtkv1poc3bhfgyn.webp',
     ],
   },
   {
@@ -4848,14 +3110,15 @@ const products = [
     stock: 53,
     brand: 'Chrysler',
     category: 'vehicle',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/vehicle/pacifica-touring/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953249/mi_ecommerce/thumbnails/eluvdtswlovgxzn9ujep.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/vehicle/pacifica-touring/1.webp',
-      'https://cdn.dummyjson.com/product-images/vehicle/pacifica-touring/2.webp',
-      'https://cdn.dummyjson.com/product-images/vehicle/pacifica-touring/3.webp',
-      'https://cdn.dummyjson.com/product-images/vehicle/pacifica-touring/4.webp',
-      'https://cdn.dummyjson.com/product-images/vehicle/pacifica-touring/5.webp',
-      'https://cdn.dummyjson.com/product-images/vehicle/pacifica-touring/6.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953245/mi_ecommerce/iho2wmkisivmkvexmrua.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953245/mi_ecommerce/e0nmtz5btconfchxc8rn.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953246/mi_ecommerce/joghyaxoqg6bvruxrqzc.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953247/mi_ecommerce/ngiarerspcmhz2qmfak2.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953248/mi_ecommerce/snj9axvracuyvtsufqkv.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953248/mi_ecommerce/csdh9vdp9vjjkks2oct5.webp',
     ],
   },
   {
@@ -4870,11 +3133,11 @@ const products = [
     brand: 'Fashionista',
     category: 'womens-bags',
     thumbnail:
-      "https://cdn.dummyjson.com/product-images/womens-bags/blue-women's-handbag/thumbnail.webp",
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953252/mi_ecommerce/thumbnails/qfd8zqvtrtmpvgeyj5jt.webp',
     images: [
-      "https://cdn.dummyjson.com/product-images/womens-bags/blue-women's-handbag/1.webp",
-      "https://cdn.dummyjson.com/product-images/womens-bags/blue-women's-handbag/2.webp",
-      "https://cdn.dummyjson.com/product-images/womens-bags/blue-women's-handbag/3.webp",
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953250/mi_ecommerce/iejkou7ogeiygl031skq.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953250/mi_ecommerce/vyg65eikcpf2fdbs4cbt.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953251/mi_ecommerce/qdarfpt2vydhpkmnpfw7.webp',
     ],
   },
   {
@@ -4889,11 +3152,11 @@ const products = [
     brand: 'Heshe',
     category: 'womens-bags',
     thumbnail:
-      "https://cdn.dummyjson.com/product-images/womens-bags/heshe-women's-leather-bag/thumbnail.webp",
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953255/mi_ecommerce/thumbnails/ap2ovnq5f48fbr4jre9m.webp',
     images: [
-      "https://cdn.dummyjson.com/product-images/womens-bags/heshe-women's-leather-bag/1.webp",
-      "https://cdn.dummyjson.com/product-images/womens-bags/heshe-women's-leather-bag/2.webp",
-      "https://cdn.dummyjson.com/product-images/womens-bags/heshe-women's-leather-bag/3.webp",
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953253/mi_ecommerce/cyghhndomcbqbkh7o1tq.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953253/mi_ecommerce/clhbkt1kxm78ex2uigz7.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953254/mi_ecommerce/bgzy3mknqnzlmndtpzg6.webp',
     ],
   },
   {
@@ -4908,11 +3171,11 @@ const products = [
     brand: 'Prada',
     category: 'womens-bags',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/womens-bags/prada-women-bag/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953257/mi_ecommerce/thumbnails/p2wqahulpu0riatkjdfn.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/womens-bags/prada-women-bag/1.webp',
-      'https://cdn.dummyjson.com/product-images/womens-bags/prada-women-bag/2.webp',
-      'https://cdn.dummyjson.com/product-images/womens-bags/prada-women-bag/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953255/mi_ecommerce/qsecb8ga7dozjbfpqgys.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953256/mi_ecommerce/rk9eaa0n2undenihirhi.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953256/mi_ecommerce/tco6mtqbvhqsqmta947z.webp',
     ],
   },
   {
@@ -4927,11 +3190,11 @@ const products = [
     brand: 'Urban Chic',
     category: 'womens-bags',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/womens-bags/white-faux-leather-backpack/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953259/mi_ecommerce/thumbnails/fpjyf1kjtvd7nxdouk2k.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/womens-bags/white-faux-leather-backpack/1.webp',
-      'https://cdn.dummyjson.com/product-images/womens-bags/white-faux-leather-backpack/2.webp',
-      'https://cdn.dummyjson.com/product-images/womens-bags/white-faux-leather-backpack/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953258/mi_ecommerce/akcd0ek5auujjzwvllqc.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953258/mi_ecommerce/crzy0fzircez4cijghpq.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953259/mi_ecommerce/htsxujsg53exc3gfu9tk.webp',
     ],
   },
   {
@@ -4946,11 +3209,11 @@ const products = [
     brand: 'Elegance Collection',
     category: 'womens-bags',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/womens-bags/women-handbag-black/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953261/mi_ecommerce/thumbnails/vnvzkshymbzktqpr1l8t.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/womens-bags/women-handbag-black/1.webp',
-      'https://cdn.dummyjson.com/product-images/womens-bags/women-handbag-black/2.webp',
-      'https://cdn.dummyjson.com/product-images/womens-bags/women-handbag-black/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953260/mi_ecommerce/f1i5uemfxe61lm8ckaxv.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953260/mi_ecommerce/q2vg2gkkm1ndioyydrc4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953261/mi_ecommerce/lgxoo5yfetjjj2at5ipz.webp',
     ],
   },
   {
@@ -4965,12 +3228,12 @@ const products = [
     brand: undefined,
     category: 'womens-dresses',
     thumbnail:
-      "https://cdn.dummyjson.com/product-images/womens-dresses/black-women's-gown/thumbnail.webp",
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953265/mi_ecommerce/thumbnails/baefimho6toed8f4kwy4.webp',
     images: [
-      "https://cdn.dummyjson.com/product-images/womens-dresses/black-women's-gown/1.webp",
-      "https://cdn.dummyjson.com/product-images/womens-dresses/black-women's-gown/2.webp",
-      "https://cdn.dummyjson.com/product-images/womens-dresses/black-women's-gown/3.webp",
-      "https://cdn.dummyjson.com/product-images/womens-dresses/black-women's-gown/4.webp",
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953262/mi_ecommerce/bilmaxuj4rpp9gcftcen.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953263/mi_ecommerce/xrxec46czgzkv2vjoyuk.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953263/mi_ecommerce/ru6tp51w8jem3lsspmnx.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953264/mi_ecommerce/zsvjqyffi8upqahmmnat.webp',
     ],
   },
   {
@@ -4985,12 +3248,12 @@ const products = [
     brand: undefined,
     category: 'womens-dresses',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/womens-dresses/corset-leather-with-skirt/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953267/mi_ecommerce/thumbnails/oltolq8lc3tuo02kfqbq.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/womens-dresses/corset-leather-with-skirt/1.webp',
-      'https://cdn.dummyjson.com/product-images/womens-dresses/corset-leather-with-skirt/2.webp',
-      'https://cdn.dummyjson.com/product-images/womens-dresses/corset-leather-with-skirt/3.webp',
-      'https://cdn.dummyjson.com/product-images/womens-dresses/corset-leather-with-skirt/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953265/mi_ecommerce/zvy8it7fdtvynrymicxn.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953266/mi_ecommerce/oigincpgocruo5otfhh4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953266/mi_ecommerce/vbjf1u4sr8xrhy7xvjzm.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953267/mi_ecommerce/w3w6cr901rt8jxayybt3.webp',
     ],
   },
   {
@@ -5005,12 +3268,12 @@ const products = [
     brand: undefined,
     category: 'womens-dresses',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/womens-dresses/corset-with-black-skirt/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953271/mi_ecommerce/thumbnails/zabwufuwqnpma665ioro.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/womens-dresses/corset-with-black-skirt/1.webp',
-      'https://cdn.dummyjson.com/product-images/womens-dresses/corset-with-black-skirt/2.webp',
-      'https://cdn.dummyjson.com/product-images/womens-dresses/corset-with-black-skirt/3.webp',
-      'https://cdn.dummyjson.com/product-images/womens-dresses/corset-with-black-skirt/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953268/mi_ecommerce/j5sykrnel5w1k2zl4thu.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953268/mi_ecommerce/xejbuzajjxunwzjstrau.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953269/mi_ecommerce/psoj5qqdede0tfy8caos.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953270/mi_ecommerce/qx4agi4yb3c76kdznmga.webp',
     ],
   },
   {
@@ -5024,12 +3287,13 @@ const products = [
     stock: 6,
     brand: undefined,
     category: 'womens-dresses',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/womens-dresses/dress-pea/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953274/mi_ecommerce/thumbnails/ropjkh3qcp1yscutoj0p.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/womens-dresses/dress-pea/1.webp',
-      'https://cdn.dummyjson.com/product-images/womens-dresses/dress-pea/2.webp',
-      'https://cdn.dummyjson.com/product-images/womens-dresses/dress-pea/3.webp',
-      'https://cdn.dummyjson.com/product-images/womens-dresses/dress-pea/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953271/mi_ecommerce/ah07gcggzr7lr21hircn.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953272/mi_ecommerce/u2avzh98f3evvzneyiuf.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953273/mi_ecommerce/xbzrpmfyae4awimbwumz.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953273/mi_ecommerce/v7jzo88qes7vu1ghso61.webp',
     ],
   },
   {
@@ -5044,12 +3308,12 @@ const products = [
     brand: undefined,
     category: 'womens-dresses',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/womens-dresses/marni-red-&-black-suit/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953277/mi_ecommerce/thumbnails/kprdkxjc73ba0ska8nud.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/womens-dresses/marni-red-&-black-suit/1.webp',
-      'https://cdn.dummyjson.com/product-images/womens-dresses/marni-red-&-black-suit/2.webp',
-      'https://cdn.dummyjson.com/product-images/womens-dresses/marni-red-&-black-suit/3.webp',
-      'https://cdn.dummyjson.com/product-images/womens-dresses/marni-red-&-black-suit/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953274/mi_ecommerce/qpgb2eoakumyxnuozdkl.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953275/mi_ecommerce/qvxakrmha41kbgv3ill2.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953276/mi_ecommerce/yrrms4uwow38g8nxbslr.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953276/mi_ecommerce/pqalpoqo8xr3p9a1lldp.webp',
     ],
   },
   {
@@ -5064,11 +3328,11 @@ const products = [
     brand: undefined,
     category: 'womens-jewellery',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/womens-jewellery/green-crystal-earring/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953279/mi_ecommerce/thumbnails/pdqbnjiivpjl9d8rksie.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/womens-jewellery/green-crystal-earring/1.webp',
-      'https://cdn.dummyjson.com/product-images/womens-jewellery/green-crystal-earring/2.webp',
-      'https://cdn.dummyjson.com/product-images/womens-jewellery/green-crystal-earring/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953277/mi_ecommerce/v8f9943hdtgvornnzmu2.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953278/mi_ecommerce/rlkmfqmnkwx9xvphrrni.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953279/mi_ecommerce/cwrv7x51wzspbcny9srb.webp',
     ],
   },
   {
@@ -5083,11 +3347,11 @@ const products = [
     brand: undefined,
     category: 'womens-jewellery',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/womens-jewellery/green-oval-earring/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953282/mi_ecommerce/thumbnails/jdgexjdzpa8np8ordcio.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/womens-jewellery/green-oval-earring/1.webp',
-      'https://cdn.dummyjson.com/product-images/womens-jewellery/green-oval-earring/2.webp',
-      'https://cdn.dummyjson.com/product-images/womens-jewellery/green-oval-earring/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953280/mi_ecommerce/gjejrvxxlazodt6sdgnj.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953280/mi_ecommerce/vrhyshswhvr9vbomypvh.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953281/mi_ecommerce/zra7eoradbkbwa95w4mo.webp',
     ],
   },
   {
@@ -5102,11 +3366,11 @@ const products = [
     brand: undefined,
     category: 'womens-jewellery',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/womens-jewellery/tropical-earring/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953284/mi_ecommerce/thumbnails/e6ti2wy9xvrtqzfyebfx.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/womens-jewellery/tropical-earring/1.webp',
-      'https://cdn.dummyjson.com/product-images/womens-jewellery/tropical-earring/2.webp',
-      'https://cdn.dummyjson.com/product-images/womens-jewellery/tropical-earring/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953282/mi_ecommerce/b0ccszt53iyada6kfmzj.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953283/mi_ecommerce/t3qk90pcrnuhbozb7adz.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953284/mi_ecommerce/okfanywfwmhocnzxidju.webp',
     ],
   },
   {
@@ -5121,12 +3385,12 @@ const products = [
     brand: 'Comfort Trends',
     category: 'womens-shoes',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/womens-shoes/black-&-brown-slipper/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953287/mi_ecommerce/thumbnails/keaqjm1adte5toljymve.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/womens-shoes/black-&-brown-slipper/1.webp',
-      'https://cdn.dummyjson.com/product-images/womens-shoes/black-&-brown-slipper/2.webp',
-      'https://cdn.dummyjson.com/product-images/womens-shoes/black-&-brown-slipper/3.webp',
-      'https://cdn.dummyjson.com/product-images/womens-shoes/black-&-brown-slipper/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953285/mi_ecommerce/lljjannglh0zkanemzbf.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953285/mi_ecommerce/zvberfyqn4zy9t6fockk.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953286/mi_ecommerce/a3lhf6qvwcnkxde2mjj0.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953287/mi_ecommerce/oqmzfvpjzcfjq7jyyf8m.webp',
     ],
   },
   {
@@ -5141,12 +3405,12 @@ const products = [
     brand: 'Calvin Klein',
     category: 'womens-shoes',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/womens-shoes/calvin-klein-heel-shoes/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953290/mi_ecommerce/thumbnails/vlpv21dt7rk5ap94mfy0.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/womens-shoes/calvin-klein-heel-shoes/1.webp',
-      'https://cdn.dummyjson.com/product-images/womens-shoes/calvin-klein-heel-shoes/2.webp',
-      'https://cdn.dummyjson.com/product-images/womens-shoes/calvin-klein-heel-shoes/3.webp',
-      'https://cdn.dummyjson.com/product-images/womens-shoes/calvin-klein-heel-shoes/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953288/mi_ecommerce/jet6cgtbpd2ymxjkwdk2.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953288/mi_ecommerce/ttv0gqahbolujmxgmvck.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953289/mi_ecommerce/boahud51ylc6fyoxsuxa.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953290/mi_ecommerce/rfr3llxgehcehzmbpkwq.webp',
     ],
   },
   {
@@ -5161,12 +3425,12 @@ const products = [
     brand: 'Fashion Diva',
     category: 'womens-shoes',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/womens-shoes/golden-shoes-woman/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953293/mi_ecommerce/thumbnails/esoheetqexnc9ow5lpgh.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/womens-shoes/golden-shoes-woman/1.webp',
-      'https://cdn.dummyjson.com/product-images/womens-shoes/golden-shoes-woman/2.webp',
-      'https://cdn.dummyjson.com/product-images/womens-shoes/golden-shoes-woman/3.webp',
-      'https://cdn.dummyjson.com/product-images/womens-shoes/golden-shoes-woman/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953291/mi_ecommerce/hpj54rqxjkus2ovkvk1l.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953291/mi_ecommerce/j1mws845nkjdaygy6mj7.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953292/mi_ecommerce/vupcfqcxrxxqy5dn1qbm.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953293/mi_ecommerce/g38nctavfczumzjhqjdu.webp',
     ],
   },
   {
@@ -5180,12 +3444,13 @@ const products = [
     stock: 49,
     brand: 'Pampi',
     category: 'womens-shoes',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/womens-shoes/pampi-shoes/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953296/mi_ecommerce/thumbnails/y08dsojyvnctm7gcvhjr.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/womens-shoes/pampi-shoes/1.webp',
-      'https://cdn.dummyjson.com/product-images/womens-shoes/pampi-shoes/2.webp',
-      'https://cdn.dummyjson.com/product-images/womens-shoes/pampi-shoes/3.webp',
-      'https://cdn.dummyjson.com/product-images/womens-shoes/pampi-shoes/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953294/mi_ecommerce/o62uc1dohjrz8idi48hc.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953294/mi_ecommerce/iicbht3jsattcqx2wl3p.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953295/mi_ecommerce/omqm7azndhbyjo8wnbgg.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953296/mi_ecommerce/k7s93buywaobjtdo4jah.webp',
     ],
   },
   {
@@ -5199,12 +3464,13 @@ const products = [
     stock: 7,
     brand: 'Fashion Express',
     category: 'womens-shoes',
-    thumbnail: 'https://cdn.dummyjson.com/product-images/womens-shoes/red-shoes/thumbnail.webp',
+    thumbnail:
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953299/mi_ecommerce/thumbnails/lalifpdr93pe5xjkuull.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/womens-shoes/red-shoes/1.webp',
-      'https://cdn.dummyjson.com/product-images/womens-shoes/red-shoes/2.webp',
-      'https://cdn.dummyjson.com/product-images/womens-shoes/red-shoes/3.webp',
-      'https://cdn.dummyjson.com/product-images/womens-shoes/red-shoes/4.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953297/mi_ecommerce/vwzvsuh5j2b2mrxedy3g.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953297/mi_ecommerce/zxa0uys6ry2z2ckvwc36.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953298/mi_ecommerce/wyrjtivhzqmiokvcgksz.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953298/mi_ecommerce/tkt27utnzrugs91zhyfz.webp',
     ],
   },
   {
@@ -5219,11 +3485,11 @@ const products = [
     brand: 'IWC',
     category: 'womens-watches',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/womens-watches/iwc-ingenieur-automatic-steel/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953301/mi_ecommerce/thumbnails/advjanbq0ixorus11t4j.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/womens-watches/iwc-ingenieur-automatic-steel/1.webp',
-      'https://cdn.dummyjson.com/product-images/womens-watches/iwc-ingenieur-automatic-steel/2.webp',
-      'https://cdn.dummyjson.com/product-images/womens-watches/iwc-ingenieur-automatic-steel/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953300/mi_ecommerce/p9w4atkkxfse5iicgt0y.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953300/mi_ecommerce/ievuzxz7wbrjd7y2csii.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953301/mi_ecommerce/vanjaz4svjsajjlird8y.webp',
     ],
   },
   {
@@ -5238,11 +3504,11 @@ const products = [
     brand: 'Rolex',
     category: 'womens-watches',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/womens-watches/rolex-cellini-moonphase/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953304/mi_ecommerce/thumbnails/w4dv4mjvtfcsazddlfl3.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/womens-watches/rolex-cellini-moonphase/1.webp',
-      'https://cdn.dummyjson.com/product-images/womens-watches/rolex-cellini-moonphase/2.webp',
-      'https://cdn.dummyjson.com/product-images/womens-watches/rolex-cellini-moonphase/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953302/mi_ecommerce/rtb9vmk97gvebdliixvt.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953303/mi_ecommerce/m2y9ngg3sdynpmi5tw3w.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953304/mi_ecommerce/yr7anhm3zrvxfruxnqwu.webp',
     ],
   },
   {
@@ -5257,11 +3523,11 @@ const products = [
     brand: 'Rolex',
     category: 'womens-watches',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/womens-watches/rolex-datejust-women/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953307/mi_ecommerce/thumbnails/p2e8xazamp8mjzjfestx.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/womens-watches/rolex-datejust-women/1.webp',
-      'https://cdn.dummyjson.com/product-images/womens-watches/rolex-datejust-women/2.webp',
-      'https://cdn.dummyjson.com/product-images/womens-watches/rolex-datejust-women/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953305/mi_ecommerce/v9nkb4il3kfq5inlwfch.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953305/mi_ecommerce/edfg9mkxy90zvm0mivqx.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953306/mi_ecommerce/zytxxfvazmfhdfrfodfm.webp',
     ],
   },
   {
@@ -5276,11 +3542,11 @@ const products = [
     brand: 'Fashion Gold',
     category: 'womens-watches',
     thumbnail:
-      'https://cdn.dummyjson.com/product-images/womens-watches/watch-gold-for-women/thumbnail.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953309/mi_ecommerce/thumbnails/r1whhgetloeuyhwdzlwt.webp',
     images: [
-      'https://cdn.dummyjson.com/product-images/womens-watches/watch-gold-for-women/1.webp',
-      'https://cdn.dummyjson.com/product-images/womens-watches/watch-gold-for-women/2.webp',
-      'https://cdn.dummyjson.com/product-images/womens-watches/watch-gold-for-women/3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953307/mi_ecommerce/hnbrs12ntrjd4ebjk4f3.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953308/mi_ecommerce/f0lhkxiguh4t0znsxzaa.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953309/mi_ecommerce/ejblnzqvhmcgeyggopw5.webp',
     ],
   },
   {
@@ -5295,13 +3561,12 @@ const products = [
     brand: 'Fashion Co.',
     category: 'womens-watches',
     thumbnail:
-      "https://cdn.dummyjson.com/product-images/womens-watches/women's-wrist-watch/thumbnail.webp",
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953312/mi_ecommerce/thumbnails/tjjkrqqoixy4ajz8xm0v.webp',
     images: [
-      "https://cdn.dummyjson.com/product-images/womens-watches/women's-wrist-watch/1.webp",
-      "https://cdn.dummyjson.com/product-images/womens-watches/women's-wrist-watch/2.webp",
-      "https://cdn.dummyjson.com/product-images/womens-watches/women's-wrist-watch/3.webp",
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953310/mi_ecommerce/dgfvsdxeqz1gwidgqgve.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953311/mi_ecommerce/dbaa03wbrbx4d4mhepme.webp',
+      'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953311/mi_ecommerce/h7jupa7xu15yhuhs7ak2.webp',
     ],
   },
 ];
-
 module.exports = products;
