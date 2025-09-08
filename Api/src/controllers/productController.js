@@ -1,14 +1,14 @@
-const { Product, CategoryProduct } = require("../db");
+const { Product, CategoryProduct } = require('../db');
 const {
   cleanArrayProductDB,
   cleanArrayProductApi,
   getCategoryProductId,
-} = require("../../helpers/productHelper");
-const products = require("../../dataApi/products");
+} = require('../../helpers/productHelper');
+const products = require('../../dataApi/products');
 
 const getAllProducts = async function () {
   const prodDB = await Product.findAll();
-  if (prodDB.length < 100) {
+  if (prodDB.length === 0) {
     const rawProdApi = products.map(async (product) => {
       const categoryProductId = await getCategoryProductId(product.category);
       await Product.findOrCreate({
@@ -33,15 +33,15 @@ const getAllProducts = async function () {
       {
         model: Product,
         attributes: [
-          "id",
-          "name",
-          "price",
-          "description",
-          "image",
-          "brand",
-          "stock",
-          "rating",
-          "state",
+          'id',
+          'name',
+          'price',
+          'description',
+          'image',
+          'brand',
+          'stock',
+          'rating',
+          'state',
         ],
       },
     ],
@@ -63,15 +63,15 @@ const getProductByName = async function (name) {
         {
           model: Product,
           attributes: [
-            "id",
-            "name",
-            "price",
-            "description",
-            "image",
-            "brand",
-            "stock",
-            "rating",
-            "state",
+            'id',
+            'name',
+            'price',
+            'description',
+            'image',
+            'brand',
+            'stock',
+            'rating',
+            'state',
           ],
         },
       ],
@@ -95,9 +95,8 @@ const getProductByName = async function (name) {
     const filteredApi = productApi.filter((product) => {
       return product.name.toLowerCase().includes(name.toLowerCase()); // Busqueda inexacta
     });
-    if (filteredApi.length > 0 || productDB.length > 0)
-      return [...filteredApi, ...productDB];
-    else throw new Error("Product name not found");
+    if (filteredApi.length > 0 || productDB.length > 0) return [...filteredApi, ...productDB];
+    else throw new Error('Product name not found');
   }
 };
 
@@ -110,7 +109,7 @@ const postProduct = async (
   stock,
   rating,
   state,
-  CategoryProductId
+  CategoryProductId,
 ) => {
   const newProduct = await Product.create({
     name,
@@ -137,7 +136,7 @@ const putProduct = async (
   stock,
   rating,
   state,
-  CategoryProductId
+  CategoryProductId,
 ) => {
   await Product.update(
     {
@@ -155,7 +154,7 @@ const putProduct = async (
       where: {
         id,
       },
-    }
+    },
   );
 };
 
