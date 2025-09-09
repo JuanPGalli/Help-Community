@@ -10,10 +10,11 @@ const getAllProducts = async function () {
   // obtenés todos los productos existentes
   const prodDB = await Product.findAll();
   // sólo seed si la DB está vacía
+  const categoryProductId = await getCategoryProductId(product.category);
+  console.log('categoryProductId for', product.title, '->', categoryProductId);
   if (prodDB.length === 0) {
     await Promise.all(
       products.map(async (product) => {
-        const categoryProductId = await getCategoryProductId(product.category);
         // findOrCreate evita duplicados por el 'where'
         await Product.findOrCreate({
           where: {
