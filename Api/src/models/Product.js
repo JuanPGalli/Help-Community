@@ -1,7 +1,7 @@
-const { DataTypes, UUIDV4 } = require("sequelize");
+const { DataTypes, UUIDV4 } = require('sequelize');
 
 module.exports = (sequelize) => {
-  sequelize.define("Product", {
+  sequelize.define('Product', {
     id: {
       type: DataTypes.UUID,
       primaryKey: true,
@@ -19,7 +19,7 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
       defaultValue:
-        "https://res.cloudinary.com/dauipbxlu/image/upload/f_auto,q_auto/fbqiqcdi52eakjlvivvb",
+        'https://res.cloudinary.com/dfz6wfwef/image/upload/v1756953304/mi_ecommerce/thumbnails/w4dv4mjvtfcsazddlfl3.webp',
     },
     price: {
       type: DataTypes.REAL,
