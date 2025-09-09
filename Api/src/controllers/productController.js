@@ -14,7 +14,6 @@ const getAllProducts = async function () {
     await Promise.all(
       products.map(async (product) => {
         const categoryProductId = await getCategoryProductId(product.category);
-        console.log('categoryProductId for', product.title, '->', categoryProductId);
         // findOrCreate evita duplicados por el 'where'
         await Product.findOrCreate({
           where: {
