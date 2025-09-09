@@ -7,25 +7,31 @@ const {
 const products = require('../../dataApi/products');
 
 const getAllProducts = async function () {
+  // obtenés todos los productos existentes
   const prodDB = await Product.findAll();
+  // sólo seed si la DB está vacía
   if (prodDB.length === 0) {
-    const rawProdApi = products.map(async (product) => {
-      const categoryProductId = await getCategoryProductId(product.category);
-      await Product.findOrCreate({
-        where: {
-          name: product.title,
-          price: product.price,
-          description: product.description,
-          image: product.thumbnail,
-          brand: product.brand,
-          stock: product.stock,
-          rating: product.rating,
-          state: true,
-          CategoryProductId: categoryProductId,
-        },
-      });
-    });
-    await Promise.all(rawProdApi);
+    await Promise.all(
+      products.map(async (product) => {
+        const categoryProductId = await getCategoryProductId(product.category);
+        // findOrCreate evita duplicados por el 'where'
+        await Product.findOrCreate({
+          where: {
+            name: product.title, // campo único
+          },
+          defaults: {
+            price: product.price,
+            description: product.description,
+            image: product.thumbnail,
+            brand: product.brand,
+            stock: product.stock,
+            rating: product.rating,
+            state: true,
+            CategoryProductId: categoryProductId,
+          },
+        });
+      }),
+    );
   }
   //trae todos los productos
   const rawArrayDB = await CategoryProduct.findAll({
@@ -47,12 +53,7 @@ const getAllProducts = async function () {
     ],
   });
 
-  const productsDB = cleanArrayProductDB(rawArrayDB);
-
-  return productsDB;
-  /* const productsApi = cleanArrayProductApi(products);
-
-  return [...productsDB, ...productsApi]; */
+  return cleanArrayProductDB(rawArrayDB);
 };
 
 const getProductByName = async function (name) {
