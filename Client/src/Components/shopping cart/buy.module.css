@@ -1,11 +1,11 @@
 .buyCont{
   border-radius: 5px;
     width: 30%;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     background-color: #fff;
     padding: 10px;
     min-height: 12rem;
-    max-height: 30rem;
+    max-height: 18.7rem;
 
 
 
@@ -35,6 +35,7 @@
     border: none;
     transition: all ease .3s;
     font-size: 1.1rem;
+    margin-top: 25%;
 }
 .btn{
     width: 100%;
