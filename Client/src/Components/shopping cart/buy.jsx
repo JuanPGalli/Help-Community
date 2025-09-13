@@ -31,7 +31,7 @@ export default function Buy() {
   return (
     <div className={styles.buyCont}>
       <div className={styles.resume}>
-        <h4>Resumen de la compra</h4>
+        <h4>Resumen de la Compra</h4>
       </div>
       <div>
         <div className={styles.amount}>

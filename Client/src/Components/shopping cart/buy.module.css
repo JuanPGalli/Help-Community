@@ -5,7 +5,7 @@
     background-color: #fff;
     padding: 10px;
     min-height: 12rem;
-    max-height: 18.7rem;
+    max-height: 29.4rem;
 
 
 
@@ -13,9 +13,10 @@
 .resume{
     margin-bottom: 10px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+    font-size: larger;
 }
 .amount{
-    line-height:.5em;
+    line-height:2em;
     display: flex;
     color: rgba(0, 0, 0, 0.599);
     justify-content: space-between;
