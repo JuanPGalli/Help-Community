@@ -4,13 +4,13 @@ import {
   GET_USER_DATA,
   ADD_ONE_TO_CART,
   ADD_TO_CART,
-  CLEART_CART,
   GET_DETAIL_CAMPAIGN,
   GET_STATE,
   REMOVE_ONE_TO_CART,
   REMOVE_TO_CART,
   GET_PRODUCT_BY_NAME,
   GET_ALL_BUYS,
+  CLEAR_CART,
 } from './action_type';
 export const GET_CAMPAIGN = 'GET_CAMPAIGN';
 export const FILTER_BY_STATE = 'FILTER_BY_STATE';
@@ -26,6 +26,7 @@ export const RESET = 'RESET';
 export const CREATE_REVIEW = 'CREATE_REVIEW';
 export const GET_REVIEWS = 'GET_REVIEWS';
 export const GET_USERS = 'GET_USERS';
+export const CLEAR_CART = 'CLEAR_CART';
 
 // console.log(process.env.NODE_ENV);
 // if (process.env.NODE_ENV === "development") {
@@ -526,3 +527,7 @@ export const removeAdminAccess = (userId) => async (dispatch) => {
     });
   }
 };
+
+export const clearCart = () => ({
+  type: 'CLEAR_CART',
+});

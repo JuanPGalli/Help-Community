@@ -1,16 +1,28 @@
-import { useEffect } from "react";
-import Buy from "./buy";
-import CardShopping from "./cardShopping";
-import style from "./shoppingCart.module.css";
-import { useSelector } from "react-redux";
-import { setItem } from "../../utils/localStorage";
-import NoItemTocart from "./noItemTocar";
+import { useEffect } from 'react';
+import Buy from './buy';
+import CardShopping from './cardShopping';
+import style from './shoppingCart.module.css';
+import { useSelector } from 'react-redux';
+import { setItem } from '../../utils/localStorage';
+import NoItemTocart from './noItemTocar';
+import { useLocation } from 'react-router-dom';
 
 export default function ShoppingCart() {
   const cart = useSelector((state) => state.cartShop);
 
+  const location = useLocation();
+
   useEffect(() => {
-    setItem("cartShop", cart);
+    const params = new URLSearchParams(location.search);
+
+    if (params.get('paid') === true) {
+      dispatch(clearCart());
+      window.localStorage.removeItem('dataCart');
+    }
+  }, [location, dispatch]);
+
+  useEffect(() => {
+    setItem('cartShop', cart);
   }, [cart]);
 
   return (
