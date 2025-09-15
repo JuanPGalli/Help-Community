@@ -14,7 +14,6 @@ import {
   GET_USERS,
   CREATE_REVIEW,
   GET_REVIEWS,
-  CLEAR_CART,
 } from '../actions/action';
 import {
   HANDLE_USER_LOGOUT,
@@ -26,6 +25,7 @@ import {
   GET_STATE,
   REMOVE_ONE_TO_CART,
   REMOVE_TO_CART,
+  CLEAR_CART,
 } from '../actions/action_type';
 
 const initialState = {
