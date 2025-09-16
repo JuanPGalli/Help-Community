@@ -26,7 +26,6 @@ export const RESET = 'RESET';
 export const CREATE_REVIEW = 'CREATE_REVIEW';
 export const GET_REVIEWS = 'GET_REVIEWS';
 export const GET_USERS = 'GET_USERS';
-export const CLEAR_CART = 'CLEAR_CART';
 
 // console.log(process.env.NODE_ENV);
 // if (process.env.NODE_ENV === "development") {
@@ -529,5 +528,5 @@ export const removeAdminAccess = (userId) => async (dispatch) => {
 };
 
 export const clearCart = () => ({
-  type: 'CLEAR_CART',
+  type: CLEAR_CART,
 });
