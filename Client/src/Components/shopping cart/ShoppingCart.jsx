@@ -6,22 +6,24 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setItem } from '../../utils/localStorage';
 import NoItemTocart from './noItemTocar';
 import { useLocation } from 'react-router-dom';
+import { clearCart } from '../../redux/actions/action';
 
 export default function ShoppingCart() {
   const cart = useSelector((state) => state.cartShop);
-
   const location = useLocation();
   const dispatch = useDispatch();
 
+  // limpiar si venimos del pago
   useEffect(() => {
     const params = new URLSearchParams(location.search);
 
-    if (params.get('paid') === true) {
+    if (params.get('paid') === 'true') {
       dispatch(clearCart());
-      window.localStorage.removeItem('dataCart');
+      window.localStorage.removeItem('cartShop');
     }
   }, [location, dispatch]);
 
+  // guardar carrito en localStorage cada vez que cambia
   useEffect(() => {
     setItem('cartShop', cart);
   }, [cart]);
