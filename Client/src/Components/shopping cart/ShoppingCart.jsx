@@ -17,7 +17,7 @@ export default function ShoppingCart() {
     const params = new URLSearchParams(location.search);
 
     if (params.get('paid') === true) {
-      useDispatch(clearCart());
+      dispatch(clearCart());
       window.localStorage.removeItem('dataCart');
     }
   }, [location, dispatch]);
