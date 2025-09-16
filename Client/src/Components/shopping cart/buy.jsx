@@ -40,7 +40,7 @@ export default function Buy() {
         </div>
         <div className={styles.amount}>
           <p className={styles.total}>Total</p>
-          <p className={styles.total}>${totalAmount}</p>
+          <p className={styles.total}>${Number(totalAmount).toFixed(2)}</p>
         </div>
         <div className={styles.btn}>
           <button onClick={handleSubmit} className={styles.btnBuy} disabled={email ? false : true}>
