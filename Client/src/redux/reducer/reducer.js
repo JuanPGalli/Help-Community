@@ -1,5 +1,4 @@
 import { getItem } from '../../utils/localStorage';
-import {} from '../actions/action';
 import {
   GET_CAMPAIGN,
   FILTER_BY_STATE,
