@@ -9,7 +9,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './FilterProducts.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 
-const FilterProducts = ({ categ = [], products = [], loading = false }) => {
+const FilterProducts = ({ categ = [], products = [] }) => {
   const dispatch = useDispatch();
   const loading = useSelector((state) => state.loading);
 
