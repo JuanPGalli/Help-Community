@@ -7,11 +7,11 @@ import {
 } from '../../redux/actions/action';
 import React, { useEffect, useState } from 'react';
 import styles from './FilterProducts.module.css';
-import { useDispatch } from 'react-redux';
-import Loader from '../loader/loader'; // si querés manejar loading aquí
+import { useDispatch, useSelector } from 'react-redux';
 
 const FilterProducts = ({ categ = [], products = [], loading = false }) => {
   const dispatch = useDispatch();
+  const loading = useSelector((state) => state.loading);
 
   // Estados de filtros
   const [selectedCateg, setSelectedCateg] = useState('');
@@ -91,10 +91,7 @@ const FilterProducts = ({ categ = [], products = [], loading = false }) => {
     dispatch(resetProducts());
   }
 
-  // Opcional: si querés mostrar loader local (o recibirlo por prop)
-  if (loading) {
-    return <Loader />;
-  }
+  if (loading) return <Loader />; // 🔹 muestra loader global
 
   return (
     <div>

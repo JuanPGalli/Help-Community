@@ -11,6 +11,8 @@ import {
   GET_PRODUCT_BY_NAME,
   GET_ALL_BUYS,
   CLEAR_CART,
+  SET_LOADING,
+  CLEAR_LOADING,
 } from './action_type';
 export const GET_CAMPAIGN = 'GET_CAMPAIGN';
 export const FILTER_BY_STATE = 'FILTER_BY_STATE';
@@ -65,11 +67,14 @@ export const getStates = () => {
 export const getReviews = () => {
   return async function (dispatch) {
     try {
+      dispatch(setLoading()); // 🔹 inicia loader
       const reviewsData = await axios('/review');
       const review = reviewsData.data;
       dispatch({ type: GET_REVIEWS, payload: review });
     } catch (error) {
       console.log('error en devolver la action', error.message);
+    } finally {
+      dispatch(clearLoading()); // 🔹 corta loader
     }
   };
 };
@@ -89,11 +94,14 @@ export const getCategory = () => {
 export const getCateg = () => {
   return async function (dispatch) {
     try {
+      dispatch(setLoading()); // 🔹 inicia loader
       const categData = await axios('/categoryProduct');
       const categ = categData.data;
       dispatch({ type: GET_CATEG, payload: categ });
     } catch (error) {
       console.log('error en devolver la action', error.message);
+    } finally {
+      dispatch(clearLoading()); // 🔹 corta loader
     }
   };
 };
@@ -139,9 +147,12 @@ export function filterByCateg(payload) {
 export const productOrdenPrecio = (order) => {
   return async function (dispatch) {
     try {
+      dispatch(setLoading()); // 🔹 inicia loader
       dispatch({ type: ORDEN_PRECIO, payload: order });
     } catch (error) {
       console.log(error.message);
+    } finally {
+      dispatch(clearLoading()); // 🔹 corta loader
     }
   };
 };
@@ -149,9 +160,12 @@ export const productOrdenPrecio = (order) => {
 export const productsFiltrosPrecio = (order) => {
   return async function (dispatch) {
     try {
+      dispatch(setLoading()); // 🔹 inicia loader
       dispatch({ type: FILTROS_PRECIO, payload: order });
     } catch (error) {
       console.log(error.message);
+    } finally {
+      dispatch(clearLoading()); // 🔹 corta loader
     }
   };
 };
@@ -159,9 +173,12 @@ export const productsFiltrosPrecio = (order) => {
 export const resetProducts = () => {
   return async function (dispatch) {
     try {
+      dispatch(setLoading()); // 🔹 inicia loader
       dispatch({ type: RESET });
     } catch (error) {
       console.log(error.message);
+    } finally {
+      dispatch(clearLoading()); // 🔹 corta loader
     }
   };
 };
@@ -169,11 +186,14 @@ export const resetProducts = () => {
 export const getProduct = () => {
   return async function (dispatch) {
     try {
+      dispatch(setLoading()); // 🔹 inicia loader
       const productData = await axios('/product');
       const products = productData.data;
       dispatch({ type: GET_PRODUCT, payload: products });
     } catch (error) {
       console.log('error en devolver los productos', error.message);
+    } finally {
+      dispatch(clearLoading()); // 🔹 corta loader
     }
   };
 };
@@ -205,10 +225,13 @@ export function postCampaign(payload) {
 export function postProduct(payload) {
   return async function () {
     try {
+      dispatch(setLoading()); // 🔹 inicia loader
       const response = await axios.post('/product', payload);
       return response;
     } catch (error) {
       return error.message;
+    } finally {
+      dispatch(clearLoading()); // 🔹 corta loader
     }
   };
 }
@@ -218,23 +241,29 @@ export function putProduct(payload) {
     console.log('PAYLOAD DEL PUT =====>>>>');
     console.log(payload);
     try {
+      dispatch(setLoading()); // 🔹 inicia loader
       const response = await axios.put(`/product/edit/${payload.id}`, payload);
       console.log(response);
     } catch (error) {
       return 'Error al editar el producto';
       // return error.message
+    } finally {
+      dispatch(clearLoading()); // 🔹 corta loader
     }
   };
 }
 export function postUser(payload) {
   return async function (dispatch) {
     try {
+      dispatch(setLoading()); // 🔹 inicia loader
       const { data } = await axios.post('/user/create', payload);
 
       if (!data.length) throw Error('No se ha podido crear el usuario');
       if (data.length) console.log('Usuario creado correctamente');
     } catch (error) {
       return error.message;
+    } finally {
+      dispatch(clearLoading()); // 🔹 corta loader
     }
   };
 }
@@ -242,10 +271,13 @@ export function postUser(payload) {
 export function postMailing(payload) {
   return async function () {
     try {
+      dispatch(setLoading()); // 🔹 inicia loader
       const response = await axios.post('/admin/mailing', payload);
       return response;
     } catch (error) {
       return error.message;
+    } finally {
+      dispatch(clearLoading()); // 🔹 corta loader
     }
   };
 }
@@ -281,11 +313,10 @@ export const removeOneToCart = (id) => {
 };
 
 export const getProductByName = (name) => {
-  console.log(name);
   return async (dispatch) => {
     try {
+      dispatch(setLoading()); // 🔹 inicia loader
       const response = await axios(`/product?name=${name}`);
-      console.log(response.data);
       dispatch({
         type: GET_PRODUCT_BY_NAME,
         payload: response.data,
@@ -293,6 +324,8 @@ export const getProductByName = (name) => {
       return response.data;
     } catch (error) {
       console.log(error.message);
+    } finally {
+      dispatch(clearLoading()); // 🔹 corta loader
     }
   };
 };
@@ -300,12 +333,15 @@ export const getProductByName = (name) => {
 export const createOrder = (payload) => {
   return async (dispatch) => {
     try {
+      dispatch(setLoading()); // 🔹 inicia loader
       const { data } = await axios.post('/payment/create_order', payload);
       console.log(data);
       window.location.href = data.init_point;
       return order;
     } catch (error) {
       console.log(error);
+    } finally {
+      dispatch(clearLoading()); // 🔹 corta loader
     }
   };
 };
@@ -342,6 +378,7 @@ export const createOrder = (payload) => {
 export const getUsers = () => {
   return async (dispatch) => {
     try {
+      dispatch(setLoading()); // 🔹 inicia loader
       const response = await axios.get('/user');
       const data = response.data;
       //   console.log("Response user", response.data);
@@ -351,25 +388,33 @@ export const getUsers = () => {
       });
     } catch (error) {
       console.log(error);
+    } finally {
+      dispatch(clearLoading()); // 🔹 corta loader
     }
   };
 };
 
 export const getAllBuys = async () => {
   try {
+    dispatch(setLoading()); // 🔹 inicia loader
     const response = await axios('/buys');
     return response.data;
   } catch (error) {
     console.log(error);
+  } finally {
+    dispatch(clearLoading()); // 🔹 corta loader
   }
 };
 
 export const getAllBuysForUser = async (email) => {
   try {
+    dispatch(setLoading()); // 🔹 inicia loader
     const response = await axios(`/buys/user/${email}`);
     return response.data;
   } catch (error) {
     console.log(error);
+  } finally {
+    dispatch(clearLoading()); // 🔹 corta loader
   }
 };
 
@@ -377,6 +422,7 @@ export const getUserByEmail = (email) => {
   return async (dispatch) => {
     if (email === 'logout') {
       try {
+        dispatch(setLoading()); // 🔹 inicia loader
         const setUserTo = {
           name: '',
           email: '',
@@ -393,9 +439,12 @@ export const getUserByEmail = (email) => {
       } catch (error) {
         console.error(error);
         return null;
+      } finally {
+        dispatch(clearLoading()); // 🔹 corta loader
       }
     } else {
       try {
+        dispatch(setLoading()); // 🔹 inicia loader
         const response = await axios(`/user/email/?email=${email}`);
         const userData = response.data[0];
         // console.log(userData);
@@ -406,6 +455,8 @@ export const getUserByEmail = (email) => {
       } catch (error) {
         console.error(error);
         return null;
+      } finally {
+        dispatch(clearLoading()); // 🔹 corta loader
       }
     }
   };
@@ -418,6 +469,7 @@ export const createReview = (review) => {
 // Acción para banear o eliminar un usuario
 export const banOrDeleteUser = (userId) => async (dispatch) => {
   try {
+    dispatch(setLoading()); // 🔹 inicia loader
     const response = await axios.put(`/user/update/${userId}`, {
       userState: false,
       userAdmin: false,
@@ -440,12 +492,15 @@ export const banOrDeleteUser = (userId) => async (dispatch) => {
       type: 'BAN_OR_DELETE_USER_ERROR',
       payload: 'Error al banear o eliminar al usuario',
     });
+  } finally {
+    dispatch(clearLoading()); // 🔹 corta loader
   }
 };
 
 // Acción para otorgar acceso de administrador a un usuario
 export const grantAdminAccess = (userId) => async (dispatch) => {
   try {
+    dispatch(setLoading()); // 🔹 inicia loader
     const response = await axios.put(`/user/update/${userId}`, {
       userState: true,
       userAdmin: true,
@@ -468,12 +523,15 @@ export const grantAdminAccess = (userId) => async (dispatch) => {
       type: 'GRANT_ADMIN_ACCESS_ERROR',
       payload: 'Error al otorgar acceso de administrador',
     });
+  } finally {
+    dispatch(clearLoading()); // 🔹 corta loader
   }
 };
 
 // Acción para habilitar un usuario
 export const unbanUser = (userId) => async (dispatch) => {
   try {
+    dispatch(setLoading()); // 🔹 inicia loader
     const response = await axios.put(`/user/update/${userId}`, {
       userState: true,
       userAdmin: false,
@@ -496,12 +554,15 @@ export const unbanUser = (userId) => async (dispatch) => {
       type: 'BAN_OR_DELETE_USER_ERROR',
       payload: 'Error al banear o eliminar al usuario',
     });
+  } finally {
+    dispatch(clearLoading()); // 🔹 corta loader
   }
 };
 
 // Acción para quitar acceso de administrador a un usuario
 export const removeAdminAccess = (userId) => async (dispatch) => {
   try {
+    dispatch(setLoading()); // 🔹 inicia loader
     const response = await axios.put(`/user/update/${userId}`, {
       userState: true,
       userAdmin: false,
@@ -524,9 +585,19 @@ export const removeAdminAccess = (userId) => async (dispatch) => {
       type: 'GRANT_ADMIN_ACCESS_ERROR',
       payload: 'Error al otorgar acceso de administrador',
     });
+  } finally {
+    dispatch(clearLoading()); // 🔹 corta loader
   }
 };
 
 export const clearCart = () => ({
   type: CLEAR_CART,
+});
+
+export const setLoading = () => ({
+  type: SET_LOADING,
+});
+
+export const clearLoading = () => ({
+  type: CLEAR_LOADING,
 });

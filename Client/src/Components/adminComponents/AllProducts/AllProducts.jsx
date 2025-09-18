@@ -4,19 +4,12 @@ import { useSelector } from 'react-redux';
 import Pagination from '../../Pagination/Pagination';
 import CardProduct from '../CardProduct/CardProduct';
 import UsersSB from '../../SearchBar/UsersSB';
-import Loader from '../../loader/loader';
 
 export const AllProducts = () => {
   const [page, setPage] = useState(1);
   const products = useSelector((state) => state.products);
   const [searchInput, setSearchInput] = useState('');
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    if (products.length > 0) {
-      setLoading(false);
-    }
-  }, [products]);
+  const loading = useSelector((state) => state.loading);
 
   const handleInputChange = (event) => {
     setSearchInput(event.target.value);
@@ -49,6 +42,8 @@ export const AllProducts = () => {
   const endIndex = startIndex + cardsPerPage;
   const displayedData = filterProducts(searchInput).slice(startIndex, endIndex);
 
+  if (loading) return <Loader />; // 🔹 muestra loader global
+
   return (
     <div className={style.allProdscontainer}>
       <div className={style.productsCards}>
@@ -58,9 +53,7 @@ export const AllProducts = () => {
           placeholder={'Busca productos por nombre o por id'}
         />
         <div className={style.prodCardCont}>
-          {loading ? (
-            <Loader />
-          ) : products.length > 0 ? (
+          {products.length > 0 ? (
             displayedData.map((product) => (
               <CardProduct
                 key={product.name}

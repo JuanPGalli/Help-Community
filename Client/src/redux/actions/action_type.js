@@ -10,3 +10,5 @@ export const GET_ALL_BUYS = 'GET_ALL_BUYS';
 export const GET_USER_DATA = 'GET_USER_DATA';
 export const HANDLE_USER_LOGOUT = 'HANDLE_USER_LOGOUT';
 export const CLEAR_CART = 'CLEAR_CART';
+export const SET_LOADING = 'SET_LOADING';
+export const CLEAR_LOADING = 'CLEAR_LOADING';

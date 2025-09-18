@@ -26,6 +26,8 @@ import {
   REMOVE_ONE_TO_CART,
   REMOVE_TO_CART,
   CLEAR_CART,
+  SET_LOADING,
+  CLEAR_LOADING,
 } from '../actions/action_type';
 
 const initialState = {
@@ -53,6 +55,7 @@ const initialState = {
     userSuperadmin: false,
     userState: true,
   },
+  loading: false,
 };
 
 const reducer = (state = initialState, action) => {
@@ -394,6 +397,16 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         cartShop: [],
+      };
+    case SET_LOADING:
+      return {
+        ...state,
+        loading: true,
+      };
+    case CLEAR_LOADING:
+      return {
+        ...state,
+        loading: false,
       };
     default:
       return state;
