@@ -8,6 +8,7 @@ import {
 import React, { useEffect, useState } from 'react';
 import styles from './FilterProducts.module.css';
 import { useDispatch, useSelector } from 'react-redux';
+import Loader from '../loader/loader';
 
 const FilterProducts = ({ categ = [], products = [] }) => {
   const dispatch = useDispatch();
