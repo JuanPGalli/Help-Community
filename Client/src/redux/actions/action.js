@@ -107,10 +107,8 @@ export const getCateg = () => {
 };
 
 export const getDetailCampaign = (name) => {
-  console.log(name);
   return async function (dispatch) {
     try {
-      console.log('entre a la funcion');
       const dataDetail = await axios(`/campaign?name=${name}`);
       const dataCampaign = dataDetail.data;
       dispatch({
@@ -212,7 +210,7 @@ export const getState = () => {
 };
 
 export function postCampaign(payload) {
-  return async function (dispatch) {
+  return async function () {
     try {
       const response = await axios.post('/campaign/create', payload);
       return response;
@@ -223,7 +221,7 @@ export function postCampaign(payload) {
 }
 
 export function postProduct(payload) {
-  return async function () {
+  return async function (dispatch) {
     try {
       dispatch(setLoading()); // 🔹 inicia loader
       const response = await axios.post('/product', payload);
@@ -237,16 +235,14 @@ export function postProduct(payload) {
 }
 
 export function putProduct(payload) {
-  return async function () {
-    console.log('PAYLOAD DEL PUT =====>>>>');
-    console.log(payload);
+  return async function (dispatch) {
     try {
       dispatch(setLoading()); // 🔹 inicia loader
       const response = await axios.put(`/product/edit/${payload.id}`, payload);
-      console.log(response);
+      return response;
     } catch (error) {
-      return 'Error al editar el producto';
-      // return error.message
+      console.error(error);
+      return { error: true, message: 'Error al editar el producto' }; // 🔹 opcional
     } finally {
       dispatch(clearLoading()); // 🔹 corta loader
     }
@@ -269,7 +265,7 @@ export function postUser(payload) {
 }
 
 export function postMailing(payload) {
-  return async function () {
+  return async function (dispatch) {
     try {
       dispatch(setLoading()); // 🔹 inicia loader
       const response = await axios.post('/admin/mailing', payload);
@@ -346,35 +342,6 @@ export const createOrder = (payload) => {
   };
 };
 
-// export const getProductByName=(name)=>{
-//     console.log(name)
-//     return async (dispatch)=>{
-//         try {
-//             const response = await axios(`/product?name=${name}`)
-//             console.log(response.data)
-//             await dispatch({
-//                 type: GET_PRODUCT_BY_NAME,
-//                 payload: response.data
-//             })
-//         } catch (error) {
-//             console.log(error.message)
-//         }
-//     }
-// }
-
-// export const createOrder = (payload)=>{
-//     return async (dispatch)=>{
-//         try {
-//             const {data} = await axios.post("/payment/create_order", payload)
-//             console.log(data)
-//             window.location.href = data.init_point
-//             return order
-//         } catch (error) {
-//             console.log(error)
-//         }
-//     }
-// }
-
 export const getUsers = () => {
   return async (dispatch) => {
     try {
@@ -394,28 +361,32 @@ export const getUsers = () => {
   };
 };
 
-export const getAllBuys = async () => {
-  try {
-    dispatch(setLoading()); // 🔹 inicia loader
-    const response = await axios('/buys');
-    return response.data;
-  } catch (error) {
-    console.log(error);
-  } finally {
-    dispatch(clearLoading()); // 🔹 corta loader
-  }
+export const getAllBuys = () => {
+  return async (dispatch) => {
+    try {
+      dispatch(setLoading()); // 🔹 inicia loader
+      const response = await axios('/buys');
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    } finally {
+      dispatch(clearLoading()); // 🔹 corta loader
+    }
+  };
 };
 
-export const getAllBuysForUser = async (email) => {
-  try {
-    dispatch(setLoading()); // 🔹 inicia loader
-    const response = await axios(`/buys/user/${email}`);
-    return response.data;
-  } catch (error) {
-    console.log(error);
-  } finally {
-    dispatch(clearLoading()); // 🔹 corta loader
-  }
+export const getAllBuysForUser = (email) => {
+  return async (dispatch) => {
+    try {
+      dispatch(setLoading()); // 🔹 inicia loader
+      const response = await axios(`/buys/user/${email}`);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    } finally {
+      dispatch(clearLoading()); // 🔹 corta loader
+    }
+  };
 };
 
 export const getUserByEmail = (email) => {
@@ -467,34 +438,36 @@ export const createReview = (review) => {
 };
 
 // Acción para banear o eliminar un usuario
-export const banOrDeleteUser = (userId) => async (dispatch) => {
-  try {
-    dispatch(setLoading()); // 🔹 inicia loader
-    const response = await axios.put(`/user/update/${userId}`, {
-      userState: false,
-      userAdmin: false,
-      userSuperadmin: false,
-    });
-    if (response.status === 200) {
-      // Aquí puedes despachar una acción de éxito si lo deseas
-      dispatch({ type: 'BAN_OR_DELETE_USER_SUCCESS', payload: response.data });
-    } else {
-      // Aquí puedes despachar una acción de error si lo deseas
+export const banOrDeleteUser = (userId) => {
+  return async (dispatch) => {
+    try {
+      dispatch(setLoading()); // 🔹 inicia loader
+      const response = await axios.put(`/user/update/${userId}`, {
+        userState: false,
+        userAdmin: false,
+        userSuperadmin: false,
+      });
+      if (response.status === 200) {
+        // Aquí puedes despachar una acción de éxito si lo deseas
+        dispatch({ type: 'BAN_OR_DELETE_USER_SUCCESS', payload: response.data });
+      } else {
+        // Aquí puedes despachar una acción de error si lo deseas
+        dispatch({
+          type: 'BAN_OR_DELETE_USER_ERROR',
+          payload: 'Error al banear o eliminar al usuario',
+        });
+      }
+    } catch (error) {
+      // Manejo de errores
+      console.error(error);
       dispatch({
         type: 'BAN_OR_DELETE_USER_ERROR',
         payload: 'Error al banear o eliminar al usuario',
       });
+    } finally {
+      dispatch(clearLoading()); // 🔹 corta loader
     }
-  } catch (error) {
-    // Manejo de errores
-    console.error(error);
-    dispatch({
-      type: 'BAN_OR_DELETE_USER_ERROR',
-      payload: 'Error al banear o eliminar al usuario',
-    });
-  } finally {
-    dispatch(clearLoading()); // 🔹 corta loader
-  }
+  };
 };
 
 // Acción para otorgar acceso de administrador a un usuario
