@@ -392,8 +392,8 @@ export const getAllBuysForUser = (email) => {
 
 export const getUserByEmail = (email) => {
   return async (dispatch) => {
-    if (email === 'logout') {
-      try {
+    try {
+      if (email === 'logout') {
         dispatch(setLoading()); // 🔹 inicia loader
         const setUserTo = {
           name: '',
@@ -408,15 +408,7 @@ export const getUserByEmail = (email) => {
         dispatch({ type: HANDLE_USER_LOGOUT, payload: setUserTo });
 
         return setUserTo;
-      } catch (error) {
-        console.error(error);
-        return null;
-      } finally {
-        dispatch(clearLoading()); // 🔹 corta loader
-      }
-    } else {
-      try {
-        dispatch(setLoading()); // 🔹 inicia loader
+      } else {
         const response = await axios(`/user/email/?email=${email}`);
         const userData = response.data[0];
         // console.log(userData);
@@ -424,12 +416,12 @@ export const getUserByEmail = (email) => {
         dispatch({ type: GET_USER_DATA, payload: userData });
 
         return userData;
-      } catch (error) {
-        console.error(error);
-        return null;
-      } finally {
-        dispatch(clearLoading()); // 🔹 corta loader
       }
+    } catch (error) {
+      console.error(error);
+      return null;
+    } finally {
+      dispatch(clearLoading()); // 🔹 corta loader
     }
   };
 };
