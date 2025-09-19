@@ -1,22 +1,17 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Product.module.css';
 import { addToCart } from '../../redux/actions/action';
 import { useDispatch } from 'react-redux';
-import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Product = (props) => {
   const { name, description, image, price, category } = props;
   const dispatch = useDispatch();
 
-  console.log(name);
-
-  const hancleAddtoCart = () => {
+  const handleAddtoCart = (e) => {
+    e.stopPropagation(); // 🔹 previene navegación a /detail/${name} si está dentro de Link
     const quantityToadd = 1;
     dispatch(addToCart(props, quantityToadd));
   };
-  // console.log(props, "props log")
 
   const capitalizeFirstLetter = (str) => {
     //para poner la primera letra de la lista de categs en mayuscula
@@ -40,7 +35,7 @@ export const Product = (props) => {
         <p className={styles.categoria}>{capitalizeFirstLetter(category)}</p>
 
         <div className={styles.btnCont}>
-          <button className={styles.btnCart} onClick={hancleAddtoCart}>
+          <button className={styles.btnCart} onClick={handleAddtoCart}>
             Añadir al carrito
           </button>
 
