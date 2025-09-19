@@ -12,15 +12,13 @@ export default function CardShopping(props) {
   const dispatch = useDispatch();
   return (
     <div className={style.cardConteiner}>
-      <Link to={`/products/detail/${name}`}>
-        <div className={style.image}>
-          <img src={image} alt='' />
-        </div>
-      </Link>
-      <div className={style.head}>
+      <div className={style.image}>
         <Link to={`/products/detail/${name}`}>
-          <h4>{name}</h4>
+          <img src={image} alt='' />
         </Link>
+      </div>
+      <div className={style.head}>
+        <h4>{name}</h4>
         <button
           className={style.btnDelete}
           onClick={() => {
@@ -52,11 +50,9 @@ export default function CardShopping(props) {
           +
         </button>
       </div>
-      <Link to={`/products/detail/${name}`}>
-        <div className={style.price}>
-          <p>${Number((price * quantity).toFixed(2))}</p>
-        </div>
-      </Link>
+      <div className={style.price}>
+        <p>${Number((price * quantity).toFixed(2))}</p>
+      </div>
     </div>
   );
 }
