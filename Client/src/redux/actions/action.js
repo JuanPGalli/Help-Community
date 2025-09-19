@@ -28,20 +28,6 @@ import {
   GET_REVIEWS,
   GET_USERS,
 } from './action_type';
-//export const GET_CAMPAIGN = 'GET_CAMPAIGN';
-//export const FILTER_BY_STATE = 'FILTER_BY_STATE';
-//export const GET_STATES = 'GET_STATES';
-//export const GET_CATEGORY = 'GET_CATEGORY';
-//export const FILTER_BY_CATEGORY = 'FILTER_BY_CATEGORY';
-//export const GET_PRODUCT = 'GET_PRODUCT';
-//export const ORDEN_PRECIO = 'ORDEN_PRECIO';
-//export const GET_CATEG = 'GET_CATEG';
-//export const FILTER_BY_CATEG = 'FILTER_BY_CATEG';
-//export const FILTROS_PRECIO = 'FILTROS_PRECIO';
-//export const RESET = 'RESET';
-//export const CREATE_REVIEW = 'CREATE_REVIEW';
-//export const GET_REVIEWS = 'GET_REVIEWS';
-//export const GET_USERS = 'GET_USERS';
 
 // console.log(process.env.NODE_ENV);
 // if (process.env.NODE_ENV === "development") {
@@ -347,9 +333,10 @@ export const createOrder = (payload) => {
       const { data } = await axios.post('/payment/create_order', payload);
       console.log(data);
       window.location.href = data.init_point;
-      return order;
+      return data;
     } catch (error) {
-      console.log(error);
+      console.error(error);
+      return { error: true, message: 'No se pudo crear la orden' }; //Tratamiento de mensaje de error personalizado.
     } finally {
       dispatch(clearLoading()); // 🔹 corta loader
     }

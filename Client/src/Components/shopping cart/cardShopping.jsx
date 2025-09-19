@@ -11,49 +11,49 @@ export default function CardShopping(props) {
 
   const dispatch = useDispatch();
   return (
-    <div className={style.cardConteiner}>
-      <div className={style.image}>
-        <Link to={`/products/detail/${name}`}>
+    <Link to={`/products/detail/${name}`}>
+      <div className={style.cardConteiner}>
+        <div className={style.image}>
           <img src={image} alt='' />
-        </Link>
-      </div>
-      <div className={style.head}>
-        <h4>{name}</h4>
-        <button
-          className={style.btnDelete}
-          onClick={() => {
-            dispatch(removeTocart(id));
-          }}
-        >
-          eliminar
-        </button>
-      </div>
+        </div>
+        <div className={style.head}>
+          <h4>{name}</h4>
+          <button
+            className={style.btnDelete}
+            onClick={() => {
+              dispatch(removeTocart(id));
+            }}
+          >
+            eliminar
+          </button>
+        </div>
 
-      <div className={style.counter}>
-        <button
-          value={'-'}
-          className={style.btnCount}
-          onClick={() => {
-            dispatch(removeOneToCart(id));
-          }}
-        >
-          -
-        </button>
-        <p>{quantity}</p>
-        <button
-          value={'+'}
-          className={style.btnCount}
-          onClick={() => {
-            dispatch(addOneToCart(id));
-          }}
-        >
-          +
-        </button>
-      </div>
+        <div className={style.counter}>
+          <button
+            value={'-'}
+            className={style.btnCount}
+            onClick={() => {
+              dispatch(removeOneToCart(id));
+            }}
+          >
+            -
+          </button>
+          <p>{quantity}</p>
+          <button
+            value={'+'}
+            className={style.btnCount}
+            onClick={() => {
+              dispatch(addOneToCart(id));
+            }}
+          >
+            +
+          </button>
+        </div>
 
-      <div className={style.price}>
-        <p>${Number((price * quantity).toFixed(2))}</p>
+        <div className={style.price}>
+          <p>${Number((price * quantity).toFixed(2))}</p>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
