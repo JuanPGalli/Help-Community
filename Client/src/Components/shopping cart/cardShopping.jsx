@@ -11,49 +11,52 @@ export default function CardShopping(props) {
 
   const dispatch = useDispatch();
   return (
-    <Link to={`/products/detail/${name}`}>
-      <div className={style.cardConteiner}>
+    <div className={style.cardConteiner}>
+      <Link to={`/products/detail/${name}`}>
         <div className={style.image}>
           <img src={image} alt='' />
         </div>
-        <div className={style.head}>
+      </Link>
+      <div className={style.head}>
+        <Link to={`/products/detail/${name}`}>
           <h4>{name}</h4>
-          <button
-            className={style.btnDelete}
-            onClick={() => {
-              dispatch(removeTocart(id));
-            }}
-          >
-            eliminar
-          </button>
-        </div>
+        </Link>
+        <button
+          className={style.btnDelete}
+          onClick={() => {
+            dispatch(removeTocart(id));
+          }}
+        >
+          eliminar
+        </button>
+      </div>
 
-        <div className={style.counter}>
-          <button
-            value={'-'}
-            className={style.btnCount}
-            onClick={() => {
-              dispatch(removeOneToCart(id));
-            }}
-          >
-            -
-          </button>
-          <p>{quantity}</p>
-          <button
-            value={'+'}
-            className={style.btnCount}
-            onClick={() => {
-              dispatch(addOneToCart(id));
-            }}
-          >
-            +
-          </button>
-        </div>
-
+      <div className={style.counter}>
+        <button
+          value={'-'}
+          className={style.btnCount}
+          onClick={() => {
+            dispatch(removeOneToCart(id));
+          }}
+        >
+          -
+        </button>
+        <p>{quantity}</p>
+        <button
+          value={'+'}
+          className={style.btnCount}
+          onClick={() => {
+            dispatch(addOneToCart(id));
+          }}
+        >
+          +
+        </button>
+      </div>
+      <Link to={`/products/detail/${name}`}>
         <div className={style.price}>
           <p>${Number((price * quantity).toFixed(2))}</p>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 }

@@ -24,8 +24,8 @@ export const Product = (props) => {
   };
 
   return (
-    <Link to={`/products/detail/${name}`} className={styles.link}>
-      <div className={styles.contenedor}>
+    <div className={styles.contenedor}>
+      <Link to={`/products/detail/${name}`} className={styles.link}>
         <div className={styles.contenedorImagen}>
           <img className={styles.imagen} src={image} alt={name} />
         </div>
@@ -33,15 +33,15 @@ export const Product = (props) => {
         <p className={styles.descripcion}>{description}</p>
         <p className={styles.precio}>$ {price}</p>
         <p className={styles.categoria}>{capitalizeFirstLetter(category)}</p>
+      </Link>
 
-        <div className={styles.btnCont}>
-          <button className={styles.btnCart} onClick={handleAddtoCart}>
-            Añadir al carrito
-          </button>
+      <div className={styles.btnCont}>
+        <button className={styles.btnCart} onClick={handleAddtoCart}>
+          Añadir al carrito
+        </button>
 
-          <button className={styles.btnBuy}>Comprar</button>
-        </div>
+        <button className={styles.btnBuy}>Comprar</button>
       </div>
-    </Link>
+    </div>
   );
 };
