@@ -12,7 +12,7 @@ const productStockController = async (items) => {
           return;
         }
 
-        const finalStock = (prod.stock ?? 0) - Number(item.quantity || 1);
+        const finalStock = (prod?.stock ?? 0) - Number(item.quantity || 1);
 
         // no permitir stock negativo
         const newStock = finalStock < 0 ? 0 : finalStock;
