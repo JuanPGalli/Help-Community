@@ -1,4 +1,4 @@
-import { Product } from '../db';
+const { Product } = require('../db');
 
 const productStockController = async (items) => {
   try {
