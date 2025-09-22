@@ -1,4 +1,4 @@
-const { Product } = require('../db');
+import { Product } from '../db';
 
 const productStockController = async (items) => {
   /* try {
@@ -31,4 +31,4 @@ const productStockController = async (items) => {
   }
 };
 
-module.exports = productStockController;
+export default productStockController;
