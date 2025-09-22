@@ -44,6 +44,9 @@ const receiveWebhook = async (req, res) => {
         paymentId,
       ]);
 
+      console.log('WEBHOOK BODY', req.body);
+      console.log('STATUS RECIBIDO', status);
+
       if (status === 'approved') {
         console.log('Webhook aprobado, actualizando stock…', items);
         await productStockController(items);
