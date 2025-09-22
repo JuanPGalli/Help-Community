@@ -1,20 +1,22 @@
-import style from "./buys.module.css"
-import { CardInfoUser } from "../userComponents/cardInfo/cardInfoUser"
-import { getAllBuysForUser } from "../../redux/actions/action"
+import style from './buys.module.css';
+import { CardInfoUser } from '../userComponents/cardInfo/cardInfoUser';
+import { getAllBuysForUser } from '../../redux/actions/action';
 import React, { useState, useEffect } from 'react';
-import Comprobante from "./comprobante/comporbante";
+import { useDispatch } from 'react-redux';
+import Comprobante from './comprobante/comporbante';
 
 export default function UserBuys() {
   const searchParams = new URLSearchParams(window.location.search);
   const email = searchParams.get('email');
   const [selectedBuyIndex, setSelectedBuyIndex] = useState(-1); // -1 significa que no se ha seleccionado ningún elemento
   const [buys, setBuys] = useState([]);
-  const [isOpen , setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(true);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const buyData = await getAllBuysForUser(email);
+        const buyData = await dispatch(getAllBuysForUser(email));
         setBuys(buyData);
       } catch (error) {
         console.error(error);
@@ -22,15 +24,15 @@ export default function UserBuys() {
     };
 
     fetchData();
-  }, []);
+  }, [dispatch, email]);
 
   const handleBuyClick = (index) => {
     setSelectedBuyIndex(index);
-  }
-  const handlerClose=()=>{
-    setSelectedBuyIndex(-1)
-    console.log("anda")
-  }
+  };
+  const handlerClose = () => {
+    setSelectedBuyIndex(-1);
+    console.log('anda');
+  };
 
   return (
     <div className={style.container}>
@@ -41,12 +43,9 @@ export default function UserBuys() {
             buys.map((buy, index) => (
               <div key={buy.id}>
                 {selectedBuyIndex === index ? (
-                <div className={style.comprobante}>
-                  <Comprobante 
-                  handlerClose={handlerClose}
-                  props={buy}
-                  />
-                </div>
+                  <div className={style.comprobante}>
+                    <Comprobante handlerClose={handlerClose} props={buy} />
+                  </div>
                 ) : (
                   <div onClick={() => handleBuyClick(index)}>
                     <CardInfoUser
