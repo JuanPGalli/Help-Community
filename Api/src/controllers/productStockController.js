@@ -1,6 +1,8 @@
 const { Product } = require('../db');
 
 const productStockController = async (items) => {
+  console.log('Entrando a productStockController con items:', items); // 👈 log al entrar
+
   try {
     await Promise.all(
       items.map(async (item) => {
@@ -24,6 +26,7 @@ const productStockController = async (items) => {
         await Product.update({ stock: newStock }, { where: { id: item.id } });
       }),
     );
+    console.log('Stock actualizado para todos los items.');
   } catch (error) {
     console.error('Error al actualizar el stock:', error);
   }

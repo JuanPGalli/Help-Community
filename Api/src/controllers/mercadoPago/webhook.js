@@ -45,6 +45,7 @@ const receiveWebhook = async (req, res) => {
       ]);
 
       if (status === 'approved') {
+        console.log('Webhook aprobado, actualizando stock…', items);
         await productStockController(items);
         //Nuevo - agregamos el clear del carrito
         if (userUuId) {

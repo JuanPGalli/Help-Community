@@ -383,7 +383,8 @@ export const getAllBuysForUser = (email) => {
       const response = await axios(`/buys/user/${email}`);
       return response.data; // devolvemos los buys para usar en setBuys
     } catch (error) {
-      console.log(error);
+      console.error('Error obteniendo compras del usuario', error);
+      throw error; // para que caiga en el catch del componente
     } finally {
       dispatch(clearLoading()); // 🔹 corta loader
     }
