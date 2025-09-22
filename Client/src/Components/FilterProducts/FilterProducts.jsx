@@ -92,7 +92,13 @@ const FilterProducts = ({ categ = [], products = [] }) => {
     dispatch(resetProducts());
   }
 
-  if (loading) return <Loader />; // 🔹 muestra loader global
+  if (loading)
+    return (
+      <div>
+        <Loader /> // 🔹 muestra loader global
+        <h1>Cargando...</h1>
+      </div>
+    );
 
   return (
     <div>

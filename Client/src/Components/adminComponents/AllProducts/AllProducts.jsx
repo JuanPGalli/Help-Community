@@ -42,7 +42,13 @@ export const AllProducts = () => {
   const endIndex = startIndex + cardsPerPage;
   const displayedData = filterProducts(searchInput).slice(startIndex, endIndex);
 
-  if (loading) return <Loader />; // 🔹 muestra loader global
+  if (loading)
+    return (
+      <div>
+        <Loader /> // 🔹 muestra loader global
+        <h1>Cargando...</h1>
+      </div>
+    );
 
   return (
     <div className={style.allProdscontainer}>
