@@ -1,7 +1,7 @@
 import style from './buys.module.css';
 import { CardInfoUser } from '../userComponents/cardInfo/cardInfoUser';
 import { getAllBuysForUser } from '../../redux/actions/action';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import Comprobante from './comprobante/comporbante';
 
@@ -16,7 +16,7 @@ export default function UserBuys() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const buyData = await dispatch(getAllBuysForUser(email));
+        const buyData = await getAllBuysForUser(email);
         setBuys(buyData);
       } catch (error) {
         console.error(error);
@@ -24,7 +24,7 @@ export default function UserBuys() {
     };
 
     fetchData();
-  }, [dispatch, email]);
+  }, [/* dispatch, */ email]);
 
   const handleBuyClick = (index) => {
     setSelectedBuyIndex(index);

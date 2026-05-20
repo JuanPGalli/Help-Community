@@ -29,17 +29,16 @@ import {
   GET_USERS,
 } from './action_type';
 
-// console.log(process.env.NODE_ENV);
-// if (process.env.NODE_ENV === "development") {
-//   // En entorno de desarrollo
-//   axios.defaults.baseURL = "http://localhost:3001";
-// } else {
-//   // En otros entornos (por ejemplo, producción)
-//   axios.defaults.baseURL =
-//     "https://help-community-production-ad63.up.railway.app";
-// }
+console.log(process.env.NODE_ENV);
+if (process.env.NODE_ENV === 'development') {
+  // En entorno de desarrollo
+  axios.defaults.baseURL = 'http://localhost:3001';
+} else {
+  // En otros entornos (por ejemplo, producción)
+  axios.defaults.baseURL = 'https://help-community-production.up.railway.app';
+}
 
-axios.defaults.baseURL = 'https://help-community-production.up.railway.app/';
+//axios.defaults.baseURL = 'https://help-community-production.up.railway.app/';
 export const getCampaign = () => {
   return async function (dispatch) {
     try {
@@ -331,9 +330,13 @@ export const createOrder = (payload) => {
     try {
       dispatch(setLoading()); // 🔹 inicia loader
       const { data } = await axios.post('/payment/create_order', payload);
-      console.log(data);
-      window.location.href = data.init_point;
-      return data;
+      // Redirigir al checkout de MercadoPago
+      if (data.init_point) {
+        window.location.href = data.init_point; // MP sandbox/checkout
+      } else {
+        console.error('No se recibió init_point en la respuesta de MP', data);
+      }
+      //return data;
     } catch (error) {
       console.error(error);
       return { error: true, message: 'No se pudo crear la orden' }; //Tratamiento de mensaje de error personalizado.

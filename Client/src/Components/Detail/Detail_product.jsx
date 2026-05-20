@@ -25,10 +25,6 @@ export const DetailProduct = () => {
   const auth = useAuth();
   const { email } = auth.user;
 
-  // console.log(`DETAIL PRODUCT ====>>>>`);
-  // console.log(detailProduct[0]);
-
-  //Este use
   useEffect(() => {
     if (email) {
       dispatch(getUserByEmail(email));
@@ -53,7 +49,7 @@ export const DetailProduct = () => {
   const [ratingError, setRatingError] = useState('');
   const [commentError, setCommentError] = useState('');
 
-  useEffect(() => {
+  /* useEffect(() => {
     const fetchData = async () => {
       try {
         const buyData = await getAllBuysForUser(email);
@@ -64,7 +60,25 @@ export const DetailProduct = () => {
     };
 
     fetchData();
-  }, []);
+  }, []); */
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        if (!email) {
+          setBuys([]);
+          return;
+        }
+        const buyData = await getAllBuysForUser(email); // <-- importante: dispatch
+        setBuys(buyData || []);
+      } catch (error) {
+        console.error('Error cargando compras del usuario', error);
+        setBuys([]);
+      }
+    };
+
+    fetchData();
+  }, [/* dispatch, */ email]);
 
   useEffect(() => {
     // Para que al enviar email como parametro, me devuelva la info del usuario, incluido el userId
@@ -89,18 +103,33 @@ export const DetailProduct = () => {
 
   const [reviewCreated, setReviewCreated] = useState(false);
 
-  let product = detailProduct[1] ? detailProduct[1] : detailProduct[0];
-  const allData = [{ ...product, email }];
-  // console.log("allData", allData)
+  let product =
+    Array.isArray(detailProduct) && detailProduct.length
+      ? detailProduct[1]
+        ? detailProduct[1]
+        : detailProduct[0]
+      : null;
 
-  // console.log("allData[0].id: ", allData[0].id)
+  /* let product = detailProduct[1] ? detailProduct[1] : detailProduct[0];
+  const allData = [{ ...product, email }]; */
 
   const [form, setForm] = useState({
-    emailUser: allData[0].email,
-    ProductId: allData[0].id,
+    emailUser: '',
+    ProductId: '',
     rating: 0,
     comment: '',
   });
+
+  // Actualizar form cuando product o email estén disponibles
+  useEffect(() => {
+    if (product) {
+      setForm((prev) => ({
+        ...prev,
+        emailUser: email || '',
+        ProductId: product.id || '',
+      }));
+    }
+  }, [product, email]);
 
   const [error, setError] = useState({
     email: '',
@@ -125,26 +154,26 @@ export const DetailProduct = () => {
   useEffect(() => {
     if (product) {
       // Verifica si emailUser necesita ser actualizado
-      if (form.emailUser !== allData[0].email) {
+      if (form.emailUser !== email) {
         setForm((prevForm) => ({
           ...prevForm,
-          emailUser: allData[0].email,
+          emailUser: email,
         }));
       }
     }
-  }, [product, allData]);
+  }, [email, form.emailUser, product]);
 
   useEffect(() => {
     if (product) {
       // Verifica si ProductId necesita ser actualizado
-      if (form.ProductId !== allData[0].id) {
+      if (form.ProductId !== (product?.id || '')) {
         setForm((prevForm) => ({
           ...prevForm,
-          ProductId: allData[0].id,
+          ProductId: product?.id || '',
         }));
       }
     }
-  }, [product, allData]);
+  }, [form.ProductId, product]);
 
   console.log('form', form);
   const hancleAddtoCart = () => {
@@ -209,7 +238,7 @@ export const DetailProduct = () => {
       const allMatchProductId = buys.some((buy) => {
         return (
           buy.products.items &&
-          buy.products.items.some((item) => item.id === allData[0].id) &&
+          buy.products.items.some((item) => item.id === product?.id) &&
           buy.products.statusDetail === 'accredited' &&
           buy.userId === userData[0].id
         );
@@ -218,20 +247,37 @@ export const DetailProduct = () => {
       // Verifica si el usuario ya ha revisado el producto
       const hasReviewed =
         Array.isArray(review) &&
-        review.some((rev) => rev.ProductId === allData[0].id && rev.emailUser === email);
+        review.some((rev) => rev.ProductId === product?.id && rev.emailUser === email);
 
       setReviewButtonEnabled(allMatchProductId && !hasReviewed);
     } else {
       setReviewButtonEnabled(false);
     }
-  }, [buys, userData, review, allData, email]);
+  }, [buys, userData, review, email, product?.id]);
 
-  const handleSubmit = (detailProduct) => {
+  /* const handleSubmit = (detailProduct) => {
     const allData = [{ ...product, email }];
     // console.log("allData de handleSubmit: ", allData)
     dispatch(createOrder(allData));
-  };
+  }; */
 
+  const handleSubmit = () => {
+    if (!product) return;
+    // array de productos. En este caso sólo uno:
+    const items = [
+      {
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        quantity: 1,
+        image: product.image,
+      },
+    ];
+    // objeto con el email del usuario
+    const emailObj = { email: email };
+
+    dispatch(createOrder([items, emailObj]));
+  };
   const handleEditButton = () => {
     navigate(`/admin/create/product/${product.name}`);
   };
@@ -252,7 +298,8 @@ export const DetailProduct = () => {
     try {
       console.log(axios.defaults.baseURL);
       const response = await axios.post(
-        'https://help-community-production.up.railway.app/review/create',
+        //'https://help-community-production.up.railway.app/review/create',
+        '/review/create',
         form,
       );
       //los datos del formulario los paso en formData (incluido los temperamentos en forma de cadena "hola, perro, paz")
@@ -275,14 +322,11 @@ export const DetailProduct = () => {
 
     closeReviewPopup();
   };
-  //   console.log("reviewsProductId: ", review.ProductId)
-  // console.log("reviews: ", reviews)
+
   useEffect(() => {
     dispatch(getReviews());
   }, [dispatch]);
 
-  // console.log("product: ", product)
-  // console.log("allData[0].id: ", allData[0].id)
   console.log('review: ', review);
 
   // console.log("review.ProductId: ", review.ProductId)
@@ -292,7 +336,7 @@ export const DetailProduct = () => {
     if (Array.isArray(review)) {
       // Verifica si 'review' es una matriz
       const ratings = review
-        .filter((rev) => rev.ProductId === allData[0].id) // Filtra las revisiones del producto actual
+        .filter((rev) => rev.ProductId === product?.id) // Filtra las revisiones del producto actual
         .map((rev) => rev.rating); // Extrae los puntajes
       if (ratings.length > 0) {
         const sum = ratings.reduce((total, rating) => total + rating, 0);
@@ -303,8 +347,6 @@ export const DetailProduct = () => {
   };
 
   const averageRating = calculateAverageRating();
-
-  console.log('allData[0].rating: ', allData[0].rating);
 
   return (
     <div className={styles.conteiner}>
@@ -330,7 +372,7 @@ export const DetailProduct = () => {
                 <h1>{product?.name}</h1>
                 <p>{product?.description}</p>
                 <p className={styles.ratingCard}>
-                  Rating: {averageRating === 0 ? allData[0].rating : averageRating}
+                  Rating: {averageRating === 0 ? product?.rating : averageRating}
                 </p>
                 <div className={styles.price}>
                   <p>$ {product?.price}</p>
@@ -338,8 +380,8 @@ export const DetailProduct = () => {
                 <div className={styles.buyCont}>
                   <button
                     className={styles.btnBuy}
-                    onClick={() => handleSubmit(detailProduct)}
-                    disabled={email ? false : true}
+                    onClick={() => handleSubmit(/* detailProduct */)}
+                    disabled={!email}
                   >
                     Comprar
                   </button>
@@ -414,7 +456,7 @@ export const DetailProduct = () => {
               <div className={styles.rev2}>
                 {Array.isArray(review) &&
                   review.map((review, index) => {
-                    if (review.ProductId === allData[0].id) {
+                    if (review.ProductId === product?.id) {
                       const formattedDateTime = new Date(review.createdAt).toLocaleString('es-ES', {
                         year: 'numeric',
                         month: '2-digit',
