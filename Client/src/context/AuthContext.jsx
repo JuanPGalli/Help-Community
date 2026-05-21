@@ -1,5 +1,5 @@
-import { useState, useEffect, createContext, useContext } from "react";
-import { auth } from "../firebase/firebase.config";
+import { useState, useEffect, createContext, useContext } from 'react';
+import { auth } from '../firebase/firebase.config';
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -7,7 +7,7 @@ import {
   signInWithPopup,
   signOut,
   onAuthStateChanged,
-} from "firebase/auth";
+} from 'firebase/auth';
 
 /* Creating a context object. */
 export const authContext = createContext();
@@ -18,18 +18,18 @@ export const authContext = createContext();
 export const useAuth = () => {
   const context = useContext(authContext);
   if (!context) {
-    console.log("error al crear el auth context");
+    throw new Error('useAuth debe usarse dentro de AuthProvider');
   }
   return context;
 };
 
 export function AuthProvider({ children }) {
-  const [user, setUser] = useState("");
+  const [user, setUser] = useState(null);
   /* A hook that is called when the component is mounted and when the component is updated. */
   useEffect(() => {
     const subscribed = onAuthStateChanged(auth, (currentUser) => {
       if (!currentUser) {
-        setUser("");
+        setUser(null);
       } else {
         setUser(currentUser);
       }
@@ -42,11 +42,7 @@ export function AuthProvider({ children }) {
    * arguments.
    */
   const register = async (email, password) => {
-    const response = await createUserWithEmailAndPassword(
-      auth,
-      email,
-      password
-    );
+    const response = await createUserWithEmailAndPassword(auth, email, password);
     console.log(response);
   };
   /**
@@ -64,8 +60,17 @@ export function AuthProvider({ children }) {
    *The responseGoogle object is being returned.
    */
   const loginWithGoogle = async () => {
-    const responseGoogle = new GoogleAuthProvider();
-    return await signInWithPopup(auth, responseGoogle);
+    try {
+      const provider = new GoogleAuthProvider();
+
+      const result = await signInWithPopup(auth, provider);
+
+      console.log('LOGIN GOOGLE OK', result);
+
+      return result;
+    } catch (error) {
+      console.error('ERROR GOOGLE LOGIN:', error);
+    }
   };
   /**
    * The logout function is an asynchronous function that calls the signOut function and logs the

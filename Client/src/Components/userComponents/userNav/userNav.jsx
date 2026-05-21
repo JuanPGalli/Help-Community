@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export function UserNav() {
   const auth = useAuth();
-  const name = auth.user.displayName;
+  const name = auth.user?.displayName;
 
   let firstPartName = 'Bienvenido'; // Cambia 'Invitado' por el valor por defecto que desees
 

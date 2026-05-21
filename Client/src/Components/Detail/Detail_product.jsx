@@ -23,7 +23,7 @@ export const DetailProduct = () => {
   const detailProduct = useSelector((state) => state.detailProduct);
   const review = useSelector((state) => state.review) || [];
   const auth = useAuth();
-  const { email } = auth.user;
+  const email = auth.user?.email;
 
   useEffect(() => {
     if (email) {
@@ -97,9 +97,9 @@ export const DetailProduct = () => {
       });
   }, []);
 
-  const displayName = auth.user.displayName;
+  const displayName = auth.user?.displayName;
   // const firstName = displayName.split(' ')[0];
-  // console.log("auth.user.email: ", auth.user.email)
+  // console.log("auth.user?.email: ", auth.user?.email)
 
   const [reviewCreated, setReviewCreated] = useState(false);
 

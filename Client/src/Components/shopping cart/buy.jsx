@@ -11,8 +11,8 @@ export default function Buy() {
   const totalProduct = cart.length;
   const dispatch = useDispatch();
   const auth = useAuth();
-  const email = auth.user.email;
-  console.log(auth.user.email);
+  const email = auth.user?.email;
+  console.log(auth.user?.email);
   console.log(email);
 
   const handleSubmit = (detailProduct) => {

@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -8,24 +7,21 @@ import { Routes, Route, Navigate, useNavigate, useLocation, Link } from 'react-r
 
 import axios from 'axios';
 
-import "./adminLayout.css"
+import './adminLayout.css';
 
-import SideBarAdmin from '../SideBarAdmin/SideBarAdmin.jsx'
+import SideBarAdmin from '../SideBarAdmin/SideBarAdmin.jsx';
 import Dashboard from '../dashboard/Dashboard.jsx';
-import CreateCampaign from '../../createCampaign/CreateCampaign.jsx'
-import CreateProduct from '../../createProduct/CreateProduct.jsx'
-import { AllBuys }  from '../../buys/allBuysAdmin.jsx'
+import CreateCampaign from '../../createCampaign/CreateCampaign.jsx';
+import CreateProduct from '../../createProduct/CreateProduct.jsx';
+import { AllBuys } from '../../buys/allBuysAdmin.jsx';
 // import { Products } from '../../Products/Products.jsx'
 import { AdminUsers } from '../adminUsers/AdminUsers.jsx';
 import MailingForm from '../mailing/mailingForm.jsx';
 import AllProducts from '../AllProducts/AllProducts.jsx';
 
-
-
-
 // function AdminLayout() {
 //   const auth = useAuth();
-//   const { email } = auth.user; // Obtenemos el correo electrónico del usuario actual
+//   const email = auth.user?.email; // Obtenemos el correo electrónico del usuario actual
 
 //   // const navigate = useNavigate();
 
@@ -51,7 +47,7 @@ import AllProducts from '../AllProducts/AllProducts.jsx';
 //           // Si el usuario no tiene permisos, el estado se mantiene en false
 //           // return <Navigate to="/home" replace />;
 //           // navigate('/home', { replace: true });
-          
+
 //         }
 //       })
 //       .catch((error) => {
@@ -62,7 +58,7 @@ import AllProducts from '../AllProducts/AllProducts.jsx';
 //   return (
 //     <>
 //       {hasAdminPermissions ? (
-      
+
 //       <div className="coco">
 //         <SideBarAdmin />
 //         <div className="content">
@@ -76,28 +72,28 @@ import AllProducts from '../AllProducts/AllProducts.jsx';
 //             <Route path="/users" element={<AdminUsers />}  />
 //             <Route path="/mailing" element={<MailingForm />} />
 //           </Routes>
-     
+
 //         </div>
 //       </div>
 
-//       ) : null} 
+//       ) : null}
 //     </>
 //   );
 // }
 
 // export default AdminLayout;
 
-
 function AdminLayout() {
   const auth = useAuth();
-  const { email } = auth.user; // Obtenemos el correo electrónico del usuario actual
+  const email = auth.user?.email; // Obtenemos el correo electrónico del usuario actual
 
   const [hasAdminPermissions, setHasAdminPermissions] = useState(null);
 
   useEffect(() => {
     setHasAdminPermissions(null);
 
-    axios.get(`/user/email?email=${email}`)
+    axios
+      .get(`/user/email?email=${email}`)
       .then((response) => {
         const data = response.data;
 
@@ -113,38 +109,40 @@ function AdminLayout() {
   }, [email]);
 
   if (hasAdminPermissions === null) {
-    return <p id="text">Cargando permisos...</p>;
+    return <p id='text'>Cargando permisos...</p>;
   } else if (hasAdminPermissions) {
     return (
-      <div className="coco">
+      <div className='coco'>
         <SideBarAdmin />
-        <div className="content">
+        <div className='content'>
           <Routes>
-            <Route path="/allProducts" element={<AllProducts />} />
-            <Route path="/products/create/:productName?" element={<CreateProduct />} />
+            <Route path='/allProducts' element={<AllProducts />} />
+            <Route path='/products/create/:productName?' element={<CreateProduct />} />
             <Route path='/create/campaign' element={<CreateCampaign />} />
             <Route path='/allbuys' element={<AllBuys />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/users" element={<AdminUsers />}  />
-            <Route path="/mailing" element={<MailingForm />} />
+            <Route path='/dashboard' element={<Dashboard />} />
+            <Route path='/users' element={<AdminUsers />} />
+            <Route path='/mailing' element={<MailingForm />} />
           </Routes>
         </div>
       </div>
     );
   } else {
-    return <div className='contenedorError'><p id="text">Error en el acceso. <Link to="/">Volver a la página de inicio</Link></p></div>;
-    
+    return (
+      <div className='contenedorError'>
+        <p id='text'>
+          Error en el acceso. <Link to='/'>Volver a la página de inicio</Link>
+        </p>
+      </div>
+    );
   }
 }
 
 export default AdminLayout;
 
-
-
-
 // function AdminLayout() {
 //   const auth = useAuth();
-//   const { email } = auth.user;
+//   const email = auth.user?.email;
 //   const navigate = useNavigate();
 
 //   const [hasAdminPermissions, setHasAdminPermissions] = useState(null);
@@ -197,10 +195,3 @@ export default AdminLayout;
 // }
 
 // export default AdminLayout;
-
-
-
-
-
-
-
